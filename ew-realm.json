@@ -3477,7 +3477,7 @@
       "alias": "eurowag365",
       "displayName": "Eurowag 365",
       "internalId": "f70451b2-745d-4d4f-8d2b-7aa2fa4a88d0",
-      "providerId": "eurowag365",
+      "providerId": "oidc",
       "enabled": true,
       "updateProfileFirstLoginMode": "on",
       "trustEmail": false,
