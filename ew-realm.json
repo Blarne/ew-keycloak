@@ -2641,7 +2641,6 @@
       ],
       "defaultClientScopes": [
         "nav4",
-        "role_list",
         "roles",
         "client",
         "email",
@@ -2823,7 +2822,8 @@
             "access.token.claim": "true",
             "claim.name": "iss",
             "jsonType.label": "String"
-         }
+          }
+        }
       ]
     },
     {
