@@ -1,6 +1,9 @@
 FROM jboss/keycloak:7.0.1
 MAINTAINER miroslav.svoboda@karumien.com
 
+RUN microdnf install -y ntp
+
+ADD ntp.conf /etc
 ADD ew-realm.json /opt/jboss/keycloak/
 
 ENTRYPOINT [ "/opt/jboss/tools/docker-entrypoint.sh" ]
