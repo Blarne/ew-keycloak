@@ -1,4 +1,4 @@
-FROM jboss/keycloak:8.0.0
+FROM jboss/keycloak:7.0.1
 MAINTAINER miroslav.svoboda@karumien.com
 
 ADD ew-realm.json /opt/jboss/keycloak/
