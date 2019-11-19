@@ -2809,7 +2809,21 @@
             "claim.name": "accountNumber",
             "jsonType.label": "String"
           }
-        }
+        },
+        {
+          "id": "46eebb69-a2bc-46e4-813a-3ce3c4791eef",
+          "name": "iss",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-hardcoded-claim-mapper",
+          "consentRequired": false,
+          "config": {
+            "claim.value": "https://login-test.eurowag.com/auth/realms/eurowag",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "iss",
+            "jsonType.label": "String"
+         }
       ]
     },
     {
