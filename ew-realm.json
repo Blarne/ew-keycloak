@@ -3474,10 +3474,10 @@
   "adminEventsDetailsEnabled": false,
   "identityProviders": [
     {
-      "alias": "oidc",
+      "alias": "eurowag365",
       "displayName": "Eurowag 365",
       "internalId": "f70451b2-745d-4d4f-8d2b-7aa2fa4a88d0",
-      "providerId": "oidc",
+      "providerId": "eurowag365",
       "enabled": true,
       "updateProfileFirstLoginMode": "on",
       "trustEmail": false,
