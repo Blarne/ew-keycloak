@@ -2129,14 +2129,6 @@
   ],
   "scopeMappings": [
     {
-      "client": "clientzone",
-      "roles": [
-        "WebAdmin",
-        "ClientsPortalAccess",
-        "EWMCPortalAccess"
-      ]
-    },
-    {
       "client": "security-admin-console",
       "roles": [
         "EW_Realm_Reader",
@@ -2144,7 +2136,7 @@
       ]
     },
     {
-      "clientScope": "crm",
+      "clientScope": "roles",
       "roles": [
         "ROLE_OWNER",
         "ROLE_OPERATOR",
@@ -2153,15 +2145,6 @@
         "ROLE_ADMIN",
         "ROLE_DRIVER",
         "ROLE_FLEET_MANAGER"
-      ]
-    },
-    {
-      "clientScope": "roles",
-      "roles": [
-        "ROLE_OPERATOR",
-        "ROLE_DISPATCHER",
-        "ROLE_ADMIN",
-        "ROLE_DRIVER"
       ]
     },
     {
