@@ -93,15 +93,6 @@
         "attributes": {}
       },
       {
-        "id": "38d71834-46a8-4967-a663-08ad813f31ca",
-        "name": "CLIENTS",
-        "description": "Module clients for portal",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
         "id": "f9a4d06c-7da4-40fb-b206-c5bddafc1885",
         "name": "ROLE_OPERATOR",
         "description": "Eurowag Internal Impersonator Role",
@@ -121,15 +112,6 @@
         "id": "a5bf7b52-e0d6-461a-9c10-f956f3dd9372",
         "name": "offline_access",
         "description": "${role_offline-access}",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "2f61e949-80fe-44fd-a6d1-740efd6474c4",
-        "name": "WEBADMIN",
-        "description": "admin roles for web",
         "composite": false,
         "clientRole": false,
         "containerId": "eurowag",
@@ -174,15 +156,6 @@
         "id": "3843975b-e405-4e79-a777-187012011131",
         "name": "ROLE_DISPATCHER",
         "description": "Dispatcher Role",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "b5ae085b-173e-4143-82a4-57307b26281d",
-        "name": "EWMC",
-        "description": "Modul EWMC for portal",
         "composite": false,
         "clientRole": false,
         "containerId": "eurowag",
