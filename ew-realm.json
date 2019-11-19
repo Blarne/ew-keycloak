@@ -50,23 +50,19 @@
         "attributes": {}
       },
       {
-        "id": "f66c4261-4e33-4d40-9afa-ccc453c80f2f",
-        "name": "ROLE_TLM05_FC_W",
-        "description": "Fuel Consumption write",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "10000xF"
-          ]
-        }
-      },
-      {
         "id": "7c4be347-0627-42da-84f2-6226422233eb",
         "name": "ROLE_ADMIN",
         "description": "Account Admin Role",
-        "composite": false,
+        "composite": true,
+        "composites": {
+          "client": {
+            "selfcare": [
+              "FINANCE_BILLINGDOC_W",
+              "FINANCE_TRANSACTION_W",
+              "USER_MANAGEMENT_W"
+            ]
+          }
+        },
         "clientRole": false,
         "containerId": "eurowag",
         "attributes": {
@@ -75,187 +71,6 @@
           ],
           "translation[cs]": [
             "Administrátor"
-          ]
-        }
-      },
-      {
-        "id": "6c484915-b7fd-46ef-bfa8-bc62f70d0567",
-        "name": "ROLE_TLM06_AER_W",
-        "description": "AETR report",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "10xF"
-          ]
-        }
-      },
-      {
-        "id": "facc1a9a-116a-471d-812f-9e00ce67c3bb",
-        "name": "MODULE_TLM00",
-        "composite": true,
-        "composites": {
-          "realm": [
-            "ROLE_TLM00_USR_R",
-            "ROLE_TLM00_V_IE",
-            "ROLE_TLM00_POI_W",
-            "ROLE_TLM00_USR_IE",
-            "ROLE_TLM00_V_R",
-            "ROLE_TLM00_D_R",
-            "ROLE_TLM00_POI_R",
-            "ROLE_TLM00_D_IE",
-            "ROLE_TLM00_V_W",
-            "ROLE_TLM00_D_W",
-            "ROLE_TLM00_POI_IE",
-            "ROLE_TLM00_USR_W"
-          ]
-        },
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "69e5be61-e7fe-4012-bba9-e4cff9600252",
-        "name": "ROLE_TLM03_LT_R",
-        "description": "Live tab read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "10xF"
-          ]
-        }
-      },
-      {
-        "id": "f45f6630-fa8f-4b52-8c5a-3916340d2a53",
-        "name": "ROLE_TLM00_D_IE",
-        "description": "Driver import/export",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "100xF"
-          ]
-        }
-      },
-      {
-        "id": "003dbab5-4f76-41ce-a1ef-65ada9cb9cfc",
-        "name": "ROLE_TLM07_TRD_R",
-        "description": "Tacho remote download read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "1xF"
-          ]
-        }
-      },
-      {
-        "id": "1a4e931f-07de-47d0-b9cc-52dd43ab91ca",
-        "name": "ROLE_TLM02_BRD_R",
-        "description": "dispatcher board read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "100000xF"
-          ]
-        }
-      },
-      {
-        "id": "5b285faa-58e0-4151-8135-804278959837",
-        "name": "MODULE_TLM01",
-        "description": "Map",
-        "composite": true,
-        "composites": {
-          "realm": [
-            "ROLE_TLM01_FST_R",
-            "ROLE_TLM01_DASH_W",
-            "ROLE_TLM01_DASH_R",
-            "ROLE_TLM01_LM_R"
-          ]
-        },
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "b5ae085b-173e-4143-82a4-57307b26281d",
-        "name": "EWMC",
-        "description": "Modul EWMC for portal",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "208b6da6-a16a-493e-b6b3-712e37422c4a",
-        "name": "ROLE_TLM03_AN_R",
-        "description": "Alarms&Notification read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "10000xF"
-          ]
-        }
-      },
-      {
-        "id": "b19f40c0-bbd1-489f-8b1a-d89375285bee",
-        "name": "MODULE_TEST.1",
-        "description": "Test",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "d3002d96-6ecb-4d64-87d3-62459fc9f985",
-        "name": "ROLE_TLM07_CRD_R",
-        "description": "Card Remote dowload",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "830e535e-075f-4e62-bacc-f6ee36872f95",
-        "name": "ROLE_TLM05_JAE_R",
-        "description": "Journeys Activity enhanced read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "100xF"
-          ]
-        }
-      },
-      {
-        "id": "0aa3951d-4abe-42da-b529-8b0926526ed9",
-        "name": "ClientsPortalAccess",
-        "description": "Permission to access clients portal",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "39e15372-03ee-4d1c-b33b-631838f10c48",
-        "name": "ROLE_TLM02_ROW_R",
-        "description": "Route Overview read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "10xF"
           ]
         }
       },
@@ -269,22 +84,61 @@
         "attributes": {}
       },
       {
-        "id": "df4fae38-1bda-4edc-ae1b-3dde329b15a1",
-        "name": "ROLE_TLM02_PLN_R",
-        "description": "Planner read",
+        "id": "9e625118-3f6c-4ac4-8a3f-76011acd91e2",
+        "name": "ROLE_FLEET_MANAGER",
+        "description": "Fleet Manager Role",
         "composite": false,
         "clientRole": false,
         "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "1xF"
-          ]
-        }
+        "attributes": {}
       },
       {
-        "id": "a53a0698-c610-45e8-bce9-744b9f13d27f",
-        "name": "MODULE_TEST_79B",
-        "description": "TEST-MODULE-B",
+        "id": "38d71834-46a8-4967-a663-08ad813f31ca",
+        "name": "CLIENTS",
+        "description": "Module clients for portal",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "f9a4d06c-7da4-40fb-b206-c5bddafc1885",
+        "name": "ROLE_OPERATOR",
+        "description": "Eurowag Internal Impersonator Role",
+        "composite": true,
+        "composites": {
+          "client": {
+            "realm-management": [
+              "impersonation"
+            ]
+          }
+        },
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "a5bf7b52-e0d6-461a-9c10-f956f3dd9372",
+        "name": "offline_access",
+        "description": "${role_offline-access}",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "2f61e949-80fe-44fd-a6d1-740efd6474c4",
+        "name": "WEBADMIN",
+        "description": "admin roles for web",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "0dde12ea-a6f4-4a54-9823-f6262e499f36",
+        "name": "uma_authorization",
+        "description": "${role_uma_authorization}",
         "composite": false,
         "clientRole": false,
         "containerId": "eurowag",
@@ -300,52 +154,36 @@
         "attributes": {}
       },
       {
-        "id": "7f1f6049-de9b-4d2c-89bd-047b1305adc2",
-        "name": "MODULE_TEST_79",
-        "description": "TEST-MODULE",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "c57339e2-37bf-421d-bbb1-b46774abf1b1",
-        "name": "ROLE_TLM05_EX_W",
-        "description": "Expenses write",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "1000000xF"
-          ]
-        }
-      },
-      {
-        "id": "57a45dc5-4465-40ad-b7a2-689fd6db1c86",
-        "name": "MODULE_TLM09",
-        "description": "Map",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "8820baa7-741d-4cd3-b53a-2631c1f13048",
-        "name": "MODULE_TLM02",
-        "description": "Plan",
+        "id": "c69a7edc-a514-4444-8372-ec6ba875bf85",
+        "name": "ROLE_ACCOUNTANT",
+        "description": "Accountant Role",
         "composite": true,
         "composites": {
-          "realm": [
-            "ROLE_TLM02_BRD_R",
-            "ROLE_TLM02_ETA_R",
-            "ROLE_TLM02_OP_R",
-            "ROLE_TLM02_VP_W",
-            "ROLE_TLM02_VP_R",
-            "ROLE_TLM02_ROW_R",
-            "ROLE_TLM02_PLN_R"
-          ]
+          "client": {
+            "selfcare": [
+              "FINANCE_BILLINGDOC_W",
+              "FINANCE_TRANSACTION_W"
+            ]
+          }
         },
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "3843975b-e405-4e79-a777-187012011131",
+        "name": "ROLE_DISPATCHER",
+        "description": "Dispatcher Role",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "b5ae085b-173e-4143-82a4-57307b26281d",
+        "name": "EWMC",
+        "description": "Modul EWMC for portal",
+        "composite": false,
         "clientRole": false,
         "containerId": "eurowag",
         "attributes": {}
@@ -354,7 +192,12 @@
         "id": "92ab6d9c-98ff-4bc7-92d7-6d3efca4e6b7",
         "name": "WebAdmin",
         "description": "Web admin of company in clients portal",
-        "composite": false,
+        "composite": true,
+        "composites": {
+          "realm": [
+            "ROLE_ADMIN"
+          ]
+        },
         "clientRole": false,
         "containerId": "eurowag",
         "attributes": {}
@@ -362,6 +205,7 @@
       {
         "id": "28a6163c-f18b-4455-b3a0-3255ba2d01ca",
         "name": "EW_Realm_Reader",
+        "description": "Eurowag Realm Admin - Read only",
         "composite": true,
         "composites": {
           "client": {
@@ -373,8 +217,8 @@
               "view-events",
               "view-realm",
               "view-users",
-              "view-identity-providers",
               "view-authorization",
+              "view-identity-providers",
               "query-users"
             ]
           }
@@ -384,92 +228,9 @@
         "attributes": {}
       },
       {
-        "id": "2e6f3319-9ab7-4b32-a575-ecd5c40ce7c7",
-        "name": "ROLE_TLM01_DASH_W",
-        "description": "dashboard write",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "1000xF"
-          ]
-        }
-      },
-      {
-        "id": "e3ae5fbe-3813-4dcb-81af-d619be08d661",
-        "name": "ROLE_TLM02_ETA_R",
-        "description": "ETA read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "100xF"
-          ]
-        }
-      },
-      {
-        "id": "53d55dca-69c4-4602-9a83-dd0973f947e4",
-        "name": "MODULE_TLM03",
-        "description": "Track",
-        "composite": true,
-        "composites": {
-          "realm": [
-            "ROLE_TLM03_LM_R",
-            "ROLE_TLM03_JA_R",
-            "ROLE_TLM03_JA_W",
-            "ROLE_TLM03_AN_R",
-            "ROLE_TLM03_LT_R"
-          ]
-        },
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "c330f92c-4990-4d8b-b6e6-26ae5eb29ae6",
-        "name": "ROLE_TLM00_D_R",
-        "description": "drivers read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "1xF"
-          ]
-        }
-      },
-      {
-        "id": "8c97ebae-d3a8-4d36-a3fb-406ad1b1b94d",
-        "name": "ROLE_TLM00_USR_W",
-        "description": "User write",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "10000000000xF"
-          ]
-        }
-      },
-      {
-        "id": "b9f47476-0fbf-4af9-8840-f9ef0ea35e30",
-        "name": "ROLE_TLM00_USR_IE",
-        "description": "user import/export",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "100000000000xF"
-          ]
-        }
-      },
-      {
         "id": "ae9898a8-8468-46d8-a079-93be5e47a369",
         "name": "EW_Realm_Admin",
-        "description": "sadsdff s",
+        "description": "Eurowag Realm Admin - Full rights",
         "composite": true,
         "composites": {
           "client": {
@@ -505,390 +266,16 @@
         }
       },
       {
-        "id": "9cbce4d3-0efc-4222-b94d-fbfb27e00470",
-        "name": "asddsfghbgzjngmjnergvtrhbsg",
-        "description": "test",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "test": [
-            "gfsg"
-          ],
-          "test2": [
-            "sadf"
-          ]
-        }
-      },
-      {
-        "id": "bb8c9b9d-eec7-4465-939d-41bb32932429",
-        "name": "MODULE_TLM07",
-        "description": "Tacho Remote Download",
-        "composite": true,
-        "composites": {
-          "realm": [
-            "ROLE_TLM07_CRD_W",
-            "ROLE_TLM07_TRD_R",
-            "ROLE_TLM07_CRD_R"
-          ]
-        },
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "9e586a89-2b4b-4e5e-b566-fbd6e647e5f2",
-        "name": "ROLE_TLM01_FST_R",
-        "description": "fuel station read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "10xF"
-          ]
-        }
-      },
-      {
-        "id": "98029e7e-3be6-441e-8861-e3232bf3833d",
-        "name": "ROLE_TLM05_EX_IE",
-        "description": "Expenses Import / export",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "10000000xF"
-          ]
-        }
-      },
-      {
-        "id": "e12f8101-c071-4df7-a29d-f28f969b86d1",
-        "name": "ROLE_TLM05_FC_R",
-        "description": "Fuel Consumption read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "1000xF"
-          ]
-        }
-      },
-      {
-        "id": "7f40042b-d0a1-417d-959e-9bda08c625bd",
-        "name": "MODULE_TLM06",
-        "description": "Live times",
-        "composite": true,
-        "composites": {
-          "realm": [
-            "ROLE_TLM06_AEI_R",
-            "ROLE_TLM06_AER_W",
-            "ROLE_TLM06_DRE_R"
-          ]
-        },
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "46682fec-e913-4a05-b611-eb7427ad256d",
-        "name": "ROLE_TLM00_USR_R",
-        "description": "User read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "1000000000xF"
-          ]
-        }
-      },
-      {
-        "id": "c4d20e9b-a3ef-4dc7-b91a-bcb2696eb386",
-        "name": "MODULE_TLM04",
-        "description": "Idle&Runnig",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "e9ca9ae4-1eb0-482e-96e8-6e58f2754df2",
-        "name": "ROLE_TLM01_DASH_R",
-        "description": "dashboard read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "100xF"
-          ]
-        }
-      },
-      {
-        "id": "38d71834-46a8-4967-a663-08ad813f31ca",
-        "name": "CLIENTS",
-        "description": "Module clients for portal",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "a5bf7b52-e0d6-461a-9c10-f956f3dd9372",
-        "name": "offline_access",
-        "description": "${role_offline-access}",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "2f61e949-80fe-44fd-a6d1-740efd6474c4",
-        "name": "WEBADMIN",
-        "description": "admin roles for web",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "0dde12ea-a6f4-4a54-9823-f6262e499f36",
-        "name": "uma_authorization",
-        "description": "${role_uma_authorization}",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "cd4858cb-cd40-4b0e-a704-7975f9ed8115",
-        "name": "MODULE_TEST_42",
-        "description": "TEST-MODULE",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "399fcae8-e48f-4d71-ad33-9b5ad9badc6a",
-        "name": "ROLE_TLM06_AEI_R",
-        "description": "AETR Info Read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "module": [
-            "TLM06"
-          ],
-          "binaryMask": [
-            "1xF"
-          ]
-        }
-      },
-      {
-        "id": "9803229a-1ae2-44b5-a0fe-04a14e89c8aa",
-        "name": "ROLE_TLM00_POI_IE",
-        "description": "POI import/export",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "100000000xF"
-          ]
-        }
-      },
-      {
-        "id": "8663929d-e183-46fd-ae4d-12984f123308",
-        "name": "ROLE_TLM03_JA_W",
-        "description": "Journeys Activity write",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "1000xF"
-          ]
-        }
-      },
-      {
-        "id": "4c91afa6-80ea-4a22-b43c-125a9b357027",
-        "name": "ROLE_TLM06_DRE_R",
-        "description": "Driver info",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "module": [
-            "TLM06"
-          ],
-          "binaryMask": [
-            "100xF"
-          ]
-        }
-      },
-      {
-        "id": "6f265153-5d48-4f42-98c5-49ebddee6961",
-        "name": "ROLE_TLM03_JA_R",
-        "description": "Journeys activity read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "100xF"
-          ]
-        }
-      },
-      {
-        "id": "858d2be3-9018-44d1-8c3a-4cf4319ec226",
-        "name": "MODULE_TLM05",
-        "description": "CAN",
-        "composite": true,
-        "composites": {
-          "realm": [
-            "ROLE_TLM05_JAE_R",
-            "ROLE_TLM05_EX_W",
-            "ROLE_TLM05_FC_R",
-            "ROLE_TLM05_LT_R",
-            "ROLE_TLM05_FC_W",
-            "ROLE_TLM05_LM_R",
-            "ROLE_TLM05_EX_IE",
-            "ROLE_TLM05_EX_R"
-          ]
-        },
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "a638699c-bc79-4022-99e5-a5cfda87d814",
-        "name": "MODULE_TEST_42B",
-        "description": "TEST-MODULE-B",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "74ffdd77-5446-4843-904f-507d7616491a",
-        "name": "MODULE_TEST_1",
-        "description": "TEST-MODULE",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "d6b675b0-9eb3-489e-946b-34ee699e4dcf",
-        "name": "ROLE_TLM00_V_R",
-        "description": "Vehicle read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "1000xF"
-          ]
-        }
-      },
-      {
-        "id": "fe9bfded-2719-4379-94c8-a3ec027be92e",
-        "name": "MODULE_TEST_1B",
-        "description": "TEST-MODULE-B",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "f605ac54-f6c6-46d0-89b6-a6b4a94ea7a4",
-        "name": "ROLE_TLM00_V_IE",
-        "description": "Vehicle import/export",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "100000xF"
-          ]
-        }
-      },
-      {
-        "id": "cbc9427e-877b-45e6-bda5-256d2a457341",
-        "name": "ROLE_TLM05_EX_R",
-        "description": "Expenses read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "100000xF"
-          ]
-        }
-      },
-      {
-        "id": "a2476782-d148-4590-9eac-9d9bcc20d083",
-        "name": "ROLE_TLM02_OP_R",
-        "description": "Online prices read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "1000000xF"
-          ]
-        }
-      },
-      {
-        "id": "49ff3ab8-47e4-4f4c-a69d-acd0aa0430d3",
-        "name": "ROLE_TLM01_LM_R",
-        "description": "live map read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "1xF"
-          ]
-        }
-      },
-      {
-        "id": "37103dda-48b8-42eb-8520-1739b9cdb2ff",
-        "name": "ROLE_TLM00_V_W",
-        "description": "Vehicle write",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "10000xF"
-          ]
-        }
-      },
-      {
-        "id": "3f25cb08-6726-45bf-bc6a-955ac0383c4a",
-        "name": "ROLE_TLM00_POI_R",
-        "description": "POI read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "1000000xF"
-          ]
-        }
-      },
-      {
-        "id": "f9a4d06c-7da4-40fb-b206-c5bddafc1885",
-        "name": "ROLE_OPERATOR",
+        "id": "69390111-e3c7-4209-80e5-cd8f0ce8eb89",
+        "name": "ROLE_OWNER",
+        "description": "Role Owner of Account",
         "composite": true,
         "composites": {
           "client": {
-            "realm-management": [
-              "impersonation"
+            "selfcare": [
+              "FINANCE_BILLINGDOC_W",
+              "FINANCE_TRANSACTION_W",
+              "USER_MANAGEMENT_W"
             ]
           }
         },
@@ -897,135 +284,9 @@
         "attributes": {}
       },
       {
-        "id": "a0551620-26a9-4ac8-87d5-c62c11a93bab",
-        "name": "ROLE_TLM02_VP_W",
-        "description": "vehicle profile write",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "10000xF"
-          ]
-        }
-      },
-      {
-        "id": "a7c5313e-76fb-44ed-8c2a-eb577fa7dcbf",
-        "name": "webadmin",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "820ab383-c15a-4125-beb0-fae953bb0f81",
-        "name": "ROLE_TLM00_POI_W",
-        "description": "POI write",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "10000000xF"
-          ]
-        }
-      },
-      {
-        "id": "3843975b-e405-4e79-a777-187012011131",
-        "name": "ROLE_DISPATCHER",
-        "description": "The Dispatcher Role",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "95729d41-a743-4fc9-b794-630b2b191c5d",
-        "name": "ROLE_TLM03_LM_R",
-        "description": "Live map read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "1xF"
-          ]
-        }
-      },
-      {
-        "id": "dace8631-72c0-4d78-9afc-30b797db1272",
-        "name": "ROLE_TLM07_CRD_W",
-        "description": "Card reader download write",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "8d90df61-187b-4bfe-9e08-2055a84f2522",
-        "name": "ROLE_TLM05_LM_R",
-        "description": "Live map read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "1xF"
-          ]
-        }
-      },
-      {
-        "id": "579050e3-723a-4cc6-957f-a7e9591c29eb",
-        "name": "MODULE_TEST_9",
-        "description": "TEST-MODULE",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "a9e59add-339a-4d5d-a65d-1cb7f207676f",
-        "name": "ROLE_TLM00_D_W",
-        "description": "driver read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "10xF"
-          ]
-        }
-      },
-      {
-        "id": "9db2ee1f-ce5c-4134-92ac-bf2df2615b1e",
-        "name": "ROLE_TLM02_VP_R",
-        "description": "vehicle profile read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "1000xF"
-          ]
-        }
-      },
-      {
-        "id": "8d5ee649-7cbf-4c25-b5e2-e731abee07c7",
-        "name": "ROLE_TLM05_LT_R",
-        "description": "Live tab read",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {
-          "binaryMask": [
-            "10xF"
-          ]
-        }
-      },
-      {
-        "id": "7e2d00b0-cc59-4fbe-a7a3-c6db74a385fb",
-        "name": "test",
-        "description": "test",
+        "id": "0aa3951d-4abe-42da-b529-8b0926526ed9",
+        "name": "ClientsPortalAccess",
+        "description": "Permission to access clients portal",
         "composite": false,
         "clientRole": false,
         "containerId": "eurowag",
@@ -1033,6 +294,7 @@
       }
     ],
     "client": {
+      "clientzone": [],
       "realm-management": [
         {
           "id": "076127fc-50d9-4de7-93c9-4871b81e2b71",
@@ -1305,7 +567,56 @@
           "attributes": {}
         }
       ],
-      "selfcare": []
+      "selfcare": [
+        {
+          "id": "21e56425-c056-4a3c-8625-9025a17b246c",
+          "name": "FINANCE_BILLINGDOC_W",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "c5e2dccf-187c-4199-a219-1b85300b1ce3",
+          "name": "FINANCE_TRANSACTION_W",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "1245a812-5fed-4498-83c3-bf57d6d93f6c",
+          "name": "FINANCE_BILLINGDOC_R",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "cc2dcc89-621e-4e00-8c3e-1be79420b77e",
+          "name": "USER_MANAGEMENT_R",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "940a5464-a191-4a37-b2c5-d94136866504",
+          "name": "FINANCE_TRANSACTION_R",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "294de447-724c-418a-b870-c297c04dc890",
+          "name": "USER_MANAGEMENT_W",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        }
+      ]
     }
   },
   "groups": [
@@ -1322,8 +633,40 @@
           "name": "Josef Ilman",
           "path": "/Accounts/Josef Ilman",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "62019"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "54a71751-276c-4a23-968f-bed7f840fa94",
+          "name": "MUDRA TRANSPORT s.r.o.",
+          "path": "/Accounts/MUDRA TRANSPORT s.r.o.",
+          "attributes": {
+            "accountNumber": [
+              "67842"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "9d8bfb14-5a32-4aa4-a096-40acd7809b6b",
+          "name": "koiussdo",
+          "path": "/Accounts/koiussdo",
+          "attributes": {
+            "compRegNo": [
+              "112239"
+            ],
+            "accountNumber": [
+              "30149"
+            ],
+            "contactEmail": [
+              "admin19@eurowag.com"
             ]
           },
           "realmRoles": [],
@@ -1344,25 +687,36 @@
           "name": "Petr Davo",
           "path": "/Accounts/Petr Davo",
           "attributes": {
-            "crmAccountId": [
-              "11678"
-            ],
             "compRegNo": [
               "vin_7928CB42"
+            ],
+            "accountNumber": [
+              "11678"
             ],
             "contactEmail": [
               "vu@eurowag.com"
             ]
           },
-          "realmRoles": [
-            "MODULE_TLM05",
-            "MODULE_TLM04",
-            "MODULE_TLM03",
-            "MODULE_TLM07",
-            "MODULE_TLM06",
-            "MODULE_TLM01",
-            "MODULE_TLM02"
-          ],
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "1fbaedff-3d84-4b23-8af6-2500bb0727f1",
+          "name": "Petr Savo",
+          "path": "/Accounts/Petr Savo",
+          "attributes": {
+            "compRegNo": [
+              "vin_7928CB41"
+            ],
+            "accountNumber": [
+              "11684"
+            ],
+            "contactEmail": [
+              "vu@eurowag.com"
+            ]
+          },
+          "realmRoles": [],
           "clientRoles": {},
           "subGroups": []
         },
@@ -1371,25 +725,36 @@
           "name": "Lol Lola",
           "path": "/Accounts/Lol Lola",
           "attributes": {
-            "crmAccountId": [
-              "11701"
-            ],
             "compRegNo": [
               "vin_7928CB50"
+            ],
+            "accountNumber": [
+              "11701"
             ],
             "contactEmail": [
               "vu.hoanh@eurowag.com"
             ]
           },
-          "realmRoles": [
-            "MODULE_TLM05",
-            "MODULE_TLM04",
-            "MODULE_TLM03",
-            "MODULE_TLM07",
-            "MODULE_TLM06",
-            "MODULE_TLM01",
-            "MODULE_TLM02"
-          ],
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "0f06cf5e-7a7f-4fb1-9be2-0f5fc9dd0d09",
+          "name": "Anton Diečka Int.Transport",
+          "path": "/Accounts/Anton Diečka Int.Transport",
+          "attributes": {
+            "compRegNo": [
+              "SK1020467041"
+            ],
+            "accountNumber": [
+              "22243"
+            ],
+            "contactEmail": [
+              "testing@wag.cz"
+            ]
+          },
+          "realmRoles": [],
           "clientRoles": {},
           "subGroups": []
         },
@@ -1398,8 +763,53 @@
           "name": "VIKING TRANS s.r.o.",
           "path": "/Accounts/VIKING TRANS s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "50822"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "5c2184ea-6e94-42d3-a428-fa9e58614529",
+          "name": "Jana Křivánková",
+          "path": "/Accounts/Jana Křivánková",
+          "attributes": {
+            "accountNumber": [
+              "62440"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "1f20af36-fd7a-4889-81bb-4d58be65c19a",
+          "name": "Expedience s.r.o.",
+          "path": "/Accounts/Expedience s.r.o.",
+          "attributes": {
+            "accountNumber": [
+              "38005"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "5ecb9d3d-e1e1-4392-bafd-408ddd698f11",
+          "name": "Corinne Manciel",
+          "path": "/Accounts/Corinne Manciel",
+          "attributes": {
+            "compRegNo": [
+              "CZ280060566"
+            ],
+            "accountNumber": [
+              "84121"
+            ],
+            "contactEmail": [
+              "fmarruffo@gmail.com"
             ]
           },
           "realmRoles": [],
@@ -1411,25 +821,17 @@
           "name": "Lukas Vitek",
           "path": "/Accounts/Lukas Vitek",
           "attributes": {
-            "crmAccountId": [
-              "11711"
-            ],
             "compRegNo": [
               "vin_7928CB44"
+            ],
+            "accountNumber": [
+              "11711"
             ],
             "contactEmail": [
               "lukas.vitek@eurowag.com"
             ]
           },
-          "realmRoles": [
-            "MODULE_TLM05",
-            "MODULE_TLM04",
-            "MODULE_TLM03",
-            "MODULE_TLM07",
-            "MODULE_TLM06",
-            "MODULE_TLM01",
-            "MODULE_TLM02"
-          ],
+          "realmRoles": [],
           "clientRoles": {},
           "subGroups": []
         },
@@ -1438,8 +840,85 @@
           "name": "ROVOLOGISTIK CZ Group, SE",
           "path": "/Accounts/ROVOLOGISTIK CZ Group, SE",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "37516"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "d5fcf5c0-9ce8-4eb1-a35e-a7d955d68719",
+          "name": "Reasoner corp.",
+          "path": "/Accounts/Reasoner corp.",
+          "attributes": {
+            "accountNumber": [
+              "101158"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "5e372e6c-3a62-4d5e-8538-96d5dc2adea8",
+          "name": "Lenka Marková",
+          "path": "/Accounts/Lenka Marková",
+          "attributes": {
+            "accountNumber": [
+              "89711"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "f164d21e-b82f-42e1-bb81-87b37f237f7f",
+          "name": "Kolo Cerveny",
+          "path": "/Accounts/Kolo Cerveny",
+          "attributes": {
+            "compRegNo": [
+              "vin_439"
+            ],
+            "accountNumber": [
+              "10904"
+            ],
+            "contactEmail": [
+              "milan.zlamal@eurowag.com"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "f7948970-5748-454c-8026-e27d9f84cf1a",
+          "name": "SPEDITRANS CZ, s.r.o.",
+          "path": "/Accounts/SPEDITRANS CZ, s.r.o.",
+          "attributes": {
+            "accountNumber": [
+              "11919"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "16077534-a4ba-4fae-bab7-3ddab91f91de",
+          "name": "Spedition Rosner,s.r.o.",
+          "path": "/Accounts/Spedition Rosner,s.r.o.",
+          "attributes": {
+            "compRegNo": [
+              "CZ63148048"
+            ],
+            "accountNumber": [
+              "11111"
+            ],
+            "contactEmail": [
+              "testing@wag.cz"
             ]
           },
           "realmRoles": [],
@@ -1451,7 +930,7 @@
           "name": "KOCOUREK Trans s.r.o.",
           "path": "/Accounts/KOCOUREK Trans s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "20478"
             ]
           },
@@ -1460,21 +939,40 @@
           "subGroups": []
         },
         {
-          "id": "9e9425da-656e-432a-a7e8-4da8f2569a5d",
-          "name": "EquiRelax2 s.r.o.",
-          "path": "/Accounts/EquiRelax2 s.r.o.",
+          "id": "5649df74-b850-48de-b080-95de9c84094f",
+          "name": "Jordan Panfilov",
+          "path": "/Accounts/Jordan Panfilov",
           "attributes": {
             "compRegNo": [
-              "64846059"
+              "CZ229292054"
             ],
-            "crmAccountId": [
-              "34031"
+            "accountNumber": [
+              "792792"
+            ],
+            "contactEmail": [
+              "han_dzledzic@hotmail.com"
             ]
           },
-          "realmRoles": [
-            "MODULE_TLM06",
-            "MODULE_TLM02"
-          ],
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "da2c7c3a-410d-4d70-b342-4d081fe4aa95",
+          "name": "Pavel Tvrdek",
+          "path": "/Accounts/Pavel Tvrdek",
+          "attributes": {
+            "compRegNo": [
+              "CZ7105172470"
+            ],
+            "accountNumber": [
+              "11087"
+            ],
+            "contactEmail": [
+              "testing@wag.cz"
+            ]
+          },
+          "realmRoles": [],
           "clientRoles": {},
           "subGroups": []
         },
@@ -1483,7 +981,7 @@
           "name": "Senior Home,s.r.o.",
           "path": "/Accounts/Senior Home,s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "54938"
             ]
           },
@@ -1496,8 +994,53 @@
           "name": "TVD - Technická výroba, a.s",
           "path": "/Accounts/TVD - Technická výroba, a.s",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "60913"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "8e58f918-c970-4855-9b1d-f70d88ede2ab",
+          "name": "Jan Veverka",
+          "path": "/Accounts/Jan Veverka",
+          "attributes": {
+            "accountNumber": [
+              "60816"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "9d4d2de3-c39e-471a-b4b2-627b7b7b6b26",
+          "name": "Gol Gola",
+          "path": "/Accounts/Gol Gola",
+          "attributes": {
+            "compRegNo": [
+              "vin_375"
+            ],
+            "accountNumber": [
+              "11709"
+            ],
+            "contactEmail": [
+              "vu.hoanh@eurowag.com"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "03c5fc5f-77db-4132-958f-b98397d4bb39",
+          "name": "J+L Kubálek s.r.o.",
+          "path": "/Accounts/J+L Kubálek s.r.o.",
+          "attributes": {
+            "accountNumber": [
+              "70662"
             ]
           },
           "realmRoles": [],
@@ -1509,19 +1052,17 @@
           "name": "Tanja Strimple",
           "path": "/Accounts/Tanja Strimple",
           "attributes": {
-            "crmAccountId": [
-              "347560"
-            ],
             "compRegNo": [
               "CZ386731936"
+            ],
+            "accountNumber": [
+              "347560"
             ],
             "contactEmail": [
               "luther@gmail.com"
             ]
           },
-          "realmRoles": [
-            "MODULE_TLM01"
-          ],
+          "realmRoles": [],
           "clientRoles": {},
           "subGroups": []
         },
@@ -1530,7 +1071,7 @@
           "name": "JAMBOR s.r.o.",
           "path": "/Accounts/JAMBOR s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "67039"
             ]
           },
@@ -1543,19 +1084,17 @@
           "name": "Patti Belyea",
           "path": "/Accounts/Patti Belyea",
           "attributes": {
-            "crmAccountId": [
-              "322604"
-            ],
             "compRegNo": [
               "CZ523579218"
+            ],
+            "accountNumber": [
+              "322604"
             ],
             "contactEmail": [
               "gilbert.langarica@gmail.com"
             ]
           },
-          "realmRoles": [
-            "MODULE_TLM01"
-          ],
+          "realmRoles": [],
           "clientRoles": {},
           "subGroups": []
         },
@@ -1564,25 +1103,17 @@
           "name": "MAES",
           "path": "/Accounts/MAES",
           "attributes": {
-            "crmAccountId": [
-              "test_maes"
-            ],
             "compRegNo": [
               "crm_xxx_test_maes"
+            ],
+            "accountNumber": [
+              "test_maes"
             ],
             "contactEmail": [
               "xuder.man@gmail.com"
             ]
           },
-          "realmRoles": [
-            "MODULE_TLM05",
-            "MODULE_TLM04",
-            "MODULE_TLM03",
-            "MODULE_TLM07",
-            "MODULE_TLM06",
-            "MODULE_TLM02",
-            "MODULE_TLM01"
-          ],
+          "realmRoles": [],
           "clientRoles": {},
           "subGroups": []
         },
@@ -1591,8 +1122,21 @@
           "name": "Ihro Transport & Logistik s.r.o.",
           "path": "/Accounts/Ihro Transport & Logistik s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "22510"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "030f92f9-9f2b-4e66-acea-2296e079a0ca",
+          "name": "Láníček Transport s.r.o.",
+          "path": "/Accounts/Láníček Transport s.r.o.",
+          "attributes": {
+            "accountNumber": [
+              "40627"
             ]
           },
           "realmRoles": [],
@@ -1604,7 +1148,7 @@
           "name": "AGF logistics s.r.o.",
           "path": "/Accounts/AGF logistics s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "35388"
             ]
           },
@@ -1617,7 +1161,7 @@
           "name": "Petr Weber",
           "path": "/Accounts/Petr Weber",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "67471"
             ]
           },
@@ -1630,19 +1174,30 @@
           "name": "Precious Breheny",
           "path": "/Accounts/Precious Breheny",
           "attributes": {
-            "crmAccountId": [
-              "436532"
-            ],
             "compRegNo": [
               "CZ256575141"
+            ],
+            "accountNumber": [
+              "436532"
             ],
             "contactEmail": [
               "anika@marse.co.uk"
             ]
           },
-          "realmRoles": [
-            "MODULE_TLM01"
-          ],
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "41a4a504-4484-4120-a851-5a441757e32b",
+          "name": "MiaB Group, s.r.o.",
+          "path": "/Accounts/MiaB Group, s.r.o.",
+          "attributes": {
+            "accountNumber": [
+              "43939"
+            ]
+          },
+          "realmRoles": [],
           "clientRoles": {},
           "subGroups": []
         },
@@ -1651,7 +1206,7 @@
           "name": "Miroslav Hnilička",
           "path": "/Accounts/Miroslav Hnilička",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "17271"
             ]
           },
@@ -1664,7 +1219,7 @@
           "name": "Filip Jokeš",
           "path": "/Accounts/Filip Jokeš",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "100317"
             ]
           },
@@ -1677,7 +1232,7 @@
           "name": "1. transportní s.r.o.",
           "path": "/Accounts/1. transportní s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "82546"
             ]
           },
@@ -1690,8 +1245,46 @@
           "name": "VCHD Cargo a.s.",
           "path": "/Accounts/VCHD Cargo a.s.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "11800"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "6fc5e948-a3a9-4f20-b48f-30a2a7f15549",
+          "name": "Elinore Carris",
+          "path": "/Accounts/Elinore Carris",
+          "attributes": {
+            "compRegNo": [
+              "CZ688134691"
+            ],
+            "accountNumber": [
+              "288168"
+            ],
+            "contactEmail": [
+              "kozane@gmail.com"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "e3a2862b-0cc6-4bb3-ad1f-6a103f258e56",
+          "name": "Dwight Thurm",
+          "path": "/Accounts/Dwight Thurm",
+          "attributes": {
+            "compRegNo": [
+              "CZ532945309"
+            ],
+            "accountNumber": [
+              "672130"
+            ],
+            "contactEmail": [
+              "jreinecke@reinecke.co.uk"
             ]
           },
           "realmRoles": [],
@@ -1703,8 +1296,40 @@
           "name": "DHL Automotive s.r.o.",
           "path": "/Accounts/DHL Automotive s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "42402"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "db77102f-7a39-4187-a26b-472fa28ae0e0",
+          "name": "SUSPRO s.r.o.",
+          "path": "/Accounts/SUSPRO s.r.o.",
+          "attributes": {
+            "accountNumber": [
+              "94692"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "7bffd0a8-07c6-423c-aa33-9f4de0c86180",
+          "name": "Emily Vanwyhe",
+          "path": "/Accounts/Emily Vanwyhe",
+          "attributes": {
+            "compRegNo": [
+              "CZ626977744"
+            ],
+            "accountNumber": [
+              "314118"
+            ],
+            "contactEmail": [
+              "reuresti@euresti.co.uk"
             ]
           },
           "realmRoles": [],
@@ -1716,14 +1341,56 @@
           "name": "Juhás AUTODOPRAVA, s.r.o.",
           "path": "/Accounts/Juhás AUTODOPRAVA, s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "31034"
             ]
           },
-          "realmRoles": [
-            "MODULE_TLM00",
-            "MODULE_TLM01"
-          ],
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "f4a6a59d-b77c-473c-a625-66da104ef0e9",
+          "name": "Tomas Junga",
+          "path": "/Accounts/Tomas Junga",
+          "attributes": {
+            "compRegNo": [
+              "vin_220"
+            ],
+            "accountNumber": [
+              "11092"
+            ],
+            "contactEmail": [
+              "tomas.junga@eurowag.com"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "5f6c9b57-599a-4f4c-b9ac-48a4de4c1286",
+          "name": "Black & White truck s.r.o.",
+          "path": "/Accounts/Black & White truck s.r.o.",
+          "attributes": {
+            "accountNumber": [
+              "38426"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "b166b747-aeb3-45d8-a881-2b255e4a610c",
+          "name": "TRANSCART s.r.o.",
+          "path": "/Accounts/TRANSCART s.r.o.",
+          "attributes": {
+            "accountNumber": [
+              "30817"
+            ]
+          },
+          "realmRoles": [],
           "clientRoles": {},
           "subGroups": []
         },
@@ -1732,7 +1399,7 @@
           "name": "HOT Logistic s.r.o.",
           "path": "/Accounts/HOT Logistic s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "78193"
             ]
           },
@@ -1745,10 +1412,48 @@
           "name": "SILO TRANS s.r.o.",
           "path": "/Accounts/SILO TRANS s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "10928"
             ]
           },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "c8c86128-4311-4f02-9a38-92ab244de585",
+          "name": "Bodos, a.s.",
+          "path": "/Accounts/Bodos, a.s.",
+          "attributes": {
+            "compRegNo": [
+              "49435230"
+            ],
+            "accountNumber": [
+              "10908"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "6dda6802-114a-4744-9856-9ce4348e9958",
+          "name": "HERMANN TRANS, s.r.o.",
+          "path": "/Accounts/HERMANN TRANS, s.r.o.",
+          "attributes": {
+            "accountNumber": [
+              "47441"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "9d55472b-28aa-409b-aab3-d79564c034da",
+          "name": "STL Express s.r.o.",
+          "path": "/Accounts/STL Express s.r.o.",
+          "attributes": {},
           "realmRoles": [],
           "clientRoles": {},
           "subGroups": []
@@ -1758,25 +1463,30 @@
           "name": "Pungas Punga",
           "path": "/Accounts/Pungas Punga",
           "attributes": {
-            "crmAccountId": [
-              "11091"
-            ],
             "compRegNo": [
               "vin_838"
+            ],
+            "accountNumber": [
+              "11091"
             ],
             "contactEmail": [
               "tomas.junga@eurowag.com"
             ]
           },
-          "realmRoles": [
-            "MODULE_TLM05",
-            "MODULE_TLM04",
-            "MODULE_TLM03",
-            "MODULE_TLM07",
-            "MODULE_TLM06",
-            "MODULE_TLM02",
-            "MODULE_TLM01"
-          ],
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "7a981b28-8a89-413d-90bf-07b7f44d14b3",
+          "name": "Jaroslav Bednář",
+          "path": "/Accounts/Jaroslav Bednář",
+          "attributes": {
+            "accountNumber": [
+              "61987"
+            ]
+          },
+          "realmRoles": [],
           "clientRoles": {},
           "subGroups": []
         },
@@ -1785,8 +1495,21 @@
           "name": "Jaroslav Siegl",
           "path": "/Accounts/Jaroslav Siegl",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "32594"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "96387f03-c943-4201-a7ac-3c96a95ce39b",
+          "name": "makalouš ivan",
+          "path": "/Accounts/makalouš ivan",
+          "attributes": {
+            "accountNumber": [
+              "43903"
             ]
           },
           "realmRoles": [],
@@ -1798,16 +1521,11 @@
           "name": "TestDevelopment",
           "path": "/Accounts/TestDevelopment",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "123456789"
             ]
           },
-          "realmRoles": [
-            "ROLE_TLM02_ETA_R",
-            "ROLE_TLM00_D_R",
-            "asddsfghbgzjngmjnergvtrhbsg",
-            "MODULE_TLM00"
-          ],
+          "realmRoles": [],
           "clientRoles": {},
           "subGroups": []
         },
@@ -1816,8 +1534,47 @@
           "name": "ALL - TRANS s.r.o.",
           "path": "/Accounts/ALL - TRANS s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "77028"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "2e953831-8a07-4d2a-9869-e59a2b64520a",
+          "name": "Jan Forman",
+          "path": "/Accounts/Jan Forman",
+          "attributes": {
+            "accountNumber": [
+              "21667"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "a9975839-ec14-4680-998d-c8236e22e82f",
+          "name": "HDB Trans s.r.o.",
+          "path": "/Accounts/HDB Trans s.r.o.",
+          "attributes": {
+            "accountNumber": [
+              "38934"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "c0a00179-c6fe-4952-9056-861941d39517",
+          "name": "SUEZ Využití zdrojů a.s.",
+          "path": "/Accounts/SUEZ Využití zdrojů a.s.",
+          "attributes": {
+            "accountNumber": [
+              "11685"
             ]
           },
           "realmRoles": [],
@@ -1829,7 +1586,7 @@
           "name": "ČSAD Hodonín a.s.",
           "path": "/Accounts/ČSAD Hodonín a.s.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "16344"
             ]
           },
@@ -1842,7 +1599,7 @@
           "name": "STEGRO s.r.o.",
           "path": "/Accounts/STEGRO s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "75693"
             ]
           },
@@ -1855,7 +1612,7 @@
           "name": "Roman Věchet s.r.o.",
           "path": "/Accounts/Roman Věchet s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "31453"
             ]
           },
@@ -1868,7 +1625,7 @@
           "name": "DH delivery s.r.o.",
           "path": "/Accounts/DH delivery s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "66926"
             ]
           },
@@ -1881,8 +1638,27 @@
           "name": "GRS spol. s.r.o",
           "path": "/Accounts/GRS spol. s.r.o",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "40361"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "7ecade86-8c5f-4a0b-a70e-77a4d78304f5",
+          "name": "Orville Feagins",
+          "path": "/Accounts/Orville Feagins",
+          "attributes": {
+            "compRegNo": [
+              "CZ743190993"
+            ],
+            "accountNumber": [
+              "910492"
+            ],
+            "contactEmail": [
+              "gfeagins@gmail.com"
             ]
           },
           "realmRoles": [],
@@ -1894,25 +1670,26 @@
           "name": "Josef Plach�",
           "path": "/Accounts/Josef Plach�",
           "attributes": {
-            "crmAccountId": [
-              "11714"
-            ],
             "compRegNo": [
               "CZ6609260152"
+            ],
+            "accountNumber": [
+              "11714"
             ],
             "contactEmail": [
               "testing@wag.cz"
             ]
           },
-          "realmRoles": [
-            "MODULE_TLM05",
-            "MODULE_TLM04",
-            "MODULE_TLM03",
-            "MODULE_TLM07",
-            "MODULE_TLM06",
-            "MODULE_TLM01",
-            "MODULE_TLM02"
-          ],
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "04adceed-1f4e-4cd4-923e-2263c2f174a7",
+          "name": "Telekom",
+          "path": "/Accounts/Telekom",
+          "attributes": {},
+          "realmRoles": [],
           "clientRoles": {},
           "subGroups": []
         },
@@ -1921,25 +1698,17 @@
           "name": "O.K. Trans Praha spol. s.r.o.",
           "path": "/Accounts/O.K. Trans Praha spol. s.r.o.",
           "attributes": {
-            "crmAccountId": [
-              "10873"
-            ],
             "compRegNo": [
               "CZ00473251"
+            ],
+            "accountNumber": [
+              "10873"
             ],
             "contactEmail": [
               "testing@wag.cz"
             ]
           },
-          "realmRoles": [
-            "MODULE_TLM05",
-            "MODULE_TLM04",
-            "MODULE_TLM03",
-            "MODULE_TLM07",
-            "MODULE_TLM06",
-            "MODULE_TLM01",
-            "MODULE_TLM02"
-          ],
+          "realmRoles": [],
           "clientRoles": {},
           "subGroups": []
         },
@@ -1948,8 +1717,21 @@
           "name": "Miloslava Kovářová",
           "path": "/Accounts/Miloslava Kovářová",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "28489"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "5b3a0e5e-1c92-459c-af15-5a630c19ddba",
+          "name": "Jiří Loskot",
+          "path": "/Accounts/Jiří Loskot",
+          "attributes": {
+            "accountNumber": [
+              "52114"
             ]
           },
           "realmRoles": [],
@@ -1961,8 +1743,21 @@
           "name": "PREMIANT CITY TOUR s.r.o.",
           "path": "/Accounts/PREMIANT CITY TOUR s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "66340"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "8fa3f721-8fa1-43bc-9792-ca13afba697f",
+          "name": "HH Real a.s.",
+          "path": "/Accounts/HH Real a.s.",
+          "attributes": {
+            "accountNumber": [
+              "519008"
             ]
           },
           "realmRoles": [],
@@ -1974,8 +1769,22 @@
           "name": "OPERA SILVATICA s.r.o.",
           "path": "/Accounts/OPERA SILVATICA s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "519000"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "9e1640ad-4352-4b77-a927-64639381375b",
+          "name": "4better s.r.o.",
+          "path": "/Accounts/4better s.r.o.",
+          "attributes": {
+            "accountNumber": [
+              "54547",
+              "54547"
             ]
           },
           "realmRoles": [],
@@ -1987,8 +1796,21 @@
           "name": "AGF Logistics, s.r.o. slovenská organizačná zložka ",
           "path": "/Accounts/AGF Logistics, s.r.o. slovenská organizačná zložka ",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "61994"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "39c25a53-1874-4a36-b535-2815b580a31d",
+          "name": "HRBÁČEK s.r.o.",
+          "path": "/Accounts/HRBÁČEK s.r.o.",
+          "attributes": {
+            "accountNumber": [
+              "10718"
             ]
           },
           "realmRoles": [],
@@ -2000,8 +1822,47 @@
           "name": "ALSET, spol. s r.o.",
           "path": "/Accounts/ALSET, spol. s r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "11095"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "7a11fbfc-1254-4bff-a8da-5b80885eb107",
+          "name": "Petr Lexa",
+          "path": "/Accounts/Petr Lexa",
+          "attributes": {
+            "accountNumber": [
+              "44095"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "c46ab0f1-42d7-4105-b3c5-b029fd67fc44",
+          "name": "CEDES Logistik s.r.o.",
+          "path": "/Accounts/CEDES Logistik s.r.o.",
+          "attributes": {
+            "accountNumber": [
+              "11294"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": []
+        },
+        {
+          "id": "cda5206c-9165-4438-a915-3de38aba0c35",
+          "name": "ČSAD Kyjov Logistics a.s.",
+          "path": "/Accounts/ČSAD Kyjov Logistics a.s.",
+          "attributes": {
+            "accountNumber": [
+              "28919"
             ]
           },
           "realmRoles": [],
@@ -2031,843 +1892,14 @@
           "name": "Petr Kol",
           "path": "/Accounts/Petr Kol",
           "attributes": {
-            "crmAccountId": [
-              "22558"
-            ],
             "compRegNo": [
               "vin_7928CB40"
             ],
-            "contactEmail": [
-              "vu@eurowag.com"
-            ]
-          },
-          "realmRoles": [
-            "MODULE_TLM02",
-            "MODULE_TLM01"
-          ],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "54a71751-276c-4a23-968f-bed7f840fa94",
-          "name": "MUDRA TRANSPORT s.r.o.",
-          "path": "/Accounts/MUDRA TRANSPORT s.r.o.",
-          "attributes": {
-            "crmAccountId": [
-              "67842"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "9d8bfb14-5a32-4aa4-a096-40acd7809b6b",
-          "name": "koiussdo",
-          "path": "/Accounts/koiussdo",
-          "attributes": {
-            "compRegNo": [
-              "112239"
-            ],
             "accountNumber": [
-              "30149"
-            ],
-            "contactEmail": [
-              "admin19@eurowag.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "b01abfe1-bc3b-4ea8-99c9-5f1ea19e0d66",
-          "name": "EquiRelax s.r.o.",
-          "path": "/Accounts/EquiRelax s.r.o.",
-          "attributes": {
-            "compRegNo": [
-              "64846059"
-            ],
-            "crmAccountId": [
-              "34034"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "1fbaedff-3d84-4b23-8af6-2500bb0727f1",
-          "name": "Petr Savo",
-          "path": "/Accounts/Petr Savo",
-          "attributes": {
-            "crmAccountId": [
-              "11684"
-            ],
-            "compRegNo": [
-              "vin_7928CB41"
+              "22558"
             ],
             "contactEmail": [
               "vu@eurowag.com"
-            ]
-          },
-          "realmRoles": [
-            "MODULE_TLM05",
-            "MODULE_TLM04",
-            "MODULE_TLM03",
-            "MODULE_TLM07",
-            "MODULE_TLM06",
-            "MODULE_TLM01",
-            "MODULE_TLM02"
-          ],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "0f06cf5e-7a7f-4fb1-9be2-0f5fc9dd0d09",
-          "name": "Anton Die�ka Int.Transport",
-          "path": "/Accounts/Anton Die�ka Int.Transport",
-          "attributes": {
-            "crmAccountId": [
-              "22243"
-            ],
-            "compRegNo": [
-              "SK1020467041"
-            ],
-            "contactEmail": [
-              "testing@wag.cz"
-            ]
-          },
-          "realmRoles": [
-            "MODULE_TLM05",
-            "MODULE_TLM04",
-            "MODULE_TLM03",
-            "MODULE_TLM07",
-            "MODULE_TLM06",
-            "MODULE_TLM01",
-            "MODULE_TLM02"
-          ],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "5c2184ea-6e94-42d3-a428-fa9e58614529",
-          "name": "Jana Křivánková",
-          "path": "/Accounts/Jana Křivánková",
-          "attributes": {
-            "crmAccountId": [
-              "62440"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "1f20af36-fd7a-4889-81bb-4d58be65c19a",
-          "name": "Expedience s.r.o.",
-          "path": "/Accounts/Expedience s.r.o.",
-          "attributes": {
-            "crmAccountId": [
-              "38005"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "5ecb9d3d-e1e1-4392-bafd-408ddd698f11",
-          "name": "Corinne Manciel",
-          "path": "/Accounts/Corinne Manciel",
-          "attributes": {
-            "crmAccountId": [
-              "84121"
-            ],
-            "compRegNo": [
-              "CZ280060566"
-            ],
-            "contactEmail": [
-              "fmarruffo@gmail.com"
-            ]
-          },
-          "realmRoles": [
-            "MODULE_TLM05",
-            "MODULE_TLM04",
-            "MODULE_TLM03",
-            "MODULE_TLM07",
-            "MODULE_TLM06",
-            "MODULE_TLM01"
-          ],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "44bd27f2-7dbe-4bad-bb12-04ebefd604a6",
-          "name": "danotest 1",
-          "path": "/Accounts/danotest 1",
-          "attributes": {
-            "crmAccountId": [
-              "11985"
-            ],
-            "compRegNo": [
-              "vin_7928CB3C"
-            ],
-            "contactEmail": [
-              "daniel.uderman.test@uderman.sk"
-            ]
-          },
-          "realmRoles": [
-            "MODULE_TLM05",
-            "MODULE_TLM04",
-            "MODULE_TLM03",
-            "MODULE_TLM07",
-            "MODULE_TLM06",
-            "MODULE_TLM02",
-            "MODULE_TLM01"
-          ],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "d5fcf5c0-9ce8-4eb1-a35e-a7d955d68719",
-          "name": "Reasoner corp.",
-          "path": "/Accounts/Reasoner corp.",
-          "attributes": {
-            "crmAccountId": [
-              "101158"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "5e372e6c-3a62-4d5e-8538-96d5dc2adea8",
-          "name": "Lenka Marková",
-          "path": "/Accounts/Lenka Marková",
-          "attributes": {
-            "crmAccountId": [
-              "89711"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "f164d21e-b82f-42e1-bb81-87b37f237f7f",
-          "name": "Kolo Cerveny",
-          "path": "/Accounts/Kolo Cerveny",
-          "attributes": {
-            "crmAccountId": [
-              "10904"
-            ],
-            "compRegNo": [
-              "vin_439"
-            ],
-            "contactEmail": [
-              "milan.zlamal@eurowag.com"
-            ]
-          },
-          "realmRoles": [
-            "MODULE_TLM05",
-            "MODULE_TLM04",
-            "MODULE_TLM03",
-            "MODULE_TLM07",
-            "MODULE_TLM06",
-            "MODULE_TLM01",
-            "MODULE_TLM02"
-          ],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "f7948970-5748-454c-8026-e27d9f84cf1a",
-          "name": "SPEDITRANS CZ, s.r.o.",
-          "path": "/Accounts/SPEDITRANS CZ, s.r.o.",
-          "attributes": {
-            "crmAccountId": [
-              "11919"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "16077534-a4ba-4fae-bab7-3ddab91f91de",
-          "name": "Spedition Rosner,s.r.o.",
-          "path": "/Accounts/Spedition Rosner,s.r.o.",
-          "attributes": {
-            "crmAccountId": [
-              "11111"
-            ],
-            "compRegNo": [
-              "CZ63148048"
-            ],
-            "contactEmail": [
-              "testing@wag.cz"
-            ]
-          },
-          "realmRoles": [
-            "MODULE_TLM04"
-          ],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "5649df74-b850-48de-b080-95de9c84094f",
-          "name": "Jordan Panfilov",
-          "path": "/Accounts/Jordan Panfilov",
-          "attributes": {
-            "crmAccountId": [
-              "792792"
-            ],
-            "compRegNo": [
-              "CZ229292054"
-            ],
-            "contactEmail": [
-              "han_dzledzic@hotmail.com"
-            ]
-          },
-          "realmRoles": [
-            "MODULE_TLM01"
-          ],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "da2c7c3a-410d-4d70-b342-4d081fe4aa95",
-          "name": "Pavel Tvrdek",
-          "path": "/Accounts/Pavel Tvrdek",
-          "attributes": {
-            "crmAccountId": [
-              "11087"
-            ],
-            "compRegNo": [
-              "CZ7105172470"
-            ],
-            "contactEmail": [
-              "testing@wag.cz"
-            ]
-          },
-          "realmRoles": [
-            "MODULE_TLM05",
-            "MODULE_TLM04",
-            "MODULE_TLM03",
-            "MODULE_TLM07",
-            "MODULE_TLM06",
-            "MODULE_TLM01",
-            "MODULE_TLM02"
-          ],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "8e58f918-c970-4855-9b1d-f70d88ede2ab",
-          "name": "Jan Veverka",
-          "path": "/Accounts/Jan Veverka",
-          "attributes": {
-            "crmAccountId": [
-              "60816"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "9d4d2de3-c39e-471a-b4b2-627b7b7b6b26",
-          "name": "Gol Gola",
-          "path": "/Accounts/Gol Gola",
-          "attributes": {
-            "crmAccountId": [
-              "11709"
-            ],
-            "compRegNo": [
-              "vin_375"
-            ],
-            "contactEmail": [
-              "vu.hoanh@eurowag.com"
-            ]
-          },
-          "realmRoles": [
-            "MODULE_TLM05",
-            "MODULE_TLM04",
-            "MODULE_TLM03",
-            "MODULE_TLM07",
-            "MODULE_TLM06",
-            "MODULE_TLM01",
-            "MODULE_TLM02"
-          ],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "03c5fc5f-77db-4132-958f-b98397d4bb39",
-          "name": "J+L Kubálek s.r.o.",
-          "path": "/Accounts/J+L Kubálek s.r.o.",
-          "attributes": {
-            "crmAccountId": [
-              "70662"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "4a097567-dc0a-45c6-92ae-5ad41d874f32",
-          "name": "aaa",
-          "path": "/Accounts/aaa",
-          "attributes": {
-            "crmAccountId": [
-              "1"
-            ],
-            "compRegNo": [
-              "testovaciAccount"
-            ],
-            "contactEmail": [
-              "aaa.aaa@aaa.cz"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "030f92f9-9f2b-4e66-acea-2296e079a0ca",
-          "name": "Láníček Transport s.r.o.",
-          "path": "/Accounts/Láníček Transport s.r.o.",
-          "attributes": {
-            "crmAccountId": [
-              "40627"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "41a4a504-4484-4120-a851-5a441757e32b",
-          "name": "MiaB Group, s.r.o.",
-          "path": "/Accounts/MiaB Group, s.r.o.",
-          "attributes": {
-            "crmAccountId": [
-              "43939"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "6fc5e948-a3a9-4f20-b48f-30a2a7f15549",
-          "name": "Elinore Carris",
-          "path": "/Accounts/Elinore Carris",
-          "attributes": {
-            "crmAccountId": [
-              "288168"
-            ],
-            "compRegNo": [
-              "CZ688134691"
-            ],
-            "contactEmail": [
-              "kozane@gmail.com"
-            ]
-          },
-          "realmRoles": [
-            "MODULE_TLM01"
-          ],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "e3a2862b-0cc6-4bb3-ad1f-6a103f258e56",
-          "name": "Dwight Thurm",
-          "path": "/Accounts/Dwight Thurm",
-          "attributes": {
-            "crmAccountId": [
-              "672130"
-            ],
-            "compRegNo": [
-              "CZ532945309"
-            ],
-            "contactEmail": [
-              "jreinecke@reinecke.co.uk"
-            ]
-          },
-          "realmRoles": [
-            "MODULE_TLM01"
-          ],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "db77102f-7a39-4187-a26b-472fa28ae0e0",
-          "name": "SUSPRO s.r.o.",
-          "path": "/Accounts/SUSPRO s.r.o.",
-          "attributes": {
-            "crmAccountId": [
-              "94692"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "7bffd0a8-07c6-423c-aa33-9f4de0c86180",
-          "name": "Emily Vanwyhe",
-          "path": "/Accounts/Emily Vanwyhe",
-          "attributes": {
-            "crmAccountId": [
-              "314118"
-            ],
-            "compRegNo": [
-              "CZ626977744"
-            ],
-            "contactEmail": [
-              "reuresti@euresti.co.uk"
-            ]
-          },
-          "realmRoles": [
-            "MODULE_TLM01"
-          ],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "d53bd5fd-969f-4431-ae9c-81f2419beb14",
-          "name": "EquiRelax6 s.r.o.",
-          "path": "/Accounts/EquiRelax6 s.r.o.",
-          "attributes": {
-            "compRegNo": [
-              "64846059"
-            ],
-            "crmAccountId": [
-              "934039"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "f4a6a59d-b77c-473c-a625-66da104ef0e9",
-          "name": "Tomas Junga",
-          "path": "/Accounts/Tomas Junga",
-          "attributes": {
-            "crmAccountId": [
-              "11092"
-            ],
-            "compRegNo": [
-              "vin_220"
-            ],
-            "contactEmail": [
-              "tomas.junga@eurowag.com"
-            ]
-          },
-          "realmRoles": [
-            "MODULE_TLM05",
-            "MODULE_TLM04",
-            "MODULE_TLM03",
-            "MODULE_TLM07",
-            "MODULE_TLM06",
-            "MODULE_TLM01",
-            "MODULE_TLM02"
-          ],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "5f6c9b57-599a-4f4c-b9ac-48a4de4c1286",
-          "name": "Black & White truck s.r.o.",
-          "path": "/Accounts/Black & White truck s.r.o.",
-          "attributes": {
-            "crmAccountId": [
-              "38426"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "b166b747-aeb3-45d8-a881-2b255e4a610c",
-          "name": "TRANSCART s.r.o.",
-          "path": "/Accounts/TRANSCART s.r.o.",
-          "attributes": {
-            "crmAccountId": [
-              "30817"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "c8c86128-4311-4f02-9a38-92ab244de585",
-          "name": "Bodos, a.s.",
-          "path": "/Accounts/Bodos, a.s.",
-          "attributes": {
-            "compRegNo": [
-              "49435230"
-            ],
-            "crmAccountId": [
-              "10908"
-            ]
-          },
-          "realmRoles": [
-            "MODULE_TLM05",
-            "MODULE_TLM04",
-            "MODULE_TLM03",
-            "MODULE_TLM00",
-            "MODULE_TLM06",
-            "MODULE_TLM01",
-            "MODULE_TLM02"
-          ],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "6dda6802-114a-4744-9856-9ce4348e9958",
-          "name": "HERMANN TRANS, s.r.o.",
-          "path": "/Accounts/HERMANN TRANS, s.r.o.",
-          "attributes": {
-            "crmAccountId": [
-              "47441"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "9d55472b-28aa-409b-aab3-d79564c034da",
-          "name": "STL Express s.r.o.",
-          "path": "/Accounts/STL Express s.r.o.",
-          "attributes": {},
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "7a981b28-8a89-413d-90bf-07b7f44d14b3",
-          "name": "Jaroslav Bednář",
-          "path": "/Accounts/Jaroslav Bednář",
-          "attributes": {
-            "crmAccountId": [
-              "61987"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "96387f03-c943-4201-a7ac-3c96a95ce39b",
-          "name": "makalouš ivan",
-          "path": "/Accounts/makalouš ivan",
-          "attributes": {
-            "crmAccountId": [
-              "43903"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "2e953831-8a07-4d2a-9869-e59a2b64520a",
-          "name": "Jan Forman",
-          "path": "/Accounts/Jan Forman",
-          "attributes": {
-            "crmAccountId": [
-              "21667"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "a9975839-ec14-4680-998d-c8236e22e82f",
-          "name": "HDB Trans s.r.o.",
-          "path": "/Accounts/HDB Trans s.r.o.",
-          "attributes": {
-            "crmAccountId": [
-              "38934"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "c0a00179-c6fe-4952-9056-861941d39517",
-          "name": "SUEZ Využití zdrojů a.s.",
-          "path": "/Accounts/SUEZ Využití zdrojů a.s.",
-          "attributes": {
-            "crmAccountId": [
-              "11685"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "7ecade86-8c5f-4a0b-a70e-77a4d78304f5",
-          "name": "Orville Feagins",
-          "path": "/Accounts/Orville Feagins",
-          "attributes": {
-            "crmAccountId": [
-              "910492"
-            ],
-            "compRegNo": [
-              "CZ743190993"
-            ],
-            "contactEmail": [
-              "gfeagins@gmail.com"
-            ]
-          },
-          "realmRoles": [
-            "MODULE_TLM01"
-          ],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "04adceed-1f4e-4cd4-923e-2263c2f174a7",
-          "name": "Telekom",
-          "path": "/Accounts/Telekom",
-          "attributes": {},
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "5435583c-dd79-4786-8c72-d334269b7733",
-          "name": "EquiRelax5 s.r.o.",
-          "path": "/Accounts/EquiRelax5 s.r.o.",
-          "attributes": {
-            "compRegNo": [
-              "64846059"
-            ],
-            "crmAccountId": [
-              "934039"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "34eeaddb-18c9-4843-a0bf-30fe558d23ca",
-          "name": "EquiRelax3 s.r.o.",
-          "path": "/Accounts/EquiRelax3 s.r.o.",
-          "attributes": {
-            "compRegNo": [
-              "64846059"
-            ],
-            "crmAccountId": [
-              "934035"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "5b3a0e5e-1c92-459c-af15-5a630c19ddba",
-          "name": "Jiří Loskot",
-          "path": "/Accounts/Jiří Loskot",
-          "attributes": {
-            "crmAccountId": [
-              "52114"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "8fa3f721-8fa1-43bc-9792-ca13afba697f",
-          "name": "HH Real a.s.",
-          "path": "/Accounts/HH Real a.s.",
-          "attributes": {
-            "crmAccountId": [
-              "519008"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "9e1640ad-4352-4b77-a927-64639381375b",
-          "name": "4better s.r.o.",
-          "path": "/Accounts/4better s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "54547"
-            ],
-            "crmAccountId": [
-              "54547"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "39c25a53-1874-4a36-b535-2815b580a31d",
-          "name": "HRBÁČEK s.r.o.",
-          "path": "/Accounts/HRBÁČEK s.r.o.",
-          "attributes": {
-            "crmAccountId": [
-              "10718"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "7a11fbfc-1254-4bff-a8da-5b80885eb107",
-          "name": "Petr Lexa",
-          "path": "/Accounts/Petr Lexa",
-          "attributes": {
-            "crmAccountId": [
-              "44095"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "c46ab0f1-42d7-4105-b3c5-b029fd67fc44",
-          "name": "CEDES Logistik s.r.o.",
-          "path": "/Accounts/CEDES Logistik s.r.o.",
-          "attributes": {
-            "crmAccountId": [
-              "11294"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "cda5206c-9165-4438-a915-3de38aba0c35",
-          "name": "ČSAD Kyjov Logistics a.s.",
-          "path": "/Accounts/ČSAD Kyjov Logistics a.s.",
-          "attributes": {
-            "crmAccountId": [
-              "28919"
             ]
           },
           "realmRoles": [],
@@ -2879,7 +1911,7 @@
           "name": "Jiří Šimon",
           "path": "/Accounts/Jiří Šimon",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "45428"
             ]
           },
@@ -2892,7 +1924,7 @@
           "name": "Věra Pieranová",
           "path": "/Accounts/Věra Pieranová",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "98132"
             ]
           },
@@ -2905,7 +1937,7 @@
           "name": "Autotyp H+S s.r.o.",
           "path": "/Accounts/Autotyp H+S s.r.o.",
           "attributes": {
-            "crmAccountId": [
+            "accountNumber": [
               "16578"
             ]
           },
@@ -3095,14 +2127,25 @@
     "FreeOTP",
     "Google Authenticator"
   ],
+  "webAuthnPolicyRpEntityName": "keycloak",
+  "webAuthnPolicySignatureAlgorithms": [
+    "ES256"
+  ],
+  "webAuthnPolicyRpId": "",
+  "webAuthnPolicyAttestationConveyancePreference": "not specified",
+  "webAuthnPolicyAuthenticatorAttachment": "not specified",
+  "webAuthnPolicyRequireResidentKey": "not specified",
+  "webAuthnPolicyUserVerificationRequirement": "not specified",
+  "webAuthnPolicyCreateTimeout": 0,
+  "webAuthnPolicyAvoidSameAuthenticatorRegister": false,
+  "webAuthnPolicyAcceptableAaguids": [],
   "scopeMappings": [
     {
-      "client": "admin-cli",
+      "client": "clientzone",
       "roles": [
-        "ROLE_OPERATOR",
-        "ROLE_DISPATCHER",
-        "ROLE_ADMIN",
-        "ROLE_DRIVER"
+        "WebAdmin",
+        "ClientsPortalAccess",
+        "EWMCPortalAccess"
       ]
     },
     {
@@ -3113,12 +2156,15 @@
       ]
     },
     {
-      "client": "selfcare",
+      "clientScope": "crm",
       "roles": [
+        "ROLE_OWNER",
         "ROLE_OPERATOR",
         "ROLE_DISPATCHER",
+        "ROLE_ACCOUNTANT",
         "ROLE_ADMIN",
-        "ROLE_DRIVER"
+        "ROLE_DRIVER",
+        "ROLE_FLEET_MANAGER"
       ]
     },
     {
@@ -3135,6 +2181,14 @@
       "roles": [
         "offline_access"
       ]
+    },
+    {
+      "clientScope": "nav4",
+      "roles": [
+        "WebAdmin",
+        "ClientsPortalAccess",
+        "EWMCPortalAccess"
+      ]
     }
   ],
   "clientScopeMappings": {
@@ -3148,6 +2202,62 @@
     ]
   },
   "clients": [
+    {
+      "id": "a7c90587-74a6-4cc8-9187-5520730f2fa2",
+      "clientId": "clientzone",
+      "name": "ClientZone",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "**********",
+      "redirectUris": [
+        "*"
+      ],
+      "webOrigins": [
+        "*"
+      ],
+      "notBefore": 0,
+      "bearerOnly": false,
+      "consentRequired": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": false,
+      "publicClient": true,
+      "frontchannelLogout": false,
+      "protocol": "openid-connect",
+      "attributes": {
+        "saml.assertion.signature": "false",
+        "saml.multivalued.roles": "false",
+        "saml.force.post.binding": "false",
+        "saml.encrypt": "false",
+        "saml.server.signature": "false",
+        "saml.server.signature.keyinfo.ext": "false",
+        "exclude.session.state.from.auth.response": "false",
+        "saml_force_name_id_format": "false",
+        "saml.client.signature": "false",
+        "tls.client.certificate.bound.access.tokens": "false",
+        "saml.authnstatement": "false",
+        "display.on.consent.screen": "false",
+        "saml.onetimeuse.condition": "false"
+      },
+      "authenticationFlowBindingOverrides": {},
+      "fullScopeAllowed": false,
+      "nodeReRegistrationTimeout": -1,
+      "defaultClientScopes": [
+        "nav4",
+        "roles",
+        "client",
+        "email",
+        "crm"
+      ],
+      "optionalClientScopes": [
+        "address",
+        "phone",
+        "offline_access",
+        "microprofile-jwt"
+      ]
+    },
     {
       "id": "ce98c771-849d-4277-8f6c-7ad6c654c2c4",
       "clientId": "realm-management",
@@ -3165,6 +2275,7 @@
       "implicitFlowEnabled": false,
       "directAccessGrantsEnabled": false,
       "serviceAccountsEnabled": false,
+      "authorizationServicesEnabled": true,
       "publicClient": false,
       "frontchannelLogout": false,
       "protocol": "openid-connect",
@@ -3173,7 +2284,28 @@
       "fullScopeAllowed": false,
       "nodeReRegistrationTimeout": 0,
       "defaultClientScopes": [],
-      "optionalClientScopes": []
+      "optionalClientScopes": [],
+      "authorizationSettings": {
+        "allowRemoteResourceManagement": false,
+        "policyEnforcementMode": "ENFORCING",
+        "resources": [],
+        "policies": [],
+        "scopes": [
+          {
+            "id": "4b25371e-8a03-4918-89a6-43286cd36a2c",
+            "name": "map-role-composite"
+          },
+          {
+            "id": "1d1ef845-a4fd-4a23-9540-55b3681ddfb8",
+            "name": "map-role-client-scope"
+          },
+          {
+            "id": "880deff1-83bb-4a48-b2f5-f00aa9c3d310",
+            "name": "map-role"
+          }
+        ],
+        "decisionStrategy": "UNANIMOUS"
+      }
     },
     {
       "id": "2d7a43ad-5200-4306-b0fa-3c6b5528597c",
@@ -3200,6 +2332,7 @@
       "fullScopeAllowed": false,
       "nodeReRegistrationTimeout": 0,
       "defaultClientScopes": [
+        "nav4",
         "roles",
         "email",
         "crm"
@@ -3218,8 +2351,8 @@
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "defaultRoles": [
-        "view-profile",
-        "manage-account"
+        "manage-account",
+        "view-profile"
       ],
       "redirectUris": [
         "/auth/realms/eurowag/account/*"
@@ -3297,6 +2430,7 @@
       "fullScopeAllowed": true,
       "nodeReRegistrationTimeout": -1,
       "defaultClientScopes": [
+        "nav4",
         "roles",
         "hello:read",
         "email",
@@ -3448,6 +2582,7 @@
     {
       "id": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
       "clientId": "selfcare",
+      "name": "SelfCare Client",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
@@ -3495,6 +2630,7 @@
           "consentRequired": false,
           "config": {
             "user.session.note": "clientAddress",
+            "userinfo.token.claim": "true",
             "id.token.claim": "true",
             "access.token.claim": "true",
             "claim.name": "clientAddress",
@@ -3509,6 +2645,7 @@
           "consentRequired": false,
           "config": {
             "user.session.note": "clientHost",
+            "userinfo.token.claim": "true",
             "id.token.claim": "true",
             "access.token.claim": "true",
             "claim.name": "clientHost",
@@ -3523,6 +2660,7 @@
           "consentRequired": false,
           "config": {
             "user.session.note": "clientId",
+            "userinfo.token.claim": "true",
             "id.token.claim": "true",
             "access.token.claim": "true",
             "claim.name": "clientId",
@@ -3531,6 +2669,7 @@
         }
       ],
       "defaultClientScopes": [
+        "nav4",
         "role_list",
         "roles",
         "client",
@@ -3640,21 +2779,6 @@
         "display.on.consent.screen": "true"
       },
       "protocolMappers": [
-        {
-          "id": "aee3ed25-dc21-45c8-b4bf-2b44dc86615b",
-          "name": "Navision 4 ID",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usermodel-attribute-mapper",
-          "consentRequired": false,
-          "config": {
-            "userinfo.token.claim": "true",
-            "user.attribute": "nav4Id",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "claim.name": "nav4Id",
-            "jsonType.label": "String"
-          }
-        },
         {
           "id": "d3616cb5-612d-481d-85ca-2ef4d91ce401",
           "name": "Username",
@@ -3793,20 +2917,6 @@
       },
       "protocolMappers": [
         {
-          "id": "511141a7-191c-4869-9280-8266806c96a0",
-          "name": "client roles",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usermodel-client-role-mapper",
-          "consentRequired": false,
-          "config": {
-            "user.attribute": "foo",
-            "access.token.claim": "true",
-            "claim.name": "resource_access.${client_id}.roles",
-            "jsonType.label": "String",
-            "multivalued": "true"
-          }
-        },
-        {
           "id": "28950793-3bc4-499a-ad65-53df8b56546e",
           "name": "realm roles",
           "protocol": "openid-connect",
@@ -3818,6 +2928,22 @@
             "claim.name": "roles",
             "jsonType.label": "String",
             "multivalued": "true"
+          }
+        },
+        {
+          "id": "c4f71c4c-0270-486a-8bb3-6ea24b14514a",
+          "name": "client roles",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-client-role-mapper",
+          "consentRequired": false,
+          "config": {
+            "multivalued": "true",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "resource_access.realm-management.roles",
+            "jsonType.label": "String",
+            "usermodel.clientRoleMapping.clientId": "realm-management"
           }
         },
         {
@@ -4206,13 +3332,41 @@
         "include.in.token.scope": "true",
         "display.on.consent.screen": "true"
       }
+    },
+    {
+      "id": "8dff7e23-9826-4fc5-b215-3e977b70c857",
+      "name": "nav4",
+      "description": "Navision 4",
+      "protocol": "openid-connect",
+      "attributes": {
+        "include.in.token.scope": "true",
+        "display.on.consent.screen": "true"
+      },
+      "protocolMappers": [
+        {
+          "id": "eff73fa5-015c-41ae-8437-305cb109bb9b",
+          "name": "Navision 4 ID",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "nav4Id",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "nav4Id",
+            "jsonType.label": "String"
+          }
+        }
+      ]
     }
   ],
   "defaultDefaultClientScopes": [
     "crm",
     "roles",
     "email",
-    "client"
+    "client",
+    "nav4"
   ],
   "defaultOptionalClientScopes": [
     "offline_access",
@@ -4225,8 +3379,8 @@
     "xContentTypeOptions": "nosniff",
     "xRobotsTag": "none",
     "xFrameOptions": "SAMEORIGIN",
-    "xXSSProtection": "1; mode=block",
     "contentSecurityPolicy": "frame-src 'self'; frame-ancestors 'self'; object-src 'none';",
+    "xXSSProtection": "1; mode=block",
     "strictTransportSecurity": "max-age=31536000; includeSubDomains"
   },
   "smtpServer": {
@@ -4348,14 +3502,26 @@
         "subComponents": {},
         "config": {
           "allowed-protocol-mapper-types": [
-            "saml-user-attribute-mapper",
+            "oidc-sha256-pairwise-sub-mapper",
             "oidc-address-mapper",
             "oidc-usermodel-property-mapper",
-            "oidc-usermodel-attribute-mapper",
-            "oidc-sha256-pairwise-sub-mapper",
-            "saml-role-list-mapper",
+            "saml-user-attribute-mapper",
+            "saml-user-property-mapper",
             "oidc-full-name-mapper",
-            "saml-user-property-mapper"
+            "oidc-usermodel-attribute-mapper",
+            "saml-role-list-mapper"
+          ]
+        }
+      },
+      {
+        "id": "db25daaf-b933-433b-94f1-1d17a68375c9",
+        "name": "Allowed Client Scopes",
+        "providerId": "allowed-client-templates",
+        "subType": "anonymous",
+        "subComponents": {},
+        "config": {
+          "allow-default-scopes": [
+            "true"
           ]
         }
       },
@@ -4370,18 +3536,6 @@
             "true"
           ],
           "client-uris-must-match": [
-            "true"
-          ]
-        }
-      },
-      {
-        "id": "db25daaf-b933-433b-94f1-1d17a68375c9",
-        "name": "Allowed Client Scopes",
-        "providerId": "allowed-client-templates",
-        "subType": "anonymous",
-        "subComponents": {},
-        "config": {
-          "allow-default-scopes": [
             "true"
           ]
         }
@@ -4414,13 +3568,13 @@
         "subComponents": {},
         "config": {
           "allowed-protocol-mapper-types": [
-            "oidc-usermodel-attribute-mapper",
-            "saml-user-attribute-mapper",
-            "oidc-usermodel-property-mapper",
             "oidc-address-mapper",
-            "oidc-sha256-pairwise-sub-mapper",
+            "saml-user-attribute-mapper",
             "saml-role-list-mapper",
+            "oidc-sha256-pairwise-sub-mapper",
             "oidc-full-name-mapper",
+            "oidc-usermodel-property-mapper",
+            "oidc-usermodel-attribute-mapper",
             "saml-user-property-mapper"
           ]
         }
@@ -4476,7 +3630,7 @@
   "defaultLocale": "en",
   "authenticationFlows": [
     {
-      "id": "be03902a-2914-4905-bd78-6f28a5918484",
+      "id": "55ae28a9-c8a5-4e52-a91a-38a17c895b8b",
       "alias": "Handle Existing Account",
       "description": "Handle what to do if there is existing account with same email/username like authenticated identity provider",
       "providerId": "basic-flow",
@@ -4507,7 +3661,7 @@
       ]
     },
     {
-      "id": "99dd6c04-b14f-4b76-b847-531d18d06cea",
+      "id": "cf429243-58d8-4d35-a876-95116432c5e6",
       "alias": "Verify Existing Account by Re-authentication",
       "description": "Reauthentication of existing account",
       "providerId": "basic-flow",
@@ -4522,8 +3676,32 @@
           "autheticatorFlow": false
         },
         {
+          "requirement": "CONDITIONAL",
+          "priority": 20,
+          "flowAlias": "Verify Existing Account by Re-authentication - auth-otp-form - Conditional",
+          "userSetupAllowed": false,
+          "autheticatorFlow": true
+        }
+      ]
+    },
+    {
+      "id": "a2ad462c-b1db-4c61-94a0-eccb19c8994a",
+      "alias": "Verify Existing Account by Re-authentication - auth-otp-form - Conditional",
+      "description": "Flow to determine if the auth-otp-form authenticator should be used or not.",
+      "providerId": "basic-flow",
+      "topLevel": false,
+      "builtIn": true,
+      "authenticationExecutions": [
+        {
+          "authenticator": "conditional-user-configured",
+          "requirement": "REQUIRED",
+          "priority": 10,
+          "userSetupAllowed": false,
+          "autheticatorFlow": false
+        },
+        {
           "authenticator": "auth-otp-form",
-          "requirement": "OPTIONAL",
+          "requirement": "REQUIRED",
           "priority": 20,
           "userSetupAllowed": false,
           "autheticatorFlow": false
@@ -4531,7 +3709,7 @@
       ]
     },
     {
-      "id": "1f1ae597-cf09-4d8e-be39-862ecdbb0e31",
+      "id": "116b2caa-a074-4d52-a401-9a5c8ea1ca26",
       "alias": "browser",
       "description": "browser based authentication",
       "providerId": "basic-flow",
@@ -4569,7 +3747,7 @@
       ]
     },
     {
-      "id": "6bfc4201-8b46-4e57-bdf9-40fbad6dd44d",
+      "id": "837a3829-194b-4a0e-a6f1-03ce151e5dcd",
       "alias": "clients",
       "description": "Base authentication for clients",
       "providerId": "client-flow",
@@ -4607,7 +3785,7 @@
       ]
     },
     {
-      "id": "76023bf9-408c-4b47-9649-c5adfb9f2314",
+      "id": "bc377be8-0f41-47ab-bd7b-3b553a1210d6",
       "alias": "direct grant",
       "description": "OpenID Connect Resource Owner Grant",
       "providerId": "basic-flow",
@@ -4629,16 +3807,40 @@
           "autheticatorFlow": false
         },
         {
-          "authenticator": "direct-grant-validate-otp",
-          "requirement": "OPTIONAL",
+          "requirement": "CONDITIONAL",
           "priority": 30,
+          "flowAlias": "direct grant - direct-grant-validate-otp - Conditional",
+          "userSetupAllowed": false,
+          "autheticatorFlow": true
+        }
+      ]
+    },
+    {
+      "id": "5ccf7460-091b-4a98-b928-65482887d523",
+      "alias": "direct grant - direct-grant-validate-otp - Conditional",
+      "description": "Flow to determine if the direct-grant-validate-otp authenticator should be used or not.",
+      "providerId": "basic-flow",
+      "topLevel": false,
+      "builtIn": true,
+      "authenticationExecutions": [
+        {
+          "authenticator": "conditional-user-configured",
+          "requirement": "REQUIRED",
+          "priority": 10,
+          "userSetupAllowed": false,
+          "autheticatorFlow": false
+        },
+        {
+          "authenticator": "direct-grant-validate-otp",
+          "requirement": "REQUIRED",
+          "priority": 20,
           "userSetupAllowed": false,
           "autheticatorFlow": false
         }
       ]
     },
     {
-      "id": "1c8515fc-8ec4-4148-b55f-c2f4ead52e70",
+      "id": "abfabcfe-3fe6-47ac-9fea-2ef639a1a5dc",
       "alias": "docker auth",
       "description": "Used by Docker clients to authenticate against the IDP",
       "providerId": "basic-flow",
@@ -4655,7 +3857,7 @@
       ]
     },
     {
-      "id": "25433cba-c1e3-42a5-bf2a-24bcd05a6d65",
+      "id": "01704be8-a5be-4b05-a9f6-b55301d8e805",
       "alias": "first broker login",
       "description": "Actions taken after first broker login with identity provider account, which is not yet linked to any Keycloak account",
       "providerId": "basic-flow",
@@ -4688,7 +3890,7 @@
       ]
     },
     {
-      "id": "5d168695-7d74-4fbd-a236-5b51f3e82b1f",
+      "id": "eaa6cb93-3f7f-4d90-a194-537fe93c50e1",
       "alias": "forms",
       "description": "Username, password, otp and other auth forms.",
       "providerId": "basic-flow",
@@ -4703,8 +3905,32 @@
           "autheticatorFlow": false
         },
         {
+          "requirement": "CONDITIONAL",
+          "priority": 20,
+          "flowAlias": "forms - auth-otp-form - Conditional",
+          "userSetupAllowed": false,
+          "autheticatorFlow": true
+        }
+      ]
+    },
+    {
+      "id": "670803e5-f081-4799-be0a-1ac171a006ac",
+      "alias": "forms - auth-otp-form - Conditional",
+      "description": "Flow to determine if the auth-otp-form authenticator should be used or not.",
+      "providerId": "basic-flow",
+      "topLevel": false,
+      "builtIn": true,
+      "authenticationExecutions": [
+        {
+          "authenticator": "conditional-user-configured",
+          "requirement": "REQUIRED",
+          "priority": 10,
+          "userSetupAllowed": false,
+          "autheticatorFlow": false
+        },
+        {
           "authenticator": "auth-otp-form",
-          "requirement": "OPTIONAL",
+          "requirement": "REQUIRED",
           "priority": 20,
           "userSetupAllowed": false,
           "autheticatorFlow": false
@@ -4712,7 +3938,7 @@
       ]
     },
     {
-      "id": "a277990c-0112-4ea9-b196-ac02bff36b70",
+      "id": "a7dcafa6-7a3c-4ee3-b36e-93bf3266127c",
       "alias": "http challenge",
       "description": "An authentication flow based on challenge-response HTTP Authentication Schemes",
       "providerId": "basic-flow",
@@ -4750,7 +3976,7 @@
       ]
     },
     {
-      "id": "a7edde89-be90-4a7f-ad12-e987b7bd97d4",
+      "id": "b6a78252-b2a6-4814-af10-9818d9cdcb26",
       "alias": "registration",
       "description": "registration flow",
       "providerId": "basic-flow",
@@ -4768,7 +3994,7 @@
       ]
     },
     {
-      "id": "a96f9612-d2cb-4fec-8d48-d76eb560192e",
+      "id": "127e3ca8-65a0-4b7c-a6c6-ad968db040de",
       "alias": "registration form",
       "description": "registration form",
       "providerId": "form-flow",
@@ -4806,7 +4032,7 @@
       ]
     },
     {
-      "id": "1075a805-bb3c-42a2-a002-cc360e875edf",
+      "id": "ce2c29b4-0fd4-4620-af35-7f43f15ef268",
       "alias": "reset credentials",
       "description": "Reset credentials for a user if they forgot their password or something",
       "providerId": "basic-flow",
@@ -4835,16 +4061,40 @@
           "autheticatorFlow": false
         },
         {
-          "authenticator": "reset-otp",
-          "requirement": "OPTIONAL",
+          "requirement": "CONDITIONAL",
           "priority": 40,
+          "flowAlias": "reset credentials - reset-otp - Conditional",
+          "userSetupAllowed": false,
+          "autheticatorFlow": true
+        }
+      ]
+    },
+    {
+      "id": "a1d9694e-d232-4d55-97ae-32164ade2f7e",
+      "alias": "reset credentials - reset-otp - Conditional",
+      "description": "Flow to determine if the reset-otp authenticator should be used or not.",
+      "providerId": "basic-flow",
+      "topLevel": false,
+      "builtIn": true,
+      "authenticationExecutions": [
+        {
+          "authenticator": "conditional-user-configured",
+          "requirement": "REQUIRED",
+          "priority": 10,
+          "userSetupAllowed": false,
+          "autheticatorFlow": false
+        },
+        {
+          "authenticator": "reset-otp",
+          "requirement": "REQUIRED",
+          "priority": 20,
           "userSetupAllowed": false,
           "autheticatorFlow": false
         }
       ]
     },
     {
-      "id": "624766af-d2a1-432c-8fad-15b8b5ae4a1c",
+      "id": "51a262f8-0447-4a0f-a064-4fc3f4373434",
       "alias": "saml ecp",
       "description": "SAML ECP Profile Authentication Flow",
       "providerId": "basic-flow",
@@ -4863,14 +4113,14 @@
   ],
   "authenticatorConfig": [
     {
-      "id": "bf6799e6-940b-47db-85fa-39512af36a29",
+      "id": "f30d345a-180d-457a-a4be-e1f999ced83c",
       "alias": "create unique user config",
       "config": {
         "require.password.update.after.registration": "false"
       }
     },
     {
-      "id": "a5d4126d-3440-4cbe-9748-84cddf33416f",
+      "id": "feeaac3a-d600-4a52-8729-30d45a6935c3",
       "alias": "review profile config",
       "config": {
         "update.profile.on.first.login": "missing"
@@ -4931,28 +4181,37 @@
   "clientAuthenticationFlow": "clients",
   "dockerAuthenticationFlow": "docker auth",
   "attributes": {
-    "_browser_header.xXSSProtection": "1; mode=block",
-    "_browser_header.strictTransportSecurity": "max-age=31536000; includeSubDomains",
-    "_browser_header.xFrameOptions": "SAMEORIGIN",
-    "quickLoginCheckMilliSeconds": "1000",
-    "permanentLockout": "false",
     "displayName": "EUROWAG [TEST]",
+    "webAuthnPolicyAuthenticatorAttachment": "not specified",
     "_browser_header.xRobotsTag": "none",
-    "maxFailureWaitSeconds": "900",
     "displayNameHtml": "<h1>EUROWAG <sup>[TEST]</sup></h1>",
-    "minimumQuickLoginWaitSeconds": "60",
+    "webAuthnPolicyRpEntityName": "keycloak",
     "failureFactor": "5",
     "actionTokenGeneratedByUserLifespan": "300",
     "maxDeltaTimeSeconds": "1800",
-    "_browser_header.xContentTypeOptions": "nosniff",
-    "actionTokenGeneratedByAdminLifespan": "43200",
+    "webAuthnPolicySignatureAlgorithms": "ES256",
     "offlineSessionMaxLifespan": "5184000",
     "_browser_header.contentSecurityPolicyReportOnly": "",
     "bruteForceProtected": "true",
     "_browser_header.contentSecurityPolicy": "frame-src 'self'; frame-ancestors 'self'; object-src 'none';",
-    "offlineSessionMaxLifespanEnabled": "false",
-    "waitIncrementSeconds": "1200"
+    "_browser_header.xXSSProtection": "1; mode=block",
+    "_browser_header.xFrameOptions": "SAMEORIGIN",
+    "_browser_header.strictTransportSecurity": "max-age=31536000; includeSubDomains",
+    "webAuthnPolicyUserVerificationRequirement": "not specified",
+    "permanentLockout": "false",
+    "quickLoginCheckMilliSeconds": "1000",
+    "webAuthnPolicyCreateTimeout": "0",
+    "webAuthnPolicyRequireResidentKey": "not specified",
+    "webAuthnPolicyRpId": "",
+    "webAuthnPolicyAttestationConveyancePreference": "not specified",
+    "maxFailureWaitSeconds": "900",
+    "minimumQuickLoginWaitSeconds": "60",
+    "webAuthnPolicyAvoidSameAuthenticatorRegister": "false",
+    "_browser_header.xContentTypeOptions": "nosniff",
+    "actionTokenGeneratedByAdminLifespan": "43200",
+    "waitIncrementSeconds": "1200",
+    "offlineSessionMaxLifespanEnabled": "false"
   },
-  "keycloakVersion": "8.0.0",
+  "keycloakVersion": "7.0.0",
   "userManagedAccessAllowed": false
 }
