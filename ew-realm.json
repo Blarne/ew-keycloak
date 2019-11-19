@@ -3492,6 +3492,26 @@
       }
     }
   ],
+  "identityProviderMappers": [
+    {
+      "id": "89645e2d-74a3-4ae3-9215-61f0f10e9a13",
+      "name": "Automatic assigned role Realm ReadOnly Admin",
+      "identityProviderAlias": "eurowag365",
+      "identityProviderMapper": "oidc-hardcoded-role-idp-mapper",
+      "config": {
+        "role": "EW_Realm_Reader"
+      }
+    },
+    {
+      "id": "87a55fa8-ee7f-40b9-b39f-d49298a6b484",
+      "name": "Automatic assigned role Operator",
+      "identityProviderAlias": "eurowag365",
+      "identityProviderMapper": "oidc-hardcoded-role-idp-mapper",
+      "config": {
+        "role": "ROLE_OPERATOR"
+      }
+    }
+  ],
   "components": {
     "org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy": [
       {
