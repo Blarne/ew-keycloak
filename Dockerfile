@@ -7,7 +7,7 @@ MAINTAINER miroslav.svoboda@karumien.com
 #ADD chrony.conf /etc
 
 #USER 1000
-ADD ew-realm.json /opt/jboss/keycloak/
+ADD ew-realm-uat.json /opt/jboss/keycloak/
 
 ENTRYPOINT [ "/opt/jboss/tools/docker-entrypoint.sh" ]
 
