@@ -3472,6 +3472,40 @@
   ],
   "adminEventsEnabled": true,
   "adminEventsDetailsEnabled": false,
+  "identityProviders": [
+    {
+      "alias": "oidc",
+      "displayName": "Eurowag 365",
+      "internalId": "f70451b2-745d-4d4f-8d2b-7aa2fa4a88d0",
+      "providerId": "oidc",
+      "enabled": true,
+      "updateProfileFirstLoginMode": "on",
+      "trustEmail": false,
+      "storeToken": false,
+      "addReadTokenRoleOnCreate": false,
+      "authenticateByDefault": false,
+      "linkOnly": false,
+      "firstBrokerLoginFlowAlias": "first broker login",
+      "config": {
+        "hideOnLoginPage": "",
+        "userInfoUrl": "https://graph.microsoft.com/oidc/userinfo",
+        "validateSignature": "true",
+        "acceptsPromptNoneForwardFromClient": "",
+        "clientId": "7e028630-512d-4741-b47c-1a0d215c07cd",
+        "tokenUrl": "https://login.microsoftonline.com/c97a84f5-62bf-4715-beca-fc25af9516f1/oauth2/v2.0/token",
+        "uiLocales": "",
+        "jwksUrl": "https://login.microsoftonline.com/c97a84f5-62bf-4715-beca-fc25af9516f1/discovery/v2.0/keys",
+        "backchannelSupported": "",
+        "issuer": "https://login.microsoftonline.com/c97a84f5-62bf-4715-beca-fc25af9516f1/v2.0",
+        "useJwksUrl": "true",
+        "loginHint": "",
+        "authorizationUrl": "https://login.microsoftonline.com/c97a84f5-62bf-4715-beca-fc25af9516f1/oauth2/v2.0/authorize",
+        "disableUserInfo": "",
+        "logoutUrl": "https://login.microsoftonline.com/c97a84f5-62bf-4715-beca-fc25af9516f1/oauth2/v2.0/logout",
+        "clientSecret": "**********"
+      }
+    }
+  ],
   "components": {
     "org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy": [
       {
