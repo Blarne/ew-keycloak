@@ -2,7 +2,8 @@ FROM jboss/keycloak:7.0.1
 MAINTAINER miroslav.svoboda@karumien.com
 
 USER root
-RUN microdnf install -y chrony
+RUN microdnf install -y chrony --enablerepo=rhel-7-server-rpms
+RUN systemctl enable chronyd
 ADD chrony.conf /etc
 
 USER 1000
