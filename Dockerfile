@@ -2,8 +2,8 @@ FROM jboss/keycloak:7.0.1
 MAINTAINER miroslav.svoboda@karumien.com
 
 USER root
-RUN microdnf install -y ntp
-ADD ntp.conf /etc
+RUN microdnf install -y chrony
+ADD chrony.conf /etc
 
 USER 1000
 ADD ew-realm.json /opt/jboss/keycloak/
