@@ -1960,7 +1960,14 @@
       "name": "SelfCare",
       "path": "/SelfCare",
       "attributes": {},
-      "realmRoles": [],
+      "realmRoles": [
+        "ROLE_DISPATCHER",
+        "ROLE_DRIVER",
+        "ROLE_ADMIN",
+        "ROLE_FLEET_MANAGER",
+        "ROLE_ACCOUNTANT",
+        "ROLE_OWNER"
+      ],
       "clientRoles": {},
       "subGroups": [
         {
@@ -1993,7 +2000,7 @@
                   "SERVICE_FINANCE"
                 ],
                 "groupId": [
-                  "FINANCE_TRANSACTION"
+                  "TRANSACTION"
                 ],
                 "businessPriority": [
                   "1"
@@ -2015,7 +2022,7 @@
                   "SERVICE_FINANCE"
                 ],
                 "groupId": [
-                  "FINANCE_BILLINGDOC"
+                  "BILLINGDOC"
                 ],
                 "businessPriority": [
                   "2"
@@ -2036,7 +2043,7 @@
               "Správa uživatelů"
             ],
             "moduleId": [
-              "USER_MANAGEMENT"
+              "USER"
             ],
             "businessPriority": [
               "1"
@@ -2054,7 +2061,7 @@
                   "Správa uživatelů"
                 ],
                 "groupId": [
-                  "USER_MANAGEMENT"
+                  "MANAGEMENT"
                 ],
                 "businessPriority": [
                   "1"

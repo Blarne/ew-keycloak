@@ -642,7 +642,14 @@
       "name": "SelfCare",
       "path": "/SelfCare",
       "attributes": {},
-      "realmRoles": [],
+      "realmRoles": [
+        "ROLE_DISPATCHER",
+        "ROLE_DRIVER",
+        "ROLE_ADMIN",
+        "ROLE_FLEET_MANAGER",
+        "ROLE_ACCOUNTANT",
+        "ROLE_OWNER"
+      ],
       "clientRoles": {},
       "subGroups": [
         {
@@ -675,7 +682,7 @@
                   "SERVICE_FINANCE"
                 ],
                 "groupId": [
-                  "FINANCE_TRANSACTION"
+                  "TRANSACTION"
                 ],
                 "businessPriority": [
                   "1"
@@ -691,13 +698,13 @@
               "path": "/SelfCare/Finance/Billing Documents",
               "attributes": {
                 "translation[cs]": [
-                  "FakturaÄŤnĂ­ dokumenty"
+                  "Fakturační dokumenty"
                 ],
                 "serviceId": [
                   "SERVICE_FINANCE"
                 ],
                 "groupId": [
-                  "FINANCE_BILLINGDOC"
+                  "BILLINGDOC"
                 ],
                 "businessPriority": [
                   "2"
@@ -715,10 +722,10 @@
           "path": "/SelfCare/User management",
           "attributes": {
             "translation[cs]": [
-              "SprĂˇva uĹľivatelĹŻ"
+              "Správa uživatelů"
             ],
             "moduleId": [
-              "USER_MANAGEMENT"
+              "USER"
             ],
             "businessPriority": [
               "1"
@@ -733,10 +740,10 @@
               "path": "/SelfCare/User management/User management",
               "attributes": {
                 "translation[cs]": [
-                  "SprĂˇva uĹľivatelĹŻ"
+                  "Správa uživatelů"
                 ],
                 "groupId": [
-                  "USER_MANAGEMENT"
+                  "MANAGEMENT"
                 ],
                 "businessPriority": [
                   "1"
