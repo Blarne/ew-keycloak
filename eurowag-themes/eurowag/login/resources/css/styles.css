@@ -1,17 +1,10 @@
 @import url('../../keycloak/lib/zocial/zocial.css');
 
-body {
-    background-color: #040507;
-    background-image: url('../img/bkgrnd.jpg');
+.login-pf body {
+    background: url("../img/bkgrnd.jpg") no-repeat center center fixed;
+    background-color: #F2F3F3;
     background-size: cover;
-    background-repeat: no-repeat;
-
-    color: #fff;
-    font-family: sans-serif;
-    text-shadow: 0px 0px 10px #000;
+    height: 100%;
+    font-family: Open Sans, sans-serif;
+    color: #274388;
 }
-
-a {
-    color: #fff;
-}
-
