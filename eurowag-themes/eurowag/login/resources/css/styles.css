@@ -5,6 +5,7 @@
     height: 100%;
     font-family: Open Sans, sans-serif;
     color: #274388;
+    background-position: 30% 50%;
 }
 
 .card-pf {
@@ -112,7 +113,6 @@ div.kc-logo-text {
     
     #kc-form-options .checkbox, .login-pf body {
         color: white;
-        background-position: 30% 50%;
     }
 
     #kc-page-title {
