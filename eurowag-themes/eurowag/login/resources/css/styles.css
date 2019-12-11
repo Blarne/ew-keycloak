@@ -4,7 +4,7 @@
     background-size: cover;
     height: 100%;
     font-family: Open Sans, sans-serif;
-    color: white;
+    color: #274388;
 }
 
 .card-pf {
@@ -58,6 +58,7 @@ form-control:hover {
 
 #kc-header-wrapper {    
     border-bottom: 8px solid #FAE108;
+    padding: 0;
 }    
     
 #kc-header {
@@ -87,9 +88,21 @@ div.kc-logo-text {
        background-color: rgb(255, 255, 255, .8);
        
     }    
-    .login-pf {
-        color: #274388;
+   
+}
+
+@media (max-width: 767px) {
+
+    div.kc-logo-text {
+      height: 46px;
+      background-size: 66px 36px;
+      margin: 10px 0 0 22px;
     }
+    
+     .login-pf body {
+        color: white;
+    }
+
 }
 
 
