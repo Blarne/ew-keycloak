@@ -86,23 +86,24 @@ div.kc-logo-text {
     .card-pf {
        clip-path: polygon(0 0, 95% 0, 100% 25%, 100% 100%, 0 100%);
        background-color: rgb(255, 255, 255, .8);
-       
-    }    
-   
+    }       
 }
 
 @media (max-width: 767px) {
 
     div.kc-logo-text {
-      height: 46px;
-      background-size: 66px 36px;
-      margin: 10px 0 0 22px;
+        height: 46px;
+        background-size: 66px 36px;
+        margin: 10px 0 0 22px;
     }
     
-     .login-pf body {
+    #kc-form-options, .login-pf body {
         color: white;
     }
 
+    #kc-page-title {
+        font-size: 24px;
+    }
 }
 
 
