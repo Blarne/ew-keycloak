@@ -89,7 +89,7 @@ div.kc-logo-text {
        background-color: rgb(255, 255, 255, .8);
     }       
     
-    #kc-locale {
+    /*#kc-locale {
         position: absolute;
         width: 200px;
         top: 20px;
@@ -100,7 +100,7 @@ div.kc-logo-text {
 
     #kc-container-wrapper {
         position: relative;
-    }
+    }*/
 }
 
 @media (max-width: 767px) {
