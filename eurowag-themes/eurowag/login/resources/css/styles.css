@@ -10,7 +10,7 @@
 .card-pf {
     clip-path: polygon(0 0, 95% 0, 100% 25%, 100% 100%, 0 100%);
     border: none;
-    background-color: rgb(255, 255, 255, .9);
+    background-color: rgb(255, 255, 255, .8);
     box-shadow: none;
 }
 
@@ -52,19 +52,27 @@ form-control:hover {
 .btn-primary {
     background-color: #FAE108;
     background-image: none;
-    border-color: 1px solid #FAE108;
+    border: 1px solid #FAE108;
     color: #274388;
 }
 
-
-@media (min-width: 768px) {
-    #kc-locale {
-        position: absolute;
-        width: 200px;
-        top: 20px;
-        right: 20px;
-        text-align: right;
-        z-index: 9999;
-    }
+#kc-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: white;
 }
+
+div.kc-logo-text {
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 300px;
+    /* margin: 0 auto; */
+    background-size: 100px 47px;
+    margin: 30px 0px 10px 25px;
+}
+
+
 
