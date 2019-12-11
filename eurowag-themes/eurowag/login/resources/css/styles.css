@@ -88,19 +88,6 @@ div.kc-logo-text {
        clip-path: polygon(0 0, 95% 0, 100% 25%, 100% 100%, 0 100%);
        background-color: rgb(255, 255, 255, .8);
     }       
-    
-    /*#kc-locale {
-        position: absolute;
-        width: 200px;
-        top: 20px;
-        right: 20px;
-        text-align: right;
-        z-index: 9999;
-    }
-
-    #kc-container-wrapper {
-        position: relative;
-    }*/
 }
 
 @media (max-width: 767px) {
