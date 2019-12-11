@@ -66,18 +66,18 @@ form-control:hover {
     padding: 0;
     width: 100%;
     z-index: 2;
-    padding: 20px;
+    padding: 0;
     background-color: white;
 }
 
 div.kc-logo-text {
     background-image: url(../img/logo.png);
     background-repeat: no-repeat;
-    height: 70px;
+    height: 60px;
     width: 300px;
     /* margin: 0 auto; */
     background-size: 100px 47px;
-    margin: 5px 0 0 10px;
+    margin: 15px 0 0 25px;
     
 }
 
