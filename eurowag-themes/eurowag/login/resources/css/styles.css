@@ -6,3 +6,54 @@
     font-family: Open Sans, sans-serif;
     color: #274388;
 }
+
+.card-pf {
+    clip-path: polygon(0 0, 95% 0, 100% 25%, 100% 100%, 0 100%);
+    border: none;
+    background-color: rgb(255, 255, 255, .9);
+    box-shadow: none;
+}
+
+h1 {
+   font-size: 2em;   
+   font-weight: 700;
+}
+
+.login-pf-page .form-control {
+   height: 50px;
+   border: 0;
+   box-shadow: none;
+   transition: none;
+}
+
+form-control:hover {
+   box-shadow: none;
+   border-bottom: 2px #274388 solid;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 2px 6px;
+    font-size: 12px;
+    line-height: 1.66666667;
+    color: #363636;
+    background-color: #fff;
+    background-image: none;
+    border: 0;
+    border-bottom: 2px solid white;
+    box-shadow: none;
+    transition: border-color ease-in-out .15s;
+    border-radius: 0;
+    clip-path: polygon(0 0, 97% 0, 100% 36%, 100% 100%, 0 100%);
+}
+
+.btn-primary {
+    background-color: #FAE108;
+    background-image: none;
+    border-color: 1px solid #FAE108;
+    color: #274388;
+}
+
+
