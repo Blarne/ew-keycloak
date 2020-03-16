@@ -43,7 +43,7 @@ label {
 #kc-content {
   height: 100%;
   padding: 45px 120px;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 #kc-content-wrapper {
