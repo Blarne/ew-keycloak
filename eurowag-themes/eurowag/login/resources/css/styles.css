@@ -23,11 +23,10 @@ h1 {
     margin-bottom: 10px;
 }
 
-input:focus {
-    box-shadow:none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;       
-    outline: 0;
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 label {
@@ -51,7 +50,6 @@ label {
 #kc-content {
   height: 100%;
   padding: 45px 120px;
-  --overflow-x: auto;
 }
 
 #kc-content-wrapper {
