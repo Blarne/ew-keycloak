@@ -1558,6 +1558,7 @@
           "consentRequired": false,
           "config": {
             "user.attribute": "foo",
+            "id.token.claim": "true",
             "access.token.claim": "true",
             "claim.name": "roles",
             "jsonType.label": "String",
