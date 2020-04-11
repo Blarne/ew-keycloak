@@ -13,7 +13,6 @@ MAINTAINER miroslav.svoboda@eurowag.com
 #USER 1000
 ADD ew-realm-uat.json /opt/jboss/keycloak/
 ADD eurowag-themes /opt/jboss/keycloak/themes 
-java -cp ew-keycloak-plugin-1.0.0-SNAPSHOT.jar 
 
 COPY --from=build /app/target/ew-keycloak-plugin-1.0.0-SNAPSHOT.jar /opt/jboss/keycloak/standalone/deployments
 WORKDIR /opt/jboss/keycloak/standalone/deployments
