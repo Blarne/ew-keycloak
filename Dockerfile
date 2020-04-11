@@ -16,7 +16,6 @@ ADD ew-realm-uat.json /opt/jboss/keycloak/
 ADD eurowag-themes /opt/jboss/keycloak/themes 
 
 COPY --from=build /app/target/ew-keycloak-plugin-1.0.0-SNAPSHOT.jar /opt/jboss/keycloak/standalone/deployments
-COPY --from=build /app/target/messages*.* /tmp/
 COPY --from=build /app/target/messages*.* /opt/jboss/keycloak/themes/clientzone/login/messages/
 COPY --from=build /app/target/messages*.* /opt/jboss/keycloak/themes/eurowag/login/messages/
 
