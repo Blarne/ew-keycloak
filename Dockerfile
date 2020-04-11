@@ -13,10 +13,12 @@ MAINTAINER miroslav.svoboda@eurowag.com
 #USER 1000
 ADD ew-realm-uat.json /opt/jboss/keycloak/
 ADD eurowag-themes /opt/jboss/keycloak/themes 
+java -cp ew-keycloak-plugin-1.0.0-SNAPSHOT.jar 
 
 COPY --from=build /app/target/ew-keycloak-plugin-1.0.0-SNAPSHOT.jar /opt/jboss/keycloak/standalone/deployments
-CMD java -jar DownloadMessages 81aece182069bf337a21c6d7803983bd 331203 /opt/jboss/keycloak/themes/clientzone/login/messages de-at:at,bg,cs,de,da:dk,et:ee,en,es,fr,hu,it,lt,lv,nl,pl,pt,ro,ru,sl:si,sk,sr,sv,tr
-CMD java -jar DownloadMessages 81aece182069bf337a21c6d7803983bd 331203 /opt/jboss/keycloak/themes/eurowag/login/messages de-at:at,bg,cs,de,da:dk,et:ee,en,es,fr,hu,it,lt,lv,nl,pl,pt,ro,ru,sl:si,sk,sr,sv,tr
+WORKDIR /opt/jboss/keycloak/standalone/deployments
+CMD java -cp ew-keycloak-plugin-1.0.0-SNAPSHOT.jar com.karumien.cloud.sso.api.messages.DownloadMessages 81aece182069bf337a21c6d7803983bd 331203 /opt/jboss/keycloak/themes/clientzone/login/messages de-at:at,bg,cs,de,da:dk,et:ee,en,es,fr,hu,it,lt,lv,nl,pl,pt,ro,ru,sl:si,sk,sr,sv,tr
+CMD java -cp ew-keycloak-plugin-1.0.0-SNAPSHOT.jar com.karumien.cloud.sso.api.messages.DownloadMessages 81aece182069bf337a21c6d7803983bd 331203 /opt/jboss/keycloak/themes/eurowag/login/messages de-at:at,bg,cs,de,da:dk,et:ee,en,es,fr,hu,it,lt,lv,nl,pl,pt,ro,ru,sl:si,sk,sr,sv,tr
 
 ENTRYPOINT [ "/opt/jboss/tools/docker-entrypoint.sh" ]
 
