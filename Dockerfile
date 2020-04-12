@@ -11,7 +11,7 @@ RUN java -cp /app/target/ew-keycloak-plugin-1.0.0-SNAPSHOT.jar com.karumien.clou
 FROM jboss/keycloak:8.0.1
 MAINTAINER miroslav.svoboda@eurowag.com
 
-#USER 1000
+
 ADD ew-realm-uat.json /opt/jboss/keycloak/
 ADD eurowag-themes /opt/jboss/keycloak/themes 
 
@@ -19,6 +19,10 @@ COPY --from=build /app/target/ew-keycloak-plugin-1.0.0-SNAPSHOT-jar-with-depende
 COPY --from=build /app/target/messages*.* /opt/jboss/keycloak/themes/clientzone/login/messages/
 COPY --from=build /app/target/messages*.* /opt/jboss/keycloak/themes/eurowag/login/messages/
 
+USER root
+RUN microdnf update -y && microdnf install -y iputils
+
+USER 1000
 ENTRYPOINT [ "/opt/jboss/tools/docker-entrypoint.sh" ]
 
 #CMD ["-b", "0.0.0.0", "-Dkeycloak.import=/opt/jboss/keycloak/ew-realm-uat.json"]
