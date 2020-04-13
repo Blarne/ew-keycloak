@@ -8,9 +8,8 @@ COPY --from=clone /app/ew-keycloak-plugin /app
 RUN mvn install
 RUN java -cp /app/target/ew-keycloak-plugin-1.0.0-SNAPSHOT.jar com.karumien.cloud.sso.api.messages.DownloadMessages 81aece182069bf337a21c6d7803983bd 331203 /app/target de-at:at,bg,cs,de,da:dk,et:ee,en,es,fr,hu,it,lt,lv,nl,pl,pt,ro,ru,sl:si,sk,sr,sv,tr
 
-FROM jboss/keycloak:8.0.1
+FROM jboss/keycloak:8.0.2
 MAINTAINER miroslav.svoboda@eurowag.com
-
 
 ADD ew-realm-uat.json /opt/jboss/keycloak/
 ADD eurowag-themes /opt/jboss/keycloak/themes 
@@ -20,7 +19,7 @@ COPY --from=build /app/target/messages*.* /opt/jboss/keycloak/themes/clientzone/
 COPY --from=build /app/target/messages*.* /opt/jboss/keycloak/themes/eurowag/login/messages/
 
 USER root
-RUN microdnf update -y && microdnf install -y iputils
+RUN microdnf install -y iputils
 
 USER 1000
 ENTRYPOINT [ "/opt/jboss/tools/docker-entrypoint.sh" ]
