@@ -12,11 +12,11 @@ FROM jboss/keycloak:9.0.3
 MAINTAINER miroslav.svoboda@eurowag.com
 
 ADD ew-realm-uat.json /opt/jboss/keycloak/
-#ADD eurowag-themes /opt/jboss/keycloak/themes 
+ADD eurowag-themes /opt/jboss/keycloak/themes 
 
 #COPY --from=build /app/target/ew-keycloak-plugin-1.0.0-SNAPSHOT-jar-with-dependencies.jar /opt/jboss/keycloak/standalone/deployments/ew-keycloak-plugin-1.0.0-SNAPSHOT.jar
-#COPY --from=build /app/target/messages*.* /opt/jboss/keycloak/themes/clientzone/login/messages/
-#COPY --from=build /app/target/messages*.* /opt/jboss/keycloak/themes/eurowag/login/messages/
+COPY --from=build /app/target/messages*.* /opt/jboss/keycloak/themes/clientzone/login/messages/
+COPY --from=build /app/target/messages*.* /opt/jboss/keycloak/themes/eurowag/login/messages/
 
 USER root
 RUN microdnf install -y iputils
