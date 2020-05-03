@@ -1,4 +1,4 @@
-<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true displayWide=false>
+<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true displayRequiredFields=false displayWide=false showAnotherWayIfPresent=true>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" class="${properties.kcHtmlClass!}">
 
@@ -31,44 +31,10 @@
     </#if>
 </head>
 
-
-<!--body class="${properties.kcBodyClass!}">
-  <div class="${properties.kcLoginClass!}">
-    
-	<div id="ew-header">
-		<div id="ew-header-logo">
-			<div class="kc-logo-text">${kcSanitize(msg("loginTitleHtml",(realm.displayNameHtml!'')))?no_esc}</div>
-		</div>
-		<div id="ew-header-flag">
-			<#if realm.internationalizationEnabled  && locale.supported?size gt 1>
-				<div id="kc-locale">
-					<div id="kc-locale-wrapper" class="${properties.kcLocaleWrapperClass!}">
-						<div class="kc-dropdown" id="kc-locale-dropdown">
-							<a href="#" id="kc-current-locale-link">${locale.current}</a>
-							<ul>
-								<#list locale.supported as l>
-									<li class="kc-dropdown-item"><span class="flag-icon flag-icon-lg flag-icon-${l.languageTag}"> </span><a href="${l.url}">${l.label}</a></li>
-								</#list>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</#if>
-		</div>
-		<div id="ew-header-top">
-		</div>
-	</div>
-	
-
-
-
-  </div>
-</body-->
-
 <body class="ew">
-  <header class="ew-header">
-	<div id="ew-logo"></div>
-	<div id="ew-header-flag">
+    <header class="ew-header">
+	    <div id="ew-logo"></div>
+    	<div id="ew-header-flag">
 			<#if realm.internationalizationEnabled  && locale.supported?size gt 1>
 				<div id="kc-locale">
 					<div id="kc-locale-wrapper" class="${properties.kcLocaleWrapperClass!}">
@@ -84,53 +50,77 @@
 				</div>
 			</#if>
 		</div>
-  </header>
-  <div class="ew-body">
-    <main class="ew-content">
-		<div id="kc-content">
-			<div id="kc-content-wrapper">
-			  <div id="ew-scroll">
-       		   <h1 id="kc-page-title"><#nested "header"></h1>
-
-			  <#-- App-initiated actions should not see warning messages about the need to complete the action -->
-			  <#-- during login.                                                                               -->
-			  <#if displayMessage && message?has_content && (message.type != 'warning' || !isAppInitiatedAction??)>
-				  <div class="alert alert-${message.type}">
-					  <#if message.type = 'success'><span class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
-					  <#if message.type = 'warning'><span class="${properties.kcFeedbackWarningIcon!}"></span></#if>
-					  <#if message.type = 'error'><span class="${properties.kcFeedbackErrorIcon!}"></span></#if>
-					  <#if message.type = 'info'><span class="${properties.kcFeedbackInfoIcon!}"></span></#if>
-					  <span class="kc-feedback-text">${kcSanitize(message.summary)?no_esc}</span>
-				  </div>
-			  </#if>
-
-			  <#nested "form">
-
-			  <#if auth?has_content && auth.showBackButton() >
-			  <form id="kc-select-back-form" action="${url.loginAction}" method="post" <#if displayWide>class="${properties.kcContentWrapperClass!}"</#if>>
-				  <div <#if displayWide>class="${properties.kcFormSocialAccountContentClass!} ${properties.kcFormSocialAccountClass!}"</#if>>
-					  <div class="${properties.kcFormGroupClass!}">
-						<input class="${properties.kcButtonClass!} ${properties.kcButtonDefaultClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}"
-							   name="back" id="kc-back" type="submit" value="${msg("doBack")}"/>
-					  </div>
-				  </div>
-			  </form>
-			  </#if>
-			 </div>
+    </header>
+  
+    <div class="ew-body">
+        <main class="ew-content">
+  
+			<div id="kc-content">
+				<div id="kc-content-wrapper">
+					<div id="ew-scroll">
+						<h1 id="kc-page-title"><#nested "header"></h1>
+	  
+						<#if displayMessage && message?has_content && (message.type != 'warning' || !isAppInitiatedAction??)>
+							<div class="alert alert-${message.type}">
+								<#if message.type = 'success'><span class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
+								<#if message.type = 'warning'><span class="${properties.kcFeedbackWarningIcon!}"></span></#if>
+								<#if message.type = 'error'><span class="${properties.kcFeedbackErrorIcon!}"></span></#if>
+								<#if message.type = 'info'><span class="${properties.kcFeedbackInfoIcon!}"></span></#if>
+								<span class="kc-feedback-text">${kcSanitize(message.summary)?no_esc}</span>
+							</div>
+						</#if>
+	  
+						<#nested "form">
+						
+						<#if auth?has_content && auth.showTryAnotherWayLink() && showAnotherWayIfPresent>
+							<form id="kc-select-try-another-way-form" action="${url.loginAction}" method="post" <#if displayWide>class="${properties.kcContentWrapperClass!}"</#if>>
+								<div <#if displayWide>class="${properties.kcFormSocialAccountContentClass!} ${properties.kcFormSocialAccountClass!}"</#if>>
+									<div class="${properties.kcFormGroupClass!}">
+										<input type="hidden" name="tryAnotherWay" value="on" />
+										<a href="#" id="try-another-way" onclick="document.forms['kc-select-try-another-way-form'].submit();return false;">${msg("doTryAnotherWay")}</a>
+									</div>
+								</div>
+							</form>
+						</#if>
+						
+						<#if displayInfo>
+							<div id="kc-info" class="${properties.kcSignUpClass!}">
+								<div id="kc-info-wrapper" class="${properties.kcInfoAreaWrapperClass!}">
+									<#nested "info">
+								</div>
+							</div>                    
+						</#if>
+						
+					</div>
+				</div>			
+			</div>
+	  
+			<div id="help-section">
+				<div id="help-section-wrapper">
+					<div>${msg("help")}</div>
+					<div>${msg("call.suport")}: <b>${properties.phone}</b></div>
+				</div>
 			</div>
 
-			
-		</div>
-		<div id="help-section">
-			<div id="help-section-wrapper">
-				<div>${msg("help")}</div>
-				<div>${msg("call.suport")}: <b>${properties.phone}</b></div>
-			</div>
-		</div>
-	</main>
-    <div class="ew-nav"><div id="truck"></div></div>
-  </div>
+        </main>
+
+        <div class="ew-nav"><div id="truck"></div></div>
+    </div>
 </body>
 
 </html>
 </#macro>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
