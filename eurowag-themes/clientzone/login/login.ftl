@@ -51,9 +51,9 @@
                       <input tabindex="4" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
                 </div>
                 <div id="kc-form-options">
-					<span>
-						${msg("driverLogin")} <a href="${properties.driverZone}">${msg("doHere")}</a>.
-					</span>
+			<span>
+				${msg("driverLogin")} <a href="${properties.driverZone}/${locale.currentLanguageTag}/${properties.driverZoneDriver}">${msg("doHere")}</a>.
+			</span>
                 </div>
             </form>
         </#if>
