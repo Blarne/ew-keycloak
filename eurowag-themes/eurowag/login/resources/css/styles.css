@@ -46,6 +46,11 @@ label {
 	padding: 15px 20px 60px 20px;
 }
 
+#password-policy {
+	font-size: 10px;
+    position: relative;
+    top: 3px;
+}
 
 #kc-content {
   height: 100%;

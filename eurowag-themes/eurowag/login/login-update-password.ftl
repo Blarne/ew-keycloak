@@ -15,6 +15,7 @@
                     <div class="input-icons"> 
 						<i class="fa fa-lock icon fa-2x"></i> 
 						<input type="password" id="password-new" name="password-new" class="${properties.kcInputClass!}" autofocus autocomplete="new-password" />
+						<span id="password-policy">${msg("passwordPolicy")}</span>
 					</div>
 				</div>
             </div>
@@ -40,10 +41,10 @@
                 <div id="kc-form-buttons" class="${properties.kcFormButtonsClass!}">
 					<br/>
 					<#if isAppInitiatedAction??>
-                    <input class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonLargeClass!}" type="submit" value="${msg("doSubmit")}" />
+                    <input class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonLargeClass!}" type="submit" value="${msg("doConfirm")}" />
                     <button class="${properties.kcButtonClass!} ${properties.kcButtonDefaultClass!} ${properties.kcButtonLargeClass!}" type="submit" name="cancel-aia" value="true" />${msg("doCancel")}</button>
                     <#else>
-                    <input class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" type="submit" value="${msg("doSubmit")}" />
+                    <input class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" type="submit" value="${msg("doConfirm")}" />
                     </#if>
                 </div>
             </div>
