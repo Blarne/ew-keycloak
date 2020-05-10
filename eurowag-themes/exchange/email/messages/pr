@@ -1,25 +1,75 @@
-Sehr geehrter Kunde,\n\n{Date} wurde für den Anmeldenamen {2} die Bildung oder Änderung des Passworts gefordert.\nDas Passwort stellen Sie bitte <a href="{0}">hier</a>ein. Der Link ist 72 Stunden gültig.\n\nDanke,\nEW-Team\n
-Уважаеми потребители,\n\n{Date} към потребителското име {2} беше подадено искане за създаване или промяна на парола.\nЗа настройка на паролата влезте, моля, <a href="{0}">тук</a>.  Връзката е валидна за 72 часа.\n\nБлагодарим Ви,\nЕкипът на EW\n
-Vážený uživateli,\n\n{Date} bylo pro přihlašovací jméno {2} požádáno o vytvoření nebo změnu hesla.\nHeslo si prosím nastavte <a href="{0}">zde</a>.  Odkaz je platný 72 hodin.\n\nDěkujeme,\nEW team\n
-Kære kunde,\n\n{Date} den blev for tilmeldingsnavnet {2} søgt om kodeordets oprettelse el. ændring .\nIndstil venligst kodeordet <a href="{0}">her</a>.  Dette link gælder i 72 timer.\n\nVi takker,\nEW team\n
-Sehr geehrter Kunde,\n\n{Date} wurde für den Anmeldenamen {2} die Bildung oder Änderung des Passworts gefordert.\nDas Passwort stellen Sie bitte <a href="{0}">hier</a>ein. Der Link ist 72 Stunden gültig.\n\nDanke,\nEW-Team\n
-Kære kunde,\n\n{Date} den blev for tilmeldingsnavnet {2} søgt om kodeordets oprettelse el. ændring .\nIndstil venligst kodeordet <a href="{0}">her</a>.  Dette link gælder i 72 timer.\n\nVi takker,\nEW team\n
-Lugupeetud klient!\n\n{Date} taotleti kasutajanimele {2} uut parooli või paroolivahetust.\nPalun määrake uus parool <a href="{0}">siin</a>. Link kehtib 72 tundi.\n\nTäname teid!\nEW meeskond\n
-Dear customer,\n\n{Date} for the login name {2} , the change or creation of the new password was requested.\nPlease set your password <a href="{0}">here</a>.  The link is valid for 72 hours.\n\nThank you,\nEW team\n
-Estimado cliente:\n\n{Date} se ha solicitado para el nombre de acceso {2} la creación o cambio de la contraseña.\nPor favor, configure la contraseña <a href="{0}">aquí</a>.  El enlace es válido 72 horas.\n\nGracias,\nEquipo EW \n
-Lugupeetud klient!\n\n{Date} taotleti kasutajanimele {2} uut parooli või paroolivahetust.\nPalun määrake uus parool <a href="{0}">siin</a>. Link kehtib 72 tundi.\n\nTäname teid!\nEW meeskond\n
-Cher utilisateur,\n\nLe {Date} a été demandée pour le nom de connexion {2} la création ou la modification du mot de passe.\nVeuillez configurer le mot de passe <a href="{0}">ici</a>.  Le lien est valide 72 heures.\n\nNous vous remercions,\nEW team\n
-Tisztelt Felhasználó!\n\n{Date} erre a bejelentkezési névre {2} jelszócsere-kérelem érkezett.\nKérjük, válasszon jelszót <a href="{0}">itt</a>.  A link 72 óráig érvényes.\n\nKöszönettel,\naz EW csapata\n
-Gentile cliente,\n\n{Date} per il nome di accesso {2} , è stata richiesta la modifica o creazione della nuova password.\nImpostare la password <a href="{0}">qui</a>.  Il collegamento è valido per 72 ore.\n\nGrazie,\nEW team\n
-Gerbiamas Kliente,\n\n{Date} prisijungimo vardui buvo {2} prašyta sukurti arba pakeisti slaptažodį.\nPrašome nustatyti slaptažodį <a href="{0}">čia</a>.  Nuoroda galioja 72 valandas.\n\nDėkojame,\nEW komanda\n
-Godātais lietotāj,\n\n{Date} šādam pieteikumvārdam {2} tika pieprasīta paroles izveidošana vai maiņa.\nParoli, lūdzu, iestatiet<a href="{0}">te</a>. Saite ir derīga 72 stundas.\n\nPaldies,\nEW team\n
-Geachte gebruiker,\n\nOp {Date} werd een verzoek ingediend voor inlognaam {2} een wachtwoord te creëren of het wachtwoord te wijzigen.\nStel het wachtwoord alstublieft <a href="{0}">hier</a> in.  De link blijft 72 uur geldig.\n\nBedankt,\nEW team\n
-Szanowny użytkowniku,\n\n{Date} zawnioskowano dla loginu {2} o utworzenie lub zmianę hasła.\nHasło można ustawić <a href="{0}">tutaj</a>.  Link pozostanie ważny przez 72 godziny.\n\nDziękujemy,\nZespół EW\n
-Estimado cliente,\n\n{Date} para nome do início de sessão {2} . Foi solicitada a alteração ou criação da palavra-passe nova.\nDefina a sua palavra-passe <a href="{0}">aqui</a>.  O link é válido durante 72 horas.\n\nObrigado,\nEquipa EW\n
-Stimate utilizator,\n\n{Date} pentru numele de autentificare {2} a fost solicitată crearea sau schimbarea parolei.\nVă rugăm să vă setaţi parola <a href="{0}">aici</a>.  Linkul este valabil 72 de ore.\n\nVă mulţumim,\nEW team\n
-Уважаемые пользователи,\n\n{Date} для имени пользователя {2} был прислан запрос на создание или изменение пароля.\nПароль, пожалуйста, настройте<a href="{0}">здесь</a>. Ссылка действительна 72 часа.\n\nСпасибо,\nКоманда EW\n
-Dragi kupec,\n\n{Date} je za prijavno ime {2} bila zahtevana sprememba ali stvaritev novega gesla.\nNastavite svoje geslo <a href="{0}">tukaj</a>.  Povezava je veljavna 72 ur.\n\nHvala,\nEkipa EW\n
-Vážený používateľ,\n\n{Date} pre prihlasovacie meno {2} bolo požiadané o vytvorenie alebo zmenu hesla.\nHeslo si, prosím, nastavte <a href="{0}">tu</a>.  Odkaz je platný 72 hodín.\n\nĎakujeme,\nEW team\n
-Poštovani,\n\n{Date} za korisničko ime {2} , poslat je zahtev za promenu ili kreiranje nove lozinke.\nPodesite lozinku <a href="{0}">ovde</a>.  Link važi 72 sata.\n\nHvala vam,\nEW tim\n
-Bästa kund,\n\nDen {Date} begärdes en ändring eller ett skapande av det nya lösenordet för inloggningsnamn {2}.\nAnge ditt lösenord <a href="{Hash}">här</a>.  Länken gäller i 72 timmar.\n\nTack,\nEW-teamet\n
-Sayın müşterimiz,\n\n{Date} tarihinde {2} kullanıcı adı için parola değiştirme ya da yeni parola oluşturma talebinde bulunuldu.\nLütfen <a href="{0}">buradan</a> parolanızı belirleyin.  Bağlantı 72 saat boyunca geçerlidir.\n\nTeşekkür ederiz,\nEW ekibi\n
+Sehr geehrter Kunde,\n\n7.5.2020 wurde für den Anmeldenamen {2} die Bildung oder Änderung des Passworts gefordert.\nDas Passwort stellen Sie bitte <a href="{0}" >hier</a>ein. Der Link ist 72 Stunden gültig.\n\nDanke,\nEW-Team\n
+Уважаеми потребители,\n\n7.5.2020 към потребителското име {2} беше подадено искане за създаване или промяна на парола.\nЗа настройка на паролата влезте, моля, <a href="{0}" >тук</a>.  Връзката е валидна за 72 часа.\n\nБлагодарим Ви,\nЕкипът на EW\n
+Vážený uživateli,\n\n7.5.2020 bylo pro přihlašovací jméno {2} požádáno o vytvoření nebo změnu hesla.\nHeslo si prosím nastavte <a href="{0}" >zde</a>.  Odkaz je platný 72 hodin.\n\nDěkujeme,\nEW team\n
+Kære kunde,\n\n7.5.2020 den blev for tilmeldingsnavnet {2} søgt om kodeordets oprettelse el. ændring .\nIndstil venligst kodeordet <a href="{0}" >her</a>.  Dette link gælder i 72 timer.\n\nVi takker,\nEW team\n
+Sehr geehrter Kunde,\n\n7.5.2020 wurde für den Anmeldenamen {2} die Bildung oder Änderung des Passworts gefordert.\nDas Passwort stellen Sie bitte <a href="{0}" >hier</a>ein. Der Link ist 72 Stunden gültig.\n\nDanke,\nEW-Team\n
+Kære kunde,\n\n7.5.2020 den blev for tilmeldingsnavnet {2} søgt om kodeordets oprettelse el. ændring .\nIndstil venligst kodeordet <a href="{0}" >her</a>.  Dette link gælder i 72 timer.\n\nVi takker,\nEW team\n
+Lugupeetud klient!\n\n7.5.2020 taotleti kasutajanimele {2} uut parooli või paroolivahetust.\nPalun määrake uus parool <a href="{0}" >siin</a>. Link kehtib 72 tundi.\n\nTäname teid!\nEW meeskond\n
+Dear customer,\n\n7.5.2020 for the login name {2} , the change or creation of the new password was requested.\nPlease set your password <a href="{0}" >here</a>.  The link is valid for 72 hours.\n\nThank you,\nEW team\n
+Estimado cliente:\n\n7.5.2020 se ha solicitado para el nombre de acceso {2} la creación o cambio de la contraseña.\nPor favor, configure la contraseña <a href="{0}" >aquí</a>.  El enlace es válido 72 horas.\n\nGracias,\nEquipo EW \n
+Lugupeetud klient!\n\n7.5.2020 taotleti kasutajanimele {2} uut parooli või paroolivahetust.\nPalun määrake uus parool <a href="{0}" >siin</a>. Link kehtib 72 tundi.\n\nTäname teid!\nEW meeskond\n
+Cher utilisateur,\n\nLe 7.5.2020 a été demandée pour le nom de connexion {2} la création ou la modification du mot de passe.\nVeuillez configurer le mot de passe <a href="{0}" >ici</a>.  Le lien est valide 72 heures.\n\nNous vous remercions,\nEW team\n
+Tisztelt Felhasználó!\n\n7.5.2020 erre a bejelentkezési névre {2} jelszócsere-kérelem érkezett.\nKérjük, válasszon jelszót <a href="{0}" >itt</a>.  A link 72 óráig érvényes.\n\nKöszönettel,\naz EW csapata\n
+Gentile cliente,\n\n7.5.2020 per il nome di accesso {2} , è stata richiesta la modifica o creazione della nuova password.\nImpostare la password <a href="{0}" >qui</a>.  Il collegamento è valido per 72 ore.\n\nGrazie,\nEW team\n
+Gerbiamas Kliente,\n\n7.5.2020 prisijungimo vardui buvo {2} prašyta sukurti arba pakeisti slaptažodį.\nPrašome nustatyti slaptažodį <a href="{0}" >čia</a>.  Nuoroda galioja 72 valandas.\n\nDėkojame,\nEW komanda\n
+Godātais lietotāj,\n\n7.5.2020 šādam pieteikumvārdam {2} tika pieprasīta paroles izveidošana vai maiņa.\nParoli, lūdzu, iestatiet<a href="{0}" >te</a>. Saite ir derīga 72 stundas.\n\nPaldies,\nEW team\n
+Geachte gebruiker,\n\nOp 7.5.2020 werd een verzoek ingediend voor inlognaam {2} een wachtwoord te creëren of het wachtwoord te wijzigen.\nStel het wachtwoord alstublieft <a href="{0}" >hier</a> in.  De link blijft 72 uur geldig.\n\nBedankt,\nEW team\n
+Szanowny użytkowniku,\n\n7.5.2020 zawnioskowano dla loginu {2} o utworzenie lub zmianę hasła.\nHasło można ustawić <a href="{0}" >tutaj</a>.  Link pozostanie ważny przez 72 godziny.\n\nDziękujemy,\nZespół EW\n
+Estimado cliente,\n\n7.5.2020 para nome do início de sessão {2} . Foi solicitada a alteração ou criação da palavra-passe nova.\nDefina a sua palavra-passe <a href="{0}" >aqui</a>.  O link é válido durante 72 horas.\n\nObrigado,\nEquipa EW\n
+Stimate utilizator,\n\n7.5.2020 pentru numele de autentificare {2} a fost solicitată crearea sau schimbarea parolei.\nVă rugăm să vă setaţi parola <a href="{0}" >aici</a>.  Linkul este valabil 72 de ore.\n\nVă mulţumim,\nEW team\n
+Уважаемые пользователи,\n\n7.5.2020 для имени пользователя {2} был прислан запрос на создание или изменение пароля.\nПароль, пожалуйста, настройте<a href="{0}" >здесь</a>. Ссылка действительна 72 часа.\n\nСпасибо,\nКоманда EW\n
+Dragi kupec,\n\n7.5.2020 je za prijavno ime {2} bila zahtevana sprememba ali stvaritev novega gesla.\nNastavite svoje geslo <a href="{0}" >tukaj</a>.  Povezava je veljavna 72 ur.\n\nHvala,\nEkipa EW\n
+Vážený používateľ,\n\n7.5.2020 pre prihlasovacie meno {2} bolo požiadané o vytvorenie alebo zmenu hesla.\nHeslo si, prosím, nastavte <a href="{0}" >tu</a>.  Odkaz je platný 72 hodín.\n\nĎakujeme,\nEW team\n
+Poštovani,\n\n7.5.2020 za korisničko ime {2} , poslat je zahtev za promenu ili kreiranje nove lozinke.\nPodesite lozinku <a href="{0}" >ovde</a>.  Link važi 72 sata.\n\nHvala vam,\nEW tim\n
+Bästa kund,\n\nDen 7.5.2020 begärdes en ändring eller ett skapande av det nya lösenordet för inloggningsnamn {2}.\nAnge ditt lösenord <a href="{0}">här</a>.  Länken gäller i 72 timmar.\n\nTack,\nEW-teamet\n
+Sayın müşterimiz,\n\n7.5.2020 tarihinde {2} kullanıcı adı için parola değiştirme ya da yeni parola oluşturma talebinde bulunuldu.\nLütfen <a href="{0}" >buradan</a> parolanızı belirleyin.  Bağlantı 72 saat boyunca geçerlidir.\n\nTeşekkür ederiz,\nEW ekibi\n
+
+
+<p>Sehr geehrter Kunde,</p><p> </p><p>7.5.2020 wurde für den Anmeldenamen {2} die Bildung oder Änderung des Passworts gefordert.</p><p>Das Passwort stellen Sie bitte <a href="{0}">hier</a>ein. Der Link ist 72 Stunden gültig.</p><p> </p><p>Danke,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>EW-Team</span></p>
+
+<p>Уважаеми потребители,</p><p> </p><p>7.5.2020 към потребителското име {2} беше подадено искане за създаване или промяна на парола.</p><p>За настройка на паролата влезте, моля, <a href="{0}">тук</a>.  Връзката е валидна за 72 часа.</p><p> </p><p>Благодарим Ви,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>Екипът на EW</span></p>
+
+<p>Vážený uživateli,</p><p> </p><p>7.5.2020 bylo pro přihlašovací jméno {2} požádáno o vytvoření nebo změnu hesla.</p><p>Heslo si prosím nastavte <a href="{0}">zde</a>.  Odkaz je platný 72 hodin.</p><p> </p><p>Děkujeme,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>EW team</span></p>
+
+<p>Kære kunde,</p><p> </p><p>7.5.2020 den blev for tilmeldingsnavnet {2} søgt om kodeordets oprettelse el. ændring .</p><p>Indstil venligst kodeordet <a href="{0}">her</a>.  Dette link gælder i 72 timer.</p><p> </p><p>Vi takker,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>EW team</span></p>
+
+<p>Sehr geehrter Kunde,</p><p> </p><p>7.5.2020 wurde für den Anmeldenamen {2} die Bildung oder Änderung des Passworts gefordert.</p><p>Das Passwort stellen Sie bitte <a href="{0}">hier</a>ein. Der Link ist 72 Stunden gültig.</p><p> </p><p>Danke,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>EW-Team</span></p>
+
+<p>Kære kunde,</p><p> </p><p>7.5.2020 den blev for tilmeldingsnavnet {2} søgt om kodeordets oprettelse el. ændring .</p><p>Indstil venligst kodeordet <a href="{0}">her</a>.  Dette link gælder i 72 timer.</p><p> </p><p>Vi takker,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>EW team</span></p>
+
+<p>Lugupeetud klient!</p><p> </p><p>7.5.2020 taotleti kasutajanimele {2} uut parooli või paroolivahetust.</p><p>Palun määrake uus parool <a href="{0}">siin</a>. Link kehtib 72 tundi.</p><p> </p><p>Täname teid!</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>EW meeskond</span></p>
+
+<p>Dear customer,</p><p> </p><p>7.5.2020 for the login name {2} , the change or creation of the new password was requested.</p><p>Please set your password <a href="{0}">here</a>.  The link is valid for 72 hours.</p><p> </p><p>Thank you,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>EW team</span></p>
+
+<p>Estimado cliente:</p><p> </p><p>7.5.2020 se ha solicitado para el nombre de acceso {2} la creación o cambio de la contraseña.</p><p>Por favor, configure la contraseña <a href="{0}">aquí</a>.  El enlace es válido 72 horas.</p><p> </p><p>Gracias,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>Equipo EW </span></p>
+
+<p>Lugupeetud klient!</p><p> </p><p>7.5.2020 taotleti kasutajanimele {2} uut parooli või paroolivahetust.</p><p>Palun määrake uus parool <a href="{0}">siin</a>. Link kehtib 72 tundi.</p><p> </p><p>Täname teid!</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>EW meeskond</span></p>
+
+<p>Cher utilisateur,</p><p> </p><p>Le 7.5.2020 a été demandée pour le nom de connexion {2} la création ou la modification du mot de passe.</p><p>Veuillez configurer le mot de passe <a href="{0}">ici</a>.  Le lien est valide 72 heures.</p><p> </p><p>Nous vous remercions,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>EW team</span></p>
+
+<p>Tisztelt Felhasználó!</p><p> </p><p>7.5.2020 erre a bejelentkezési névre {2} jelszócsere-kérelem érkezett.</p><p>Kérjük, válasszon jelszót <a href="{0}">itt</a>.  A link 72 óráig érvényes.</p><p> </p><p>Köszönettel,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>az EW csapata</span></p>
+
+<p>Gentile cliente,</p><p> </p><p>7.5.2020 per il nome di accesso {2} , è stata richiesta la modifica o creazione della nuova password.</p><p>Impostare la password <a href="{0}">qui</a>.  Il collegamento è valido per 72 ore.</p><p> </p><p>Grazie,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>EW team</span></p>
+
+<p>Gerbiamas Kliente,</p><p> </p><p>7.5.2020 prisijungimo vardui buvo {2} prašyta sukurti arba pakeisti slaptažodį.</p><p>Prašome nustatyti slaptažodį <a href="{0}">čia</a>.  Nuoroda galioja 72 valandas.</p><p> </p><p>Dėkojame,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>EW komanda</span></p>
+
+<p>Godātais lietotāj,</p><p> </p><p>7.5.2020 šādam pieteikumvārdam {2} tika pieprasīta paroles izveidošana vai maiņa.</p><p>Paroli, lūdzu, iestatiet<a href="{0}">te</a>. Saite ir derīga 72 stundas.</p><p> </p><p>Paldies,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>EW team</span></p>
+
+<p>Geachte gebruiker,</p><p> </p><p>Op 7.5.2020 werd een verzoek ingediend voor inlognaam {2} een wachtwoord te creëren of het wachtwoord te wijzigen.</p><p>Stel het wachtwoord alstublieft <a href="{0}">hier</a> in.  De link blijft 72 uur geldig.</p><p> </p><p>Bedankt,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>EW team</span></p>
+
+<p>Szanowny użytkowniku,</p><p> </p><p>7.5.2020 zawnioskowano dla loginu {2} o utworzenie lub zmianę hasła.</p><p>Hasło można ustawić <a href="{0}">tutaj</a>.  Link pozostanie ważny przez 72 godziny.</p><p> </p><p>Dziękujemy,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>Zespół EW</span></p>
+
+<p>Estimado cliente,</p><p> </p><p>7.5.2020 para nome do início de sessão {2} . Foi solicitada a alteração ou criação da palavra-passe nova.</p><p>Defina a sua palavra-passe <a href="{0}">aqui</a>.  O link é válido durante 72 horas.</p><p> </p><p>Obrigado,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>Equipa EW</span></p>
+
+<p>Stimate utilizator,</p><p> </p><p>7.5.2020 pentru numele de autentificare {2} a fost solicitată crearea sau schimbarea parolei.</p><p>Vă rugăm să vă setaţi parola <a href="{0}">aici</a>.  Linkul este valabil 72 de ore.</p><p> </p><p>Vă mulţumim,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>EW team</span></p>
+
+<p>Уважаемые пользователи,</p><p> </p><p>7.5.2020 для имени пользователя {2} был прислан запрос на создание или изменение пароля.</p><p>Пароль, пожалуйста, настройте<a href="{0}">здесь</a>. Ссылка действительна 72 часа.</p><p> </p><p>Спасибо,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>Команда EW</span></p>
+
+<p>Dragi kupec,</p><p> </p><p>7.5.2020 je za prijavno ime {2} bila zahtevana sprememba ali stvaritev novega gesla.</p><p>Nastavite svoje geslo <a href="{0}">tukaj</a>.  Povezava je veljavna 72 ur.</p><p> </p><p>Hvala,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>Ekipa EW</span></p>
+
+<p>Vážený používateľ,</p><p> </p><p>7.5.2020 pre prihlasovacie meno {2} bolo požiadané o vytvorenie alebo zmenu hesla.</p><p>Heslo si, prosím, nastavte <a href="{0}">tu</a>.  Odkaz je platný 72 hodín.</p><p> </p><p>Ďakujeme,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>EW team</span></p>
+
+<p>Poštovani,</p><p> </p><p>7.5.2020 za korisničko ime {2} , poslat je zahtev za promenu ili kreiranje nove lozinke.</p><p>Podesite lozinku <a href="{0}">ovde</a>.  Link važi 72 sata.</p><p> </p><p>Hvala vam,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>EW tim</span></p>
+
+<p>	Bästa kund,</p><p>	 </p><p>	Den 7.5.2020 begärdes en ändring eller ett skapande av det nya lösenordet för inloggningsnamn {2}.</p><p>	Ange ditt lösenord&nbsp;<a href='"{0}"'>här</a>.  Länken gäller i 72 timmar.</p><p>	 </p><p>	Tack,</p><p><span style='color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;'>EW-teamet</span></p><p>Sayın müşterimiz,</p><p> </p><p>7.5.2020 tarihinde {2} kullanıcı adı için parola değiştirme ya da yeni parola oluşturma talebinde bulunuldu.</p><p>Lütfen <a href="{0}">buradan</a> parolanızı belirleyin.  Bağlantı 72 saat boyunca geçerlidir.</p><p> </p><p>Teşekkür ederiz,</p><p><span style=color: rgb(48, 48, 48); font-family: tahoma, arial, verdana;>EW ekibi</span></p>
+
