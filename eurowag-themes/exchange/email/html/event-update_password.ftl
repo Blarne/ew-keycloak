@@ -1,5 +1,6 @@
+<#assign lastUpdated = .now>
 <html>
 <body>
-${kcSanitize(msg("eventUpdatePasswordBodyHtml",event.date, event.ipAddress))?no_esc}
+${kcSanitize(msg("passwordResetBodyHtml",link, linkExpiration, user.username, linkExpirationFormatter(linkExpiration), lastUpdated?string["dd.MM.yyyy HH:mm"]))?no_esc}
 </body>
 </html>

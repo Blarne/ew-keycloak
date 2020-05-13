@@ -1,2 +1,3 @@
 <#ftl output_format="plainText">
-${msg("passwordResetBody",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration))}
+<#assign lastUpdated = .now>
+${msg("passwordResetBody",link, linkExpiration, user.username, linkExpirationFormatter(linkExpiration), lastUpdated?string["dd.MM.yyyy HH:mm"])}
