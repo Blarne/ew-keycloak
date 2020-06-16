@@ -24,7 +24,7 @@
   "sslRequired": "external",
   "registrationAllowed": false,
   "registrationEmailAsUsername": false,
-  "rememberMe": true,
+  "rememberMe": false,
   "verifyEmail": true,
   "loginWithEmailAllowed": false,
   "duplicateEmailsAllowed": true,
@@ -47,7 +47,43 @@
         "composite": false,
         "clientRole": false,
         "containerId": "eurowag",
-        "attributes": {}
+        "attributes": {
+          "translation[en]": [
+            "Driver"
+          ],
+          "translation": [
+            "Driver"
+          ],
+          "translation[cs]": [
+            "Řidič"
+          ]
+        }
+      },
+      {
+        "id": "dc13fcea-c6de-420a-8581-7d89d4167233",
+        "name": "ROLE_TLM05_FC_W",
+        "description": "Fuel Consumption write",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "10000xF"
+          ]
+        }
+      },
+      {
+        "id": "c81b4d53-b3db-47d3-a357-7dce4e7ab525",
+        "name": "ROLE_TLM05_LM_R",
+        "description": "Live map read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "1xF"
+          ]
+        }
       },
       {
         "id": "7c4be347-0627-42da-84f2-6226422233eb",
@@ -55,22 +91,221 @@
         "description": "Account Admin Role",
         "composite": true,
         "composites": {
+          "realm": [
+            "WebAdmin"
+          ],
           "client": {
             "selfcare": [
-              "FINANCE_BILLINGDOC_W",
+              "ORDERING_CREATE_R",
+              "EMBEDDING_EWMC_NEWCARD_W",
+              "EMBEDDING_EWMC_FINANCES_R",
               "FINANCE_TRANSACTION_W",
-              "USER_MANAGEMENT_W"
+              "VEHICLES_OBU_W",
+              "USER_MANAGEMENT_R",
+              "USER_MANAGEMENT_W",
+              "EMBEDDING_EWMC_MODE_R",
+              "EMBEDDING_EWMC_NEWCARD_R",
+              "VEHICLES_MANAGEMENT_R",
+              "EMBEDDING_EWMC_CARDLIST_R",
+              "EMBEDDING_VEHICLES_OBU_W",
+              "EMBEDDING_TOLL_REGISTRATION_W",
+              "EMBEDDING_EWMC_W",
+              "FINANCE_BILLINGDOC_R",
+              "EMBEDDING_EWMC_R",
+              "ORDERING_CREATE_W",
+              "EMBEDDING_EWMC_CARDLIST_W",
+              "VEHICLES_MANAGEMENT_W",
+              "FINANCE_BILLINGDOC_W",
+              "EMBEDDING_VEHICLES_OBU_R",
+              "VEHICLES_OBU_R",
+              "EMBEDDING_EWMC_MODE_W",
+              "EMBEDDING_EWMC_FINANCES_W",
+              "FINANCE_TRANSACTION_R",
+              "EMBEDDING_TOLL_REGISTRATION_R"
             ]
           }
         },
         "clientRole": false,
         "containerId": "eurowag",
         "attributes": {
+          "translation[en]": [
+            "Administrator"
+          ],
           "translation": [
             "Administrator"
           ],
           "translation[cs]": [
             "Administrátor"
+          ]
+        }
+      },
+      {
+        "id": "cda37f35-8338-4264-a5d5-d488a4c4c6b8",
+        "name": "ROLE_TLM03_JA_W",
+        "description": "Journeys Activity write",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "1000xF"
+          ]
+        }
+      },
+      {
+        "id": "96365c70-2d41-42fe-9def-eacc0a3d3a14",
+        "name": "ROLE_TLM00_POI_W",
+        "description": "POI write",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "10000000xF"
+          ]
+        }
+      },
+      {
+        "id": "36bac62d-63cc-467f-895f-c31281875ef9",
+        "name": "ROLE_TLM07_CRD_W",
+        "description": "Card reader download write",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "757f5d2a-312d-4831-ba6b-912a676e99ae",
+        "name": "ROLE_TLM00_V_W",
+        "description": "Vehicle write",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "10000xF"
+          ]
+        }
+      },
+      {
+        "id": "5b2c4422-338f-4afc-99f2-3e7965a078ff",
+        "name": "MODULE_TLM02",
+        "description": "Plan",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "12854c38-7204-4858-90ec-84963eecaed3",
+        "name": "ROLE_TLM00_D_W",
+        "description": "Driver write",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "10xF"
+          ]
+        }
+      },
+      {
+        "id": "c1452f6b-9472-42cb-98c0-25ec01a97fc5",
+        "name": "ROLE_TLM02_VP_W",
+        "description": "Vehicle profile write",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "10000xF"
+          ]
+        }
+      },
+      {
+        "id": "ffac86b4-a362-4499-ac4b-0e2d1c9767fd",
+        "name": "MODULE_TLM08",
+        "description": "module 8",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "8ead09c8-605e-4775-87a3-fbd919ec646f",
+        "name": "ROLE_TLM08_LMM_R",
+        "description": "Live messaging read messages",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "413cdf08-0ab9-47fb-a49f-3ace6e341f2c",
+        "name": "ROLE_TLM07_TRD_R",
+        "description": "Tacho remote download read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "1xF"
+          ]
+        }
+      },
+      {
+        "id": "74817c6d-f741-480d-ba7d-ed86bfedd6f3",
+        "name": "ROLE_TLM00_USR_W",
+        "description": "User write",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "10000000000xF"
+          ]
+        }
+      },
+      {
+        "id": "d4c77ab1-51af-4e7d-bca2-139e7cc234a3",
+        "name": "ROLE_TLM06_AER_W",
+        "description": "AETR report",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "10xF"
+          ]
+        }
+      },
+      {
+        "id": "0aa3951d-4abe-42da-b529-8b0926526ed9",
+        "name": "ClientsPortalAccess",
+        "description": "Permission to access clients portal",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "d11f2b5c-ed88-41f8-8d38-1fb1a5d55465",
+        "name": "MODULE_TLM10",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "93077588-a9d6-4f93-8c24-c8b5e41de264",
+        "name": "ROLE_TLM01_DASH_R",
+        "description": "Dashboard read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "100xF"
           ]
         }
       },
@@ -84,47 +319,17 @@
         "attributes": {}
       },
       {
-        "id": "9e625118-3f6c-4ac4-8a3f-76011acd91e2",
-        "name": "ROLE_FLEET_MANAGER",
-        "description": "Fleet Manager Role",
+        "id": "c3c2fd34-438e-4ea4-9505-7b2a300dce88",
+        "name": "ROLE_TLM05_JAE_R",
+        "description": "Journeys Activity enhanced read",
         "composite": false,
         "clientRole": false,
         "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "f9a4d06c-7da4-40fb-b206-c5bddafc1885",
-        "name": "ROLE_OPERATOR",
-        "description": "Eurowag Internal Impersonator Role",
-        "composite": true,
-        "composites": {
-          "client": {
-            "realm-management": [
-              "impersonation"
-            ]
-          }
-        },
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "a5bf7b52-e0d6-461a-9c10-f956f3dd9372",
-        "name": "offline_access",
-        "description": "${role_offline-access}",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
-      },
-      {
-        "id": "0dde12ea-a6f4-4a54-9823-f6262e499f36",
-        "name": "uma_authorization",
-        "description": "${role_uma_authorization}",
-        "composite": false,
-        "clientRole": false,
-        "containerId": "eurowag",
-        "attributes": {}
+        "attributes": {
+          "binaryMask": [
+            "100xF"
+          ]
+        }
       },
       {
         "id": "c69a7edc-a514-4444-8372-ec6ba875bf85",
@@ -135,22 +340,92 @@
           "client": {
             "selfcare": [
               "FINANCE_BILLINGDOC_W",
-              "FINANCE_TRANSACTION_W"
+              "FINANCE_TRANSACTION_W",
+              "FINANCE_BILLINGDOC_R",
+              "EMBEDDING_EWMC_R",
+              "FINANCE_TRANSACTION_R"
             ]
           }
         },
         "clientRole": false,
         "containerId": "eurowag",
-        "attributes": {}
+        "attributes": {
+          "translation[en]": [
+            "Accountant"
+          ],
+          "translation": [
+            "Accountant"
+          ],
+          "translation[cs]": [
+            "Účetní"
+          ]
+        }
       },
       {
-        "id": "3843975b-e405-4e79-a777-187012011131",
-        "name": "ROLE_DISPATCHER",
-        "description": "Dispatcher Role",
+        "id": "82e67be2-1ab6-4e93-9a88-f99fc1521d20",
+        "name": "MODULE_TLM03",
+        "description": "Track",
         "composite": false,
         "clientRole": false,
         "containerId": "eurowag",
         "attributes": {}
+      },
+      {
+        "id": "734e2591-e6fc-4923-af85-d96af13290ee",
+        "name": "ROLE_TLM07_CRD_R",
+        "description": "Card Remote download",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "7689503c-5cf5-479c-a2fd-676fe69f4dba",
+        "name": "ROLE_TLM06_DRE_R",
+        "description": "Driver info",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "100xF"
+          ]
+        }
+      },
+      {
+        "id": "d8edfd98-4149-4a65-85c9-70f26c544bcd",
+        "name": "ROLE_TLM05_EX_IE",
+        "description": "Expenses import/export",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "10000000xF"
+          ]
+        }
+      },
+      {
+        "id": "79334d4c-b676-4c84-985e-02eff405e419",
+        "name": "MODULE_TLM07",
+        "description": "Tacho Remote Download",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "6495cfc2-34f6-4114-ab13-3c96d651c51b",
+        "name": "ROLE_TLM00_V_IE",
+        "description": "Vehicle import/export",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "100000xF"
+          ]
+        }
       },
       {
         "id": "92ab6d9c-98ff-4bc7-92d7-6d3efca4e6b7",
@@ -165,6 +440,19 @@
         "clientRole": false,
         "containerId": "eurowag",
         "attributes": {}
+      },
+      {
+        "id": "c3029fba-022a-4a72-8ca5-e8d7f5dfb9f6",
+        "name": "ROLE_TLM00_V_R",
+        "description": "Vehicle read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "1000xF"
+          ]
+        }
       },
       {
         "id": "28a6163c-f18b-4455-b3a0-3255ba2d01ca",
@@ -226,16 +514,307 @@
         "attributes": {}
       },
       {
-        "id": "69390111-e3c7-4209-80e5-cd8f0ce8eb89",
-        "name": "ROLE_OWNER",
-        "description": "Role Owner of Account",
+        "id": "f5cb4e41-9013-40ee-a4ba-ec2733c99038",
+        "name": "ROLE_TLM00_POI_R",
+        "description": "POI read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "1000000xF"
+          ]
+        }
+      },
+      {
+        "id": "f0e7b649-4a42-4fbc-a93d-9c9cb4ab6e1d",
+        "name": "ROLE_TLM05_EX_W",
+        "description": "Expenses write",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "1000000xF"
+          ]
+        }
+      },
+      {
+        "id": "042be32c-0e83-429f-bc13-8f68965ac70c",
+        "name": "ROLE_TLM02_BRD_R",
+        "description": "Dispatcher board read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "100000xF"
+          ]
+        }
+      },
+      {
+        "id": "db7dfdd1-3049-4a1a-87c0-b9f3e0a60392",
+        "name": "ROLE_TLM02_OP_R",
+        "description": "Online prices read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "1000000xF"
+          ]
+        }
+      },
+      {
+        "id": "b01efb01-a5e8-4d27-8cf0-ab3e57ca7a61",
+        "name": "ROLE_TLM02_ETA_R",
+        "description": "ETA read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "100xF"
+          ]
+        }
+      },
+      {
+        "id": "5936b8b1-2ce5-440f-a77d-46e520fdca76",
+        "name": "ROLE_TLM00_D_R",
+        "description": "Driver read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "1xF"
+          ]
+        }
+      },
+      {
+        "id": "ec3e8ce6-a5b7-4da1-862a-53fea75b7d28",
+        "name": "ROLE_TLM03_JA_R",
+        "description": "Journeys activity read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "100xF"
+          ]
+        }
+      },
+      {
+        "id": "cf76690d-bec2-491e-b8da-3080e4b8af9f",
+        "name": "ROLE_TLM03_AN_R",
+        "description": "Alarms&Notification read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "10000xF"
+          ]
+        }
+      },
+      {
+        "id": "4099bb4b-d1c5-48f3-a711-e7725cac0631",
+        "name": "MODULE_TLM09",
+        "description": "Map",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "a5bf7b52-e0d6-461a-9c10-f956f3dd9372",
+        "name": "offline_access",
+        "description": "${role_offline-access}",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "0dde12ea-a6f4-4a54-9823-f6262e499f36",
+        "name": "uma_authorization",
+        "description": "${role_uma_authorization}",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "aaf9965b-b493-4f9d-abed-f50177a30932",
+        "name": "ROLE_TLM08_LMT_R",
+        "description": "Live messaging voice messages listen",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "daa64c0e-111b-466d-89cd-9ed2bfb69cda",
+        "name": "MODULE_TLM04",
+        "description": "Idle&Runnig",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "140d01e0-bd36-4da7-9c34-8fdb454eb3e4",
+        "name": "ROLE_TLM00_USR_IE",
+        "description": "User import/export",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "100000000000xF"
+          ]
+        }
+      },
+      {
+        "id": "cfae5676-4182-475f-96b1-cbc16b04fa40",
+        "name": "ROLE_TLM03_LT_R",
+        "description": "Live tab read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "10xF"
+          ]
+        }
+      },
+      {
+        "id": "f969cc1f-99b5-46a1-a315-c560ef62b597",
+        "name": "ROLE_TLM00_POI_IE",
+        "description": "POI import/export",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "100000000xF"
+          ]
+        }
+      },
+      {
+        "id": "8185c6a5-8099-4e3c-92ae-be6805af49dd",
+        "name": "ROLE_TLM02_ROW_R",
+        "description": "Route Overview read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "10xF"
+          ]
+        }
+      },
+      {
+        "id": "bc04a31b-1e8f-437e-8ad2-a35750e529f6",
+        "name": "MODULE_TLM00",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "e56bf8d9-93ac-4a0d-8bcb-8943041df462",
+        "name": "ROLE_TLM03_LM_R",
+        "description": "Live map read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "1xF"
+          ]
+        }
+      },
+      {
+        "id": "9e625118-3f6c-4ac4-8a3f-76011acd91e2",
+        "name": "ROLE_FLEET_MANAGER",
+        "description": "Fleet Manager Role",
         "composite": true,
         "composites": {
           "client": {
             "selfcare": [
-              "FINANCE_BILLINGDOC_W",
-              "FINANCE_TRANSACTION_W",
-              "USER_MANAGEMENT_W"
+              "EMBEDDING_VEHICLES_OBU_W",
+              "ORDERING_CREATE_R",
+              "EMBEDDING_TOLL_REGISTRATION_W",
+              "EMBEDDING_EWMC_W",
+              "EMBEDDING_EWMC_R",
+              "EMBEDDING_EWMC_NEWCARD_W",
+              "ORDERING_CREATE_W",
+              "EMBEDDING_EWMC_CARDLIST_W",
+              "EMBEDDING_EWMC_FINANCES_R",
+              "VEHICLES_MANAGEMENT_W",
+              "EMBEDDING_VEHICLES_OBU_R",
+              "VEHICLES_OBU_R",
+              "VEHICLES_OBU_W",
+              "EMBEDDING_EWMC_MODE_W",
+              "EMBEDDING_EWMC_FINANCES_W",
+              "EMBEDDING_EWMC_MODE_R",
+              "EMBEDDING_EWMC_NEWCARD_R",
+              "VEHICLES_MANAGEMENT_R",
+              "EMBEDDING_TOLL_REGISTRATION_R",
+              "EMBEDDING_EWMC_CARDLIST_R"
+            ]
+          }
+        },
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "translation[en]": [
+            "Fleet manager"
+          ],
+          "translation": [
+            "Fleet manager"
+          ],
+          "translation[cs]": [
+            "Fleet manažer"
+          ]
+        }
+      },
+      {
+        "id": "4c311142-e475-4cec-83da-f89091609829",
+        "name": "ROLE_TLM02_VP_R",
+        "description": "Vehicle profile read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "1000xF"
+          ]
+        }
+      },
+      {
+        "id": "2a96ab11-22be-4422-8bed-b50d70f67f46",
+        "name": "ROLE_TLM02_PLN_R",
+        "description": "Planner read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "1xF"
+          ]
+        }
+      },
+      {
+        "id": "f9a4d06c-7da4-40fb-b206-c5bddafc1885",
+        "name": "ROLE_OPERATOR",
+        "description": "Eurowag Internal Impersonator Role",
+        "composite": true,
+        "composites": {
+          "client": {
+            "realm-management": [
+              "impersonation"
             ]
           }
         },
@@ -244,17 +823,259 @@
         "attributes": {}
       },
       {
-        "id": "0aa3951d-4abe-42da-b529-8b0926526ed9",
-        "name": "ClientsPortalAccess",
-        "description": "Permission to access clients portal",
+        "id": "db12561f-94f0-4399-96ec-bbb51437c385",
+        "name": "MODULE_TLM05",
+        "description": "CAN",
         "composite": false,
         "clientRole": false,
         "containerId": "eurowag",
         "attributes": {}
+      },
+      {
+        "id": "a1f4eece-ff90-47b7-a6cf-8d3de0276425",
+        "name": "ROLE_TLM00_USR_R",
+        "description": "User read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "1000000000xF"
+          ]
+        }
+      },
+      {
+        "id": "4cfe5e7c-d80c-49a9-9441-f92d3c1d9a81",
+        "name": "ROLE_TLM05_LT_R",
+        "description": "Live tab read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "10xF"
+          ]
+        }
+      },
+      {
+        "id": "12dbeaf8-950f-4d98-a675-3369398817b1",
+        "name": "ROLE_TLM05_FC_R",
+        "description": "Fuel Consumption read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "1000xF"
+          ]
+        }
+      },
+      {
+        "id": "e20a696b-e5af-4701-8f93-1b3746046883",
+        "name": "ROLE_TLM06_AEI_R",
+        "description": "AETR Info Read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "1xF"
+          ]
+        }
+      },
+      {
+        "id": "7c35fd86-a5e5-4d9f-9f7e-842101298b3a",
+        "name": "ROLE_TLM01_FST_R",
+        "description": "Fuel station read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "10xF"
+          ]
+        }
+      },
+      {
+        "id": "3843975b-e405-4e79-a777-187012011131",
+        "name": "ROLE_DISPATCHER",
+        "description": "Dispatcher Role",
+        "composite": true,
+        "composites": {
+          "client": {
+            "selfcare": [
+              "ORDERING_CREATE_R",
+              "EMBEDDING_VEHICLES_OBU_R",
+              "VEHICLES_OBU_R",
+              "EMBEDDING_EWMC_R",
+              "VEHICLES_MANAGEMENT_R"
+            ]
+          }
+        },
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "translation[en]": [
+            "Dispatcher"
+          ],
+          "translation": [
+            "Dispatcher"
+          ],
+          "translation[cs]": [
+            "Dispečer"
+          ]
+        }
+      },
+      {
+        "id": "bc699b51-a015-4ef3-8c81-e0183fb40abe",
+        "name": "ROLE_TLM01_LM_R",
+        "description": "Live map read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "1xF"
+          ]
+        }
+      },
+      {
+        "id": "3e7f16b8-bb5a-4acd-bc58-65e44176eee9",
+        "name": "MODULE_TLM01",
+        "description": "Map",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "e955698b-0faf-4269-9622-3efbd9b3fb49",
+        "name": "ROLE_TLM01_DASH_W",
+        "description": "Dashboard write",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "1000xF"
+          ]
+        }
+      },
+      {
+        "id": "fa9e5327-06fb-4dc3-a3c8-581234e5dff2",
+        "name": "ROLE_TLM05_EX_R",
+        "description": "Expenses read",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "100000xF"
+          ]
+        }
+      },
+      {
+        "id": "aeb3d99b-f478-49b8-8cf7-419b5f53c4d6",
+        "name": "ROLE_INITIAL",
+        "description": "Initial Role for CSC",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "7ad0b938-031d-4292-8a31-b4a0fa256329",
+        "name": "MODULE_TLM06",
+        "description": "Live times",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {}
+      },
+      {
+        "id": "69390111-e3c7-4209-80e5-cd8f0ce8eb89",
+        "name": "ROLE_OWNER",
+        "description": "Owner of Account Role (Company owner)",
+        "composite": true,
+        "composites": {
+          "client": {
+            "selfcare": [
+              "ORDERING_CREATE_R",
+              "EMBEDDING_EWMC_NEWCARD_W",
+              "EMBEDDING_EWMC_FINANCES_R",
+              "FINANCE_TRANSACTION_W",
+              "VEHICLES_OBU_W",
+              "USER_MANAGEMENT_R",
+              "USER_MANAGEMENT_W",
+              "EMBEDDING_EWMC_MODE_R",
+              "EMBEDDING_EWMC_NEWCARD_R",
+              "VEHICLES_MANAGEMENT_R",
+              "EMBEDDING_EWMC_CARDLIST_R",
+              "EMBEDDING_VEHICLES_OBU_W",
+              "EMBEDDING_TOLL_REGISTRATION_W",
+              "EMBEDDING_EWMC_W",
+              "FINANCE_BILLINGDOC_R",
+              "EMBEDDING_EWMC_R",
+              "ORDERING_CREATE_W",
+              "EMBEDDING_EWMC_CARDLIST_W",
+              "VEHICLES_MANAGEMENT_W",
+              "FINANCE_BILLINGDOC_W",
+              "EMBEDDING_VEHICLES_OBU_R",
+              "VEHICLES_OBU_R",
+              "EMBEDDING_EWMC_MODE_W",
+              "EMBEDDING_EWMC_FINANCES_W",
+              "FINANCE_TRANSACTION_R",
+              "EMBEDDING_TOLL_REGISTRATION_R"
+            ]
+          }
+        },
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "translation[en]": [
+            "Company owner"
+          ],
+          "translation": [
+            "Company owner"
+          ],
+          "translation[cs]": [
+            "Vlastník společnosti"
+          ]
+        }
+      },
+      {
+        "id": "26bd194e-3f47-45aa-a5c3-456cc959e788",
+        "name": "ROLE_TLM00_D_IE",
+        "description": "Driver import/export",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "eurowag",
+        "attributes": {
+          "binaryMask": [
+            "100xF"
+          ]
+        }
       }
     ],
     "client": {
-      "clientzone": [],
+      "dih": [
+        {
+          "id": "6a828b43-4dbe-47f7-b4e9-b6c3d948f399",
+          "name": "HELLO_READ",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "ebf0d4c0-32fe-43da-96de-a24e9e2ad8a7",
+          "attributes": {}
+        },
+        {
+          "id": "6fee89cf-b01b-4b1d-93ae-cebba737d8d8",
+          "name": "PRICELIST_READ",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "ebf0d4c0-32fe-43da-96de-a24e9e2ad8a7",
+          "attributes": {}
+        }
+      ],
       "realm-management": [
         {
           "id": "076127fc-50d9-4de7-93c9-4871b81e2b71",
@@ -294,6 +1115,14 @@
           "id": "833ced86-7430-4789-a6b4-af6c60f83753",
           "name": "view-events",
           "description": "${role_view-events}",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "ce98c771-849d-4277-8f6c-7ad6c654c2c4",
+          "attributes": {}
+        },
+        {
+          "id": "5d579cb9-95d9-46ba-92c6-5cb0aac023e0",
+          "name": "uma_protection",
           "composite": false,
           "clientRole": true,
           "containerId": "ce98c771-849d-4277-8f6c-7ad6c654c2c4",
@@ -467,19 +1296,10 @@
           "attributes": {}
         }
       ],
-      "dih": [
-        {
-          "id": "6a828b43-4dbe-47f7-b4e9-b6c3d948f399",
-          "name": "HELLO_READ",
-          "composite": false,
-          "clientRole": true,
-          "containerId": "ebf0d4c0-32fe-43da-96de-a24e9e2ad8a7",
-          "attributes": {}
-        }
-      ],
       "security-admin-console": [],
-      "admin-cli": [],
-      "api": [],
+      "account-console": [],
+      "telematics": [],
+      "telematics-web": [],
       "broker": [
         {
           "id": "ba23a88f-d762-4696-95a9-984cc4fac96e",
@@ -491,7 +1311,342 @@
           "attributes": {}
         }
       ],
+      "portal-emb": [],
+      "selfcare": [
+        {
+          "id": "73ddb0ad-bb01-4eeb-9fd1-bc2a767f540d",
+          "name": "ORDERING_CREATE_R",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "ebbc9495-f4c8-4d50-81f9-16e70b5fc58f",
+          "name": "EMBEDDING_EWMC_NEWCARD_W",
+          "composite": true,
+          "composites": {
+            "client": {
+              "selfcare": [
+                "EMBEDDING_EWMC_NEWCARD_R"
+              ]
+            }
+          },
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "9fafe7bf-92ee-4791-b8f7-b6010d763b45",
+          "name": "EMBEDDING_EWMC_FINANCES_R",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "c5e2dccf-187c-4199-a219-1b85300b1ce3",
+          "name": "FINANCE_TRANSACTION_W",
+          "composite": true,
+          "composites": {
+            "client": {
+              "selfcare": [
+                "FINANCE_TRANSACTION_R"
+              ]
+            }
+          },
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "8c1aa1af-d92e-435e-af37-87f8b291d358",
+          "name": "VEHICLES_OBU_W",
+          "composite": true,
+          "composites": {
+            "client": {
+              "selfcare": [
+                "VEHICLES_OBU_R"
+              ]
+            }
+          },
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "cc2dcc89-621e-4e00-8c3e-1be79420b77e",
+          "name": "USER_MANAGEMENT_R",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "294de447-724c-418a-b870-c297c04dc890",
+          "name": "USER_MANAGEMENT_W",
+          "composite": true,
+          "composites": {
+            "client": {
+              "selfcare": [
+                "USER_MANAGEMENT_R"
+              ]
+            }
+          },
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "d5e57385-dabd-4090-8336-3a6926501122",
+          "name": "EMBEDDING_EWMC_MODE_R",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "dedc23dc-2082-46f9-a85a-dfb21d0e7df1",
+          "name": "EMBEDDING_EWMC_NEWCARD_R",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "5111c600-26d7-49db-9865-b52d09fafad9",
+          "name": "VEHICLES_MANAGEMENT_R",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "6535030e-34f2-40d6-a941-da3a35e1f8a5",
+          "name": "EMBEDDING_EWMC_CARDLIST_R",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "f8101976-f5d7-49bf-bad8-7195ea61c6ef",
+          "name": "EMBEDDING_VEHICLES_OBU_W",
+          "composite": true,
+          "composites": {
+            "client": {
+              "selfcare": [
+                "EMBEDDING_VEHICLES_OBU_R"
+              ]
+            }
+          },
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "44d39ae8-083a-4f71-ba23-20716a45f0b3",
+          "name": "EMBEDDING_TOLL_REGISTRATION_W",
+          "description": "",
+          "composite": true,
+          "composites": {
+            "client": {
+              "selfcare": [
+                "EMBEDDING_TOLL_REGISTRATION_R"
+              ]
+            }
+          },
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "971908df-da6b-4bd8-ab91-527c5613bc17",
+          "name": "EMBEDDING_EWMC_W",
+          "composite": true,
+          "composites": {
+            "client": {
+              "selfcare": [
+                "EMBEDDING_EWMC_R"
+              ]
+            }
+          },
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "1245a812-5fed-4498-83c3-bf57d6d93f6c",
+          "name": "FINANCE_BILLINGDOC_R",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "619f1e5c-2e87-4fa7-825b-ba76a19238e6",
+          "name": "EMBEDDING_EWMC_R",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "07fee00b-5364-4928-a6ce-644b9d29bfe7",
+          "name": "ORDERING_CREATE_W",
+          "composite": true,
+          "composites": {
+            "client": {
+              "selfcare": [
+                "ORDERING_CREATE_R"
+              ]
+            }
+          },
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "d77eb7ec-e76d-4ec1-9fe5-a9ce5746dee7",
+          "name": "EMBEDDING_EWMC_CARDLIST_W",
+          "composite": true,
+          "composites": {
+            "client": {
+              "selfcare": [
+                "EMBEDDING_EWMC_CARDLIST_R"
+              ]
+            }
+          },
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "1b548c8d-ad57-489a-a030-554d34532b71",
+          "name": "VEHICLES_MANAGEMENT_W",
+          "composite": true,
+          "composites": {
+            "client": {
+              "selfcare": [
+                "VEHICLES_MANAGEMENT_R"
+              ]
+            }
+          },
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "21e56425-c056-4a3c-8625-9025a17b246c",
+          "name": "FINANCE_BILLINGDOC_W",
+          "composite": true,
+          "composites": {
+            "client": {
+              "selfcare": [
+                "FINANCE_BILLINGDOC_R"
+              ]
+            }
+          },
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "e8e7cab2-8d81-427f-906f-37c189b9b2d0",
+          "name": "EMBEDDING_VEHICLES_OBU_R",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "d180f14e-85fc-4af5-a2c6-be62703c9fef",
+          "name": "VEHICLES_OBU_R",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "91a865c3-f3e1-4b06-b9bf-aca4fc72cd2f",
+          "name": "EMBEDDING_EWMC_MODE_W",
+          "composite": true,
+          "composites": {
+            "client": {
+              "selfcare": [
+                "EMBEDDING_EWMC_CARDLIST_R"
+              ]
+            }
+          },
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "06d0b372-4281-4f81-8cad-9ed5d2124547",
+          "name": "EMBEDDING_EWMC_FINANCES_W",
+          "composite": true,
+          "composites": {
+            "client": {
+              "selfcare": [
+                "EMBEDDING_EWMC_FINANCES_R"
+              ]
+            }
+          },
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "940a5464-a191-4a37-b2c5-d94136866504",
+          "name": "FINANCE_TRANSACTION_R",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        },
+        {
+          "id": "d7ce6687-8f16-4b67-81f5-3d4fe342ec2e",
+          "name": "EMBEDDING_TOLL_REGISTRATION_R",
+          "description": "",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
+          "attributes": {}
+        }
+      ],
+      "clientzone": [],
+      "aequitas-web": [],
+      "admin-cli": [],
+      "onboarding": [],
+      "api": [],
+      "ewmczone": [],
       "account": [
+        {
+          "id": "57ea56e6-960c-433f-aaaf-9b5d2274d717",
+          "name": "view-applications",
+          "description": "${role_view-applications}",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "15c4bda0-ec49-474f-a72a-7f7096d74934",
+          "attributes": {}
+        },
+        {
+          "id": "af962f53-e449-4155-a82a-f84dc36d2bca",
+          "name": "manage-consent",
+          "description": "${role_manage-consent}",
+          "composite": true,
+          "composites": {
+            "client": {
+              "account": [
+                "view-consent"
+              ]
+            }
+          },
+          "clientRole": true,
+          "containerId": "15c4bda0-ec49-474f-a72a-7f7096d74934",
+          "attributes": {}
+        },
         {
           "id": "71e45f35-c370-4988-9b5d-d93275359000",
           "name": "manage-account",
@@ -518,6 +1673,15 @@
           "attributes": {}
         },
         {
+          "id": "199d42ef-acb7-4f82-864c-4bfdab1bfeee",
+          "name": "view-consent",
+          "description": "${role_view-consent}",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "15c4bda0-ec49-474f-a72a-7f7096d74934",
+          "attributes": {}
+        },
+        {
           "id": "e0c25651-4171-4129-b854-e2dfbea0cdcb",
           "name": "view-profile",
           "description": "${role_view-profile}",
@@ -526,1387 +1690,10 @@
           "containerId": "15c4bda0-ec49-474f-a72a-7f7096d74934",
           "attributes": {}
         }
-      ],
-      "selfcare": [
-        {
-          "id": "21e56425-c056-4a3c-8625-9025a17b246c",
-          "name": "FINANCE_BILLINGDOC_W",
-          "composite": false,
-          "clientRole": true,
-          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
-          "attributes": {}
-        },
-        {
-          "id": "c5e2dccf-187c-4199-a219-1b85300b1ce3",
-          "name": "FINANCE_TRANSACTION_W",
-          "composite": false,
-          "clientRole": true,
-          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
-          "attributes": {}
-        },
-        {
-          "id": "1245a812-5fed-4498-83c3-bf57d6d93f6c",
-          "name": "FINANCE_BILLINGDOC_R",
-          "composite": false,
-          "clientRole": true,
-          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
-          "attributes": {}
-        },
-        {
-          "id": "cc2dcc89-621e-4e00-8c3e-1be79420b77e",
-          "name": "USER_MANAGEMENT_R",
-          "composite": false,
-          "clientRole": true,
-          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
-          "attributes": {}
-        },
-        {
-          "id": "940a5464-a191-4a37-b2c5-d94136866504",
-          "name": "FINANCE_TRANSACTION_R",
-          "composite": false,
-          "clientRole": true,
-          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
-          "attributes": {}
-        },
-        {
-          "id": "294de447-724c-418a-b870-c297c04dc890",
-          "name": "USER_MANAGEMENT_W",
-          "composite": false,
-          "clientRole": true,
-          "containerId": "e3f8a70b-4738-4486-94aa-e2354b456f2d",
-          "attributes": {}
-        }
       ]
     }
   },
   "groups": [
-    {
-      "id": "2c006517-01ca-444a-97e8-8b62f645556e",
-      "name": "Accounts",
-      "path": "/Accounts",
-      "attributes": {},
-      "realmRoles": [],
-      "clientRoles": {},
-      "subGroups": [
-        {
-          "id": "30712800-a87b-437f-8efc-0408d4f3b604",
-          "name": "Josef Ilman",
-          "path": "/Accounts/Josef Ilman",
-          "attributes": {
-            "accountNumber": [
-              "62019"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "54a71751-276c-4a23-968f-bed7f840fa94",
-          "name": "MUDRA TRANSPORT s.r.o.",
-          "path": "/Accounts/MUDRA TRANSPORT s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "67842"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "9d8bfb14-5a32-4aa4-a096-40acd7809b6b",
-          "name": "koiussdo",
-          "path": "/Accounts/koiussdo",
-          "attributes": {
-            "compRegNo": [
-              "112239"
-            ],
-            "accountNumber": [
-              "30149"
-            ],
-            "contactEmail": [
-              "admin19@eurowag.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "e9857c88-f141-4d18-a6a9-3bfb664dae8d",
-          "name": "Kovařík a syn, o.s.",
-          "path": "/Accounts/Kovařík a syn, o.s.",
-          "attributes": {},
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "7901c6bb-9c0d-4ada-977b-a88af3427a34",
-          "name": "Petr Davo",
-          "path": "/Accounts/Petr Davo",
-          "attributes": {
-            "compRegNo": [
-              "vin_7928CB42"
-            ],
-            "accountNumber": [
-              "11678"
-            ],
-            "contactEmail": [
-              "vu@eurowag.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "1fbaedff-3d84-4b23-8af6-2500bb0727f1",
-          "name": "Petr Savo",
-          "path": "/Accounts/Petr Savo",
-          "attributes": {
-            "compRegNo": [
-              "vin_7928CB41"
-            ],
-            "accountNumber": [
-              "11684"
-            ],
-            "contactEmail": [
-              "vu@eurowag.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "044b9441-1e80-4d72-b2ae-4a29ac0abd6f",
-          "name": "Lol Lola",
-          "path": "/Accounts/Lol Lola",
-          "attributes": {
-            "compRegNo": [
-              "vin_7928CB50"
-            ],
-            "accountNumber": [
-              "11701"
-            ],
-            "contactEmail": [
-              "vu.hoanh@eurowag.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "0f06cf5e-7a7f-4fb1-9be2-0f5fc9dd0d09",
-          "name": "Anton Diečka Int.Transport",
-          "path": "/Accounts/Anton Diečka Int.Transport",
-          "attributes": {
-            "compRegNo": [
-              "SK1020467041"
-            ],
-            "accountNumber": [
-              "22243"
-            ],
-            "contactEmail": [
-              "testing@wag.cz"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "16beaadb-17dc-4673-a945-d4344269fc9a",
-          "name": "VIKING TRANS s.r.o.",
-          "path": "/Accounts/VIKING TRANS s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "50822"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "5c2184ea-6e94-42d3-a428-fa9e58614529",
-          "name": "Jana Křivánková",
-          "path": "/Accounts/Jana Křivánková",
-          "attributes": {
-            "accountNumber": [
-              "62440"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "1f20af36-fd7a-4889-81bb-4d58be65c19a",
-          "name": "Expedience s.r.o.",
-          "path": "/Accounts/Expedience s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "38005"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "5ecb9d3d-e1e1-4392-bafd-408ddd698f11",
-          "name": "Corinne Manciel",
-          "path": "/Accounts/Corinne Manciel",
-          "attributes": {
-            "compRegNo": [
-              "CZ280060566"
-            ],
-            "accountNumber": [
-              "84121"
-            ],
-            "contactEmail": [
-              "fmarruffo@gmail.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "711d3128-2f0f-435e-b0fd-d4a7034b0fa8",
-          "name": "Lukas Vitek",
-          "path": "/Accounts/Lukas Vitek",
-          "attributes": {
-            "compRegNo": [
-              "vin_7928CB44"
-            ],
-            "accountNumber": [
-              "11711"
-            ],
-            "contactEmail": [
-              "lukas.vitek@eurowag.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "464ef5a0-89a8-4a7e-b3de-5e549ce252f4",
-          "name": "ROVOLOGISTIK CZ Group, SE",
-          "path": "/Accounts/ROVOLOGISTIK CZ Group, SE",
-          "attributes": {
-            "accountNumber": [
-              "37516"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "d5fcf5c0-9ce8-4eb1-a35e-a7d955d68719",
-          "name": "Reasoner corp.",
-          "path": "/Accounts/Reasoner corp.",
-          "attributes": {
-            "accountNumber": [
-              "101158"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "5e372e6c-3a62-4d5e-8538-96d5dc2adea8",
-          "name": "Lenka Marková",
-          "path": "/Accounts/Lenka Marková",
-          "attributes": {
-            "accountNumber": [
-              "89711"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "f164d21e-b82f-42e1-bb81-87b37f237f7f",
-          "name": "Kolo Cerveny",
-          "path": "/Accounts/Kolo Cerveny",
-          "attributes": {
-            "compRegNo": [
-              "vin_439"
-            ],
-            "accountNumber": [
-              "10904"
-            ],
-            "contactEmail": [
-              "milan.zlamal@eurowag.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "f7948970-5748-454c-8026-e27d9f84cf1a",
-          "name": "SPEDITRANS CZ, s.r.o.",
-          "path": "/Accounts/SPEDITRANS CZ, s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "11919"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "16077534-a4ba-4fae-bab7-3ddab91f91de",
-          "name": "Spedition Rosner,s.r.o.",
-          "path": "/Accounts/Spedition Rosner,s.r.o.",
-          "attributes": {
-            "compRegNo": [
-              "CZ63148048"
-            ],
-            "accountNumber": [
-              "11111"
-            ],
-            "contactEmail": [
-              "testing@wag.cz"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "95d7c137-3fb3-4dc6-845a-111d56974548",
-          "name": "KOCOUREK Trans s.r.o.",
-          "path": "/Accounts/KOCOUREK Trans s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "20478"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "5649df74-b850-48de-b080-95de9c84094f",
-          "name": "Jordan Panfilov",
-          "path": "/Accounts/Jordan Panfilov",
-          "attributes": {
-            "compRegNo": [
-              "CZ229292054"
-            ],
-            "accountNumber": [
-              "792792"
-            ],
-            "contactEmail": [
-              "han_dzledzic@hotmail.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "da2c7c3a-410d-4d70-b342-4d081fe4aa95",
-          "name": "Pavel Tvrdek",
-          "path": "/Accounts/Pavel Tvrdek",
-          "attributes": {
-            "compRegNo": [
-              "CZ7105172470"
-            ],
-            "accountNumber": [
-              "11087"
-            ],
-            "contactEmail": [
-              "testing@wag.cz"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "c669e8c5-e90c-4f4d-b83f-ca6ecf343a3f",
-          "name": "Senior Home,s.r.o.",
-          "path": "/Accounts/Senior Home,s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "54938"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "031d1f42-1534-42dd-949f-c76193acea24",
-          "name": "TVD - Technická výroba, a.s",
-          "path": "/Accounts/TVD - Technická výroba, a.s",
-          "attributes": {
-            "accountNumber": [
-              "60913"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "8e58f918-c970-4855-9b1d-f70d88ede2ab",
-          "name": "Jan Veverka",
-          "path": "/Accounts/Jan Veverka",
-          "attributes": {
-            "accountNumber": [
-              "60816"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "9d4d2de3-c39e-471a-b4b2-627b7b7b6b26",
-          "name": "Gol Gola",
-          "path": "/Accounts/Gol Gola",
-          "attributes": {
-            "compRegNo": [
-              "vin_375"
-            ],
-            "accountNumber": [
-              "11709"
-            ],
-            "contactEmail": [
-              "vu.hoanh@eurowag.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "03c5fc5f-77db-4132-958f-b98397d4bb39",
-          "name": "J+L Kubálek s.r.o.",
-          "path": "/Accounts/J+L Kubálek s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "70662"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "744c7b9a-9ae8-4f4d-8104-f9cbc17a7956",
-          "name": "Tanja Strimple",
-          "path": "/Accounts/Tanja Strimple",
-          "attributes": {
-            "compRegNo": [
-              "CZ386731936"
-            ],
-            "accountNumber": [
-              "347560"
-            ],
-            "contactEmail": [
-              "luther@gmail.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "0836b5ba-cfe0-4f74-aadf-c509e10ad6c8",
-          "name": "JAMBOR s.r.o.",
-          "path": "/Accounts/JAMBOR s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "67039"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "072313b6-ffab-43d8-b596-d079c4d1def9",
-          "name": "Patti Belyea",
-          "path": "/Accounts/Patti Belyea",
-          "attributes": {
-            "compRegNo": [
-              "CZ523579218"
-            ],
-            "accountNumber": [
-              "322604"
-            ],
-            "contactEmail": [
-              "gilbert.langarica@gmail.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "26e063ea-65b3-49a8-9d3d-8da5975cde76",
-          "name": "MAES",
-          "path": "/Accounts/MAES",
-          "attributes": {
-            "compRegNo": [
-              "crm_xxx_test_maes"
-            ],
-            "accountNumber": [
-              "test_maes"
-            ],
-            "contactEmail": [
-              "xuder.man@gmail.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "e0bf5ce7-6cd6-456e-a9da-24f957539253",
-          "name": "Ihro Transport & Logistik s.r.o.",
-          "path": "/Accounts/Ihro Transport & Logistik s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "22510"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "030f92f9-9f2b-4e66-acea-2296e079a0ca",
-          "name": "Láníček Transport s.r.o.",
-          "path": "/Accounts/Láníček Transport s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "40627"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "45a91792-a839-41bc-915b-3880b79a4c01",
-          "name": "AGF logistics s.r.o.",
-          "path": "/Accounts/AGF logistics s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "35388"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "9286c0f7-9e61-42c3-853a-9e8ebe416110",
-          "name": "Petr Weber",
-          "path": "/Accounts/Petr Weber",
-          "attributes": {
-            "accountNumber": [
-              "67471"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "25f6a390-2c23-4176-99ae-a2d1762329c5",
-          "name": "Precious Breheny",
-          "path": "/Accounts/Precious Breheny",
-          "attributes": {
-            "compRegNo": [
-              "CZ256575141"
-            ],
-            "accountNumber": [
-              "436532"
-            ],
-            "contactEmail": [
-              "anika@marse.co.uk"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "41a4a504-4484-4120-a851-5a441757e32b",
-          "name": "MiaB Group, s.r.o.",
-          "path": "/Accounts/MiaB Group, s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "43939"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "8a5b5f32-6835-42a6-8c23-38a10e2c7aaa",
-          "name": "Miroslav Hnilička",
-          "path": "/Accounts/Miroslav Hnilička",
-          "attributes": {
-            "accountNumber": [
-              "17271"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "7a30b62a-7cdf-48f6-bb9f-c0c55d0e7134",
-          "name": "Filip Jokeš",
-          "path": "/Accounts/Filip Jokeš",
-          "attributes": {
-            "accountNumber": [
-              "100317"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "bf5d0c9b-a131-4afb-987d-a1ac8961db47",
-          "name": "1. transportní s.r.o.",
-          "path": "/Accounts/1. transportní s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "82546"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "f8d58d26-d524-4aa7-b792-5a295897f98d",
-          "name": "VCHD Cargo a.s.",
-          "path": "/Accounts/VCHD Cargo a.s.",
-          "attributes": {
-            "accountNumber": [
-              "11800"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "6fc5e948-a3a9-4f20-b48f-30a2a7f15549",
-          "name": "Elinore Carris",
-          "path": "/Accounts/Elinore Carris",
-          "attributes": {
-            "compRegNo": [
-              "CZ688134691"
-            ],
-            "accountNumber": [
-              "288168"
-            ],
-            "contactEmail": [
-              "kozane@gmail.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "e3a2862b-0cc6-4bb3-ad1f-6a103f258e56",
-          "name": "Dwight Thurm",
-          "path": "/Accounts/Dwight Thurm",
-          "attributes": {
-            "compRegNo": [
-              "CZ532945309"
-            ],
-            "accountNumber": [
-              "672130"
-            ],
-            "contactEmail": [
-              "jreinecke@reinecke.co.uk"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "30aee78e-1942-4477-84d5-32e08fbe6e00",
-          "name": "DHL Automotive s.r.o.",
-          "path": "/Accounts/DHL Automotive s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "42402"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "db77102f-7a39-4187-a26b-472fa28ae0e0",
-          "name": "SUSPRO s.r.o.",
-          "path": "/Accounts/SUSPRO s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "94692"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "7bffd0a8-07c6-423c-aa33-9f4de0c86180",
-          "name": "Emily Vanwyhe",
-          "path": "/Accounts/Emily Vanwyhe",
-          "attributes": {
-            "compRegNo": [
-              "CZ626977744"
-            ],
-            "accountNumber": [
-              "314118"
-            ],
-            "contactEmail": [
-              "reuresti@euresti.co.uk"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "7dce0a41-1dbe-48ee-8e11-02ff12095b7c",
-          "name": "Juhás AUTODOPRAVA, s.r.o.",
-          "path": "/Accounts/Juhás AUTODOPRAVA, s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "31034"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "f4a6a59d-b77c-473c-a625-66da104ef0e9",
-          "name": "Tomas Junga",
-          "path": "/Accounts/Tomas Junga",
-          "attributes": {
-            "compRegNo": [
-              "vin_220"
-            ],
-            "accountNumber": [
-              "11092"
-            ],
-            "contactEmail": [
-              "tomas.junga@eurowag.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "5f6c9b57-599a-4f4c-b9ac-48a4de4c1286",
-          "name": "Black & White truck s.r.o.",
-          "path": "/Accounts/Black & White truck s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "38426"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "b166b747-aeb3-45d8-a881-2b255e4a610c",
-          "name": "TRANSCART s.r.o.",
-          "path": "/Accounts/TRANSCART s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "30817"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "680c4efa-8d73-4bfb-8dc2-a6269b5d20bb",
-          "name": "HOT Logistic s.r.o.",
-          "path": "/Accounts/HOT Logistic s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "78193"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "8699e2ea-3623-45b8-8a1b-e62a55db9fff",
-          "name": "SILO TRANS s.r.o.",
-          "path": "/Accounts/SILO TRANS s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "10928"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "c8c86128-4311-4f02-9a38-92ab244de585",
-          "name": "Bodos, a.s.",
-          "path": "/Accounts/Bodos, a.s.",
-          "attributes": {
-            "compRegNo": [
-              "49435230"
-            ],
-            "accountNumber": [
-              "10908"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "6dda6802-114a-4744-9856-9ce4348e9958",
-          "name": "HERMANN TRANS, s.r.o.",
-          "path": "/Accounts/HERMANN TRANS, s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "47441"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "9d55472b-28aa-409b-aab3-d79564c034da",
-          "name": "STL Express s.r.o.",
-          "path": "/Accounts/STL Express s.r.o.",
-          "attributes": {},
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "a4cc9cf0-1ba5-4136-abc2-003833050d72",
-          "name": "Pungas Punga",
-          "path": "/Accounts/Pungas Punga",
-          "attributes": {
-            "compRegNo": [
-              "vin_838"
-            ],
-            "accountNumber": [
-              "11091"
-            ],
-            "contactEmail": [
-              "tomas.junga@eurowag.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "7a981b28-8a89-413d-90bf-07b7f44d14b3",
-          "name": "Jaroslav Bednář",
-          "path": "/Accounts/Jaroslav Bednář",
-          "attributes": {
-            "accountNumber": [
-              "61987"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "bb22c4f8-baab-4be9-8243-9a5111c18e17",
-          "name": "Jaroslav Siegl",
-          "path": "/Accounts/Jaroslav Siegl",
-          "attributes": {
-            "accountNumber": [
-              "32594"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "96387f03-c943-4201-a7ac-3c96a95ce39b",
-          "name": "makalouš ivan",
-          "path": "/Accounts/makalouš ivan",
-          "attributes": {
-            "accountNumber": [
-              "43903"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "c6f9f330-b037-46e1-bf1a-b58330a46871",
-          "name": "TestDevelopment",
-          "path": "/Accounts/TestDevelopment",
-          "attributes": {
-            "accountNumber": [
-              "123456789"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "9e3eb5b3-80c1-4aa8-982a-1e4514cb52ae",
-          "name": "ALL - TRANS s.r.o.",
-          "path": "/Accounts/ALL - TRANS s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "77028"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "2e953831-8a07-4d2a-9869-e59a2b64520a",
-          "name": "Jan Forman",
-          "path": "/Accounts/Jan Forman",
-          "attributes": {
-            "accountNumber": [
-              "21667"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "a9975839-ec14-4680-998d-c8236e22e82f",
-          "name": "HDB Trans s.r.o.",
-          "path": "/Accounts/HDB Trans s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "38934"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "c0a00179-c6fe-4952-9056-861941d39517",
-          "name": "SUEZ Využití zdrojů a.s.",
-          "path": "/Accounts/SUEZ Využití zdrojů a.s.",
-          "attributes": {
-            "accountNumber": [
-              "11685"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "d84c97d6-51d6-4e26-bf44-1a42bfdaa21f",
-          "name": "ČSAD Hodonín a.s.",
-          "path": "/Accounts/ČSAD Hodonín a.s.",
-          "attributes": {
-            "accountNumber": [
-              "16344"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "28624c7c-350e-4df2-b3a8-cf77274fc4a6",
-          "name": "STEGRO s.r.o.",
-          "path": "/Accounts/STEGRO s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "75693"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "e00a35c1-5913-4e9f-82c6-9720b388723d",
-          "name": "Roman Věchet s.r.o.",
-          "path": "/Accounts/Roman Věchet s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "31453"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "7288c240-8638-4cf9-9b45-4a8735e1ef86",
-          "name": "DH delivery s.r.o.",
-          "path": "/Accounts/DH delivery s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "66926"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "8a614a70-0d14-4c66-a716-54a2f8c30fcd",
-          "name": "GRS spol. s.r.o",
-          "path": "/Accounts/GRS spol. s.r.o",
-          "attributes": {
-            "accountNumber": [
-              "40361"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "7ecade86-8c5f-4a0b-a70e-77a4d78304f5",
-          "name": "Orville Feagins",
-          "path": "/Accounts/Orville Feagins",
-          "attributes": {
-            "compRegNo": [
-              "CZ743190993"
-            ],
-            "accountNumber": [
-              "910492"
-            ],
-            "contactEmail": [
-              "gfeagins@gmail.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "5bfd8b85-2e4f-4add-8246-e4ae936b7725",
-          "name": "Josef Plach�",
-          "path": "/Accounts/Josef Plach�",
-          "attributes": {
-            "compRegNo": [
-              "CZ6609260152"
-            ],
-            "accountNumber": [
-              "11714"
-            ],
-            "contactEmail": [
-              "testing@wag.cz"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "04adceed-1f4e-4cd4-923e-2263c2f174a7",
-          "name": "Telekom",
-          "path": "/Accounts/Telekom",
-          "attributes": {},
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "a159eeb0-029e-44ba-af92-f57445de31e9",
-          "name": "O.K. Trans Praha spol. s.r.o.",
-          "path": "/Accounts/O.K. Trans Praha spol. s.r.o.",
-          "attributes": {
-            "compRegNo": [
-              "CZ00473251"
-            ],
-            "accountNumber": [
-              "10873"
-            ],
-            "contactEmail": [
-              "testing@wag.cz"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "36cc793f-c0b1-494d-8798-e716a72d4e9c",
-          "name": "Miloslava Kovářová",
-          "path": "/Accounts/Miloslava Kovářová",
-          "attributes": {
-            "accountNumber": [
-              "28489"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "5b3a0e5e-1c92-459c-af15-5a630c19ddba",
-          "name": "Jiří Loskot",
-          "path": "/Accounts/Jiří Loskot",
-          "attributes": {
-            "accountNumber": [
-              "52114"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "6023b077-ab4c-4646-925c-bb54b1eb1a82",
-          "name": "PREMIANT CITY TOUR s.r.o.",
-          "path": "/Accounts/PREMIANT CITY TOUR s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "66340"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "8fa3f721-8fa1-43bc-9792-ca13afba697f",
-          "name": "HH Real a.s.",
-          "path": "/Accounts/HH Real a.s.",
-          "attributes": {
-            "accountNumber": [
-              "519008"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "59b68a55-ae28-4e21-a57e-a3cae2afd654",
-          "name": "OPERA SILVATICA s.r.o.",
-          "path": "/Accounts/OPERA SILVATICA s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "519000"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "9e1640ad-4352-4b77-a927-64639381375b",
-          "name": "4better s.r.o.",
-          "path": "/Accounts/4better s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "54547",
-              "54547"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "0199f1ec-d2d9-445a-93da-88318dffdc83",
-          "name": "AGF Logistics, s.r.o. slovenská organizačná zložka ",
-          "path": "/Accounts/AGF Logistics, s.r.o. slovenská organizačná zložka ",
-          "attributes": {
-            "accountNumber": [
-              "61994"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "39c25a53-1874-4a36-b535-2815b580a31d",
-          "name": "HRBÁČEK s.r.o.",
-          "path": "/Accounts/HRBÁČEK s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "10718"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "7daf2b74-fbda-4abd-8c78-5f351fb28c80",
-          "name": "ALSET, spol. s r.o.",
-          "path": "/Accounts/ALSET, spol. s r.o.",
-          "attributes": {
-            "accountNumber": [
-              "11095"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "7a11fbfc-1254-4bff-a8da-5b80885eb107",
-          "name": "Petr Lexa",
-          "path": "/Accounts/Petr Lexa",
-          "attributes": {
-            "accountNumber": [
-              "44095"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "c46ab0f1-42d7-4105-b3c5-b029fd67fc44",
-          "name": "CEDES Logistik s.r.o.",
-          "path": "/Accounts/CEDES Logistik s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "11294"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "cda5206c-9165-4438-a915-3de38aba0c35",
-          "name": "ČSAD Kyjov Logistics a.s.",
-          "path": "/Accounts/ČSAD Kyjov Logistics a.s.",
-          "attributes": {
-            "accountNumber": [
-              "28919"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "a271964c-920f-4125-a075-28e3f664beb9",
-          "name": "MAYER TRANSPORT spol. s r.o.",
-          "path": "/Accounts/MAYER TRANSPORT spol. s r.o.",
-          "attributes": {},
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "861ddba1-2983-4e95-b798-61b6b0c5af11",
-          "name": "STRACHAN AUTODOPRAVA, s.r.o.",
-          "path": "/Accounts/STRACHAN AUTODOPRAVA, s.r.o.",
-          "attributes": {},
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "bc6fcf49-e7fb-4c2a-9fdc-4a7827e194f9",
-          "name": "Petr Kol",
-          "path": "/Accounts/Petr Kol",
-          "attributes": {
-            "compRegNo": [
-              "vin_7928CB40"
-            ],
-            "accountNumber": [
-              "22558"
-            ],
-            "contactEmail": [
-              "vu@eurowag.com"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "db2db877-6758-417f-bc74-bb0ff93e236a",
-          "name": "Jiří Šimon",
-          "path": "/Accounts/Jiří Šimon",
-          "attributes": {
-            "accountNumber": [
-              "45428"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "4b9ed862-1ace-4de2-9bc5-bf51f841a070",
-          "name": "Věra Pieranová",
-          "path": "/Accounts/Věra Pieranová",
-          "attributes": {
-            "accountNumber": [
-              "98132"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        },
-        {
-          "id": "7e39ce79-6b74-4580-b1d3-ca29528e2e60",
-          "name": "Autotyp H+S s.r.o.",
-          "path": "/Accounts/Autotyp H+S s.r.o.",
-          "attributes": {
-            "accountNumber": [
-              "16578"
-            ]
-          },
-          "realmRoles": [],
-          "clientRoles": {},
-          "subGroups": []
-        }
-      ]
-    },
     {
       "id": "c80ccb1a-e1ca-41ef-9e17-2bc3cd2f9e09",
       "name": "Realm",
@@ -1982,7 +1769,7 @@
               "FINANCE"
             ],
             "businessPriority": [
-              "1"
+              "10"
             ]
           },
           "realmRoles": [],
@@ -2046,7 +1833,7 @@
               "USER"
             ],
             "businessPriority": [
-              "1"
+              "20"
             ]
           },
           "realmRoles": [],
@@ -2072,6 +1859,253 @@
               "subGroups": []
             }
           ]
+        },
+        {
+          "id": "adc271ab-25d4-447d-a3d2-1854758fc9ca",
+          "name": "Vehicle and OBU management",
+          "path": "/SelfCare/Vehicle and OBU management",
+          "attributes": {
+            "translation[cs]": [
+              "Správa vozidel a OBU"
+            ],
+            "moduleId": [
+              "VEHICLES"
+            ],
+            "businessPriority": [
+              "30"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": [
+            {
+              "id": "7d205e68-d706-46ff-ba87-26b0c8979fe5",
+              "name": "Vehicle management",
+              "path": "/SelfCare/Vehicle and OBU management/Vehicle management",
+              "attributes": {
+                "translation[cs]": [
+                  "Správa vozidel"
+                ],
+                "moduleId": [
+                  "MANAGEMENT"
+                ],
+                "businessPriority": [
+                  "1"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {},
+              "subGroups": []
+            },
+            {
+              "id": "28f85652-78f4-486f-b517-1c4b646477aa",
+              "name": "OBU management",
+              "path": "/SelfCare/Vehicle and OBU management/OBU management",
+              "attributes": {
+                "translation[cs]": [
+                  "Správa OBU"
+                ],
+                "moduleId": [
+                  "OBU"
+                ],
+                "businessPriority": [
+                  "2"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {},
+              "subGroups": []
+            }
+          ]
+        },
+        {
+          "id": "c602b0e9-7b40-4d30-89ab-ce11a6b249ea",
+          "name": "Ordering",
+          "path": "/SelfCare/Ordering",
+          "attributes": {
+            "translation[cs]": [
+              "Objednávky"
+            ],
+            "moduleId": [
+              "ORDERING"
+            ],
+            "businessPriority": [
+              "40"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": [
+            {
+              "id": "52010049-7ca1-43ad-ad41-8cc60ad71402",
+              "name": "Place new order",
+              "path": "/SelfCare/Ordering/Place new order",
+              "attributes": {
+                "translation[cs]": [
+                  "Vytvoření nové objednávky"
+                ],
+                "moduleId": [
+                  "CREATE"
+                ],
+                "businessPriority": [
+                  "1"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {},
+              "subGroups": []
+            }
+          ]
+        },
+        {
+          "id": "6201dfd5-aa1a-4451-8c21-ea56c1113498",
+          "name": "Embedding",
+          "path": "/SelfCare/Embedding",
+          "attributes": {
+            "translation[cs]": [
+              "Embedding"
+            ],
+            "moduleId": [
+              "EMBEDDING"
+            ],
+            "businessPriority": [
+              "50"
+            ]
+          },
+          "realmRoles": [],
+          "clientRoles": {},
+          "subGroups": [
+            {
+              "id": "fd79c2bd-451c-465c-81a7-ed9e41e66e3d",
+              "name": "Toll registration",
+              "path": "/SelfCare/Embedding/Toll registration",
+              "attributes": {
+                "translation[cs]": [
+                  "Registrace mýtného"
+                ],
+                "moduleId": [
+                  "EMBEDDING_TOLL_REGISTRATION"
+                ],
+                "businessPriority": [
+                  "1"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {},
+              "subGroups": []
+            },
+            {
+              "id": "8eafcc57-4eab-413f-b83a-31be5fc94e08",
+              "name": "EWMC Card management",
+              "path": "/SelfCare/Embedding/EWMC Card management",
+              "attributes": {
+                "translation[cs]": [
+                  "Správa karet EWMC"
+                ],
+                "moduleId": [
+                  "EMBEDDING_EWMC_CARDLIST"
+                ],
+                "businessPriority": [
+                  "5"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {},
+              "subGroups": []
+            },
+            {
+              "id": "8dedadb6-124d-4f4e-beec-635cf0217081",
+              "name": "EWMC Ordering of new card",
+              "path": "/SelfCare/Embedding/EWMC Ordering of new card",
+              "attributes": {
+                "translation[cs]": [
+                  "EWMC Objednání nové karty"
+                ],
+                "moduleId": [
+                  "EMBEDDING_EWMC_NEWCARD"
+                ],
+                "businessPriority": [
+                  "4"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {},
+              "subGroups": []
+            },
+            {
+              "id": "d8e37824-46d7-45e6-8cdf-2cc3fbcf5632",
+              "name": "EWMC Payment mode",
+              "path": "/SelfCare/Embedding/EWMC Payment mode",
+              "attributes": {
+                "translation[cs]": [
+                  "Režim platby EWMC"
+                ],
+                "moduleId": [
+                  "EMBEDDING_EWMC_MODE"
+                ],
+                "businessPriority": [
+                  "6"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {},
+              "subGroups": []
+            },
+            {
+              "id": "b0e0026a-a468-4100-91e6-afd7667307c0",
+              "name": "List of vehicles",
+              "path": "/SelfCare/Embedding/List of vehicles",
+              "attributes": {
+                "translation[cs]": [
+                  "Seznam vozidel"
+                ],
+                "moduleId": [
+                  "EMBEDDING_VEHICLES_OBU"
+                ],
+                "businessPriority": [
+                  "2"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {},
+              "subGroups": []
+            },
+            {
+              "id": "70898307-17b2-40b2-8371-eaa43f3cea93",
+              "name": "EWMC",
+              "path": "/SelfCare/Embedding/EWMC",
+              "attributes": {
+                "moduleId": [
+                  "EMBEDDING_EWMC"
+                ],
+                "businessPriority": [
+                  "3"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {},
+              "subGroups": []
+            },
+            {
+              "id": "39ae287f-2076-45c3-b24e-310c24ad42f7",
+              "name": "EWMC Finances",
+              "path": "/SelfCare/Embedding/EWMC Finances",
+              "attributes": {
+                "translation[cs]": [
+                  "Finance EWMC"
+                ],
+                "moduleId": [
+                  "EMBEDDING_EWMC_FINANCES"
+                ],
+                "businessPriority": [
+                  "7"
+                ]
+              },
+              "realmRoles": [],
+              "clientRoles": {},
+              "subGroups": []
+            }
+          ]
         }
       ]
     }
@@ -2083,7 +2117,7 @@
   "requiredCredentials": [
     "password"
   ],
-  "passwordPolicy": "upperCase(1) and lowerCase(1) and digits(1) and notUsername(undefined) and length(8) and passwordHistory(5) and hashAlgorithm(pbkdf2-sha256) and hashIterations(27500) and specialChars(0)",
+  "passwordPolicy": "hashIterations(27500) and specialChars(0) and upperCase(0) and lowerCase(0) and passwordHistory(5) and length(2) and digits(0) and notUsername(undefined) and hashAlgorithm(pbkdf2-sha256)",
   "otpPolicyType": "totp",
   "otpPolicyAlgorithm": "HmacSHA1",
   "otpPolicyInitialCounter": 0,
@@ -2094,16 +2128,206 @@
     "FreeOTP",
     "Google Authenticator"
   ],
+  "webAuthnPolicyRpEntityName": "keycloak",
+  "webAuthnPolicySignatureAlgorithms": [
+    "ES256"
+  ],
+  "webAuthnPolicyRpId": "",
+  "webAuthnPolicyAttestationConveyancePreference": "not specified",
+  "webAuthnPolicyAuthenticatorAttachment": "not specified",
+  "webAuthnPolicyRequireResidentKey": "not specified",
+  "webAuthnPolicyUserVerificationRequirement": "not specified",
+  "webAuthnPolicyCreateTimeout": 0,
+  "webAuthnPolicyAvoidSameAuthenticatorRegister": false,
+  "webAuthnPolicyAcceptableAaguids": [],
+  "webAuthnPolicyPasswordlessRpEntityName": "keycloak",
+  "webAuthnPolicyPasswordlessSignatureAlgorithms": [
+    "ES256"
+  ],
+  "webAuthnPolicyPasswordlessRpId": "",
+  "webAuthnPolicyPasswordlessAttestationConveyancePreference": "not specified",
+  "webAuthnPolicyPasswordlessAuthenticatorAttachment": "not specified",
+  "webAuthnPolicyPasswordlessRequireResidentKey": "not specified",
+  "webAuthnPolicyPasswordlessUserVerificationRequirement": "not specified",
+  "webAuthnPolicyPasswordlessCreateTimeout": 0,
+  "webAuthnPolicyPasswordlessAvoidSameAuthenticatorRegister": false,
+  "webAuthnPolicyPasswordlessAcceptableAaguids": [],
+  "users": [
+    {
+      "id": "3736b0c8-61e7-4276-9440-4218dd77f51f",
+      "createdTimestamp": 1576790128075,
+      "username": "service-account-clientzone",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "serviceAccountClientId": "clientzone",
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "ROLE_OPERATOR",
+        "offline_access",
+        "uma_authorization"
+      ],
+      "clientRoles": {
+        "account": [
+          "manage-account",
+          "view-profile"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    },
+    {
+      "id": "0cb11a1b-0121-4e87-86b3-a6ad40bc436b",
+      "createdTimestamp": 1586827377239,
+      "username": "service-account-ewmczone",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "serviceAccountClientId": "ewmczone",
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "offline_access",
+        "uma_authorization"
+      ],
+      "clientRoles": {
+        "account": [
+          "manage-account",
+          "view-profile"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    },
+    {
+      "id": "7d44799a-b74c-4aee-847f-0c0fa9534ee9",
+      "createdTimestamp": 1579780872189,
+      "username": "service-account-onboarding",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "serviceAccountClientId": "onboarding",
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "ROLE_OPERATOR",
+        "offline_access",
+        "uma_authorization"
+      ],
+      "clientRoles": {
+        "account": [
+          "manage-account",
+          "view-profile"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    },
+    {
+      "id": "b9d39994-e0c5-48d1-a94d-c79bf8537f01",
+      "createdTimestamp": 1578949944506,
+      "username": "service-account-telematics",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "serviceAccountClientId": "telematics",
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "ROLE_OPERATOR",
+        "offline_access",
+        "uma_authorization"
+      ],
+      "clientRoles": {
+        "account": [
+          "manage-account",
+          "view-profile"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    }
+  ],
   "scopeMappings": [
     {
-      "client": "security-admin-console",
+      "client": "admin-cli",
       "roles": [
-        "EW_Realm_Reader",
-        "EW_Realm_Admin"
+        "ROLE_OWNER",
+        "WebAdmin",
+        "ROLE_OPERATOR",
+        "ROLE_DISPATCHER",
+        "ROLE_ACCOUNTANT",
+        "ClientsPortalAccess",
+        "ROLE_ADMIN",
+        "ROLE_DRIVER",
+        "EWMCPortalAccess",
+        "ROLE_FLEET_MANAGER",
+        "ROLE_INITIAL"
       ]
     },
     {
-      "clientScope": "roles",
+      "client": "aequitas-web",
+      "roles": [
+        "WebAdmin",
+        "ClientsPortalAccess",
+        "EWMCPortalAccess"
+      ]
+    },
+    {
+      "client": "clientzone",
+      "roles": [
+        "WebAdmin",
+        "ROLE_OPERATOR",
+        "ClientsPortalAccess",
+        "EWMCPortalAccess",
+        "ROLE_INITIAL"
+      ]
+    },
+    {
+      "client": "ewmczone",
+      "roles": [
+        "WebAdmin",
+        "ROLE_OPERATOR",
+        "ClientsPortalAccess",
+        "ROLE_ADMIN",
+        "EWMCPortalAccess",
+        "ROLE_INITIAL"
+      ]
+    },
+    {
+      "client": "onboarding",
+      "roles": [
+        "ROLE_OPERATOR"
+      ]
+    },
+    {
+      "client": "selfcare",
+      "roles": [
+        "ROLE_OWNER",
+        "ROLE_OPERATOR",
+        "ROLE_DISPATCHER",
+        "ROLE_ACCOUNTANT",
+        "ROLE_ADMIN",
+        "ROLE_DRIVER",
+        "ROLE_FLEET_MANAGER",
+        "ROLE_INITIAL"
+      ]
+    },
+    {
+      "client": "telematics",
+      "roles": [
+        "ROLE_OWNER",
+        "ROLE_OPERATOR",
+        "ROLE_DISPATCHER",
+        "ROLE_ACCOUNTANT",
+        "ROLE_ADMIN",
+        "ROLE_DRIVER",
+        "ROLE_FLEET_MANAGER"
+      ]
+    },
+    {
+      "client": "telematics-web",
       "roles": [
         "ROLE_OWNER",
         "ROLE_OPERATOR",
@@ -2121,47 +2345,70 @@
       ]
     },
     {
-      "clientScope": "nav4",
+      "clientScope": "roles",
       "roles": [
-        "WebAdmin",
-        "ClientsPortalAccess",
-        "EWMCPortalAccess"
+        "ROLE_OWNER",
+        "ROLE_OPERATOR",
+        "ROLE_DISPATCHER",
+        "ROLE_ACCOUNTANT",
+        "ROLE_ADMIN",
+        "ROLE_DRIVER",
+        "ROLE_FLEET_MANAGER"
       ]
     }
   ],
   "clientScopeMappings": {
     "dih": [
       {
+        "clientScope": "pricelist:read",
+        "roles": [
+          "PRICELIST_READ"
+        ]
+      },
+      {
         "clientScope": "hello:read",
         "roles": [
           "HELLO_READ"
+        ]
+      }
+    ],
+    "account": [
+      {
+        "client": "account-console",
+        "roles": [
+          "manage-account"
         ]
       }
     ]
   },
   "clients": [
     {
-      "id": "a7c90587-74a6-4cc8-9187-5520730f2fa2",
-      "clientId": "clientzone",
-      "name": "ClientZone",
+      "id": "15c4bda0-ec49-474f-a72a-7f7096d74934",
+      "clientId": "account",
+      "name": "${client_account}",
+      "rootUrl": "${authBaseUrl}",
+      "baseUrl": "/realms/eurowag/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
+      "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
+      "defaultRoles": [
+        "manage-account",
+        "view-profile"
+      ],
       "redirectUris": [
-        "*"
+        "/realms/eurowag/account/*"
       ],
-      "webOrigins": [
-        "*"
-      ],
+      "webOrigins": [],
       "notBefore": 0,
       "bearerOnly": false,
       "consentRequired": false,
       "standardFlowEnabled": true,
-      "implicitFlowEnabled": false,
-      "directAccessGrantsEnabled": true,
+      "implicitFlowEnabled": true,
+      "directAccessGrantsEnabled": false,
       "serviceAccountsEnabled": false,
-      "publicClient": true,
+      "publicClient": false,
       "frontchannelLogout": false,
       "protocol": "openid-connect",
       "attributes": {
@@ -2173,20 +2420,67 @@
         "saml.server.signature.keyinfo.ext": "false",
         "exclude.session.state.from.auth.response": "false",
         "saml_force_name_id_format": "false",
-        "saml.client.signature": "false",
         "tls.client.certificate.bound.access.tokens": "false",
+        "saml.client.signature": "false",
         "saml.authnstatement": "false",
         "display.on.consent.screen": "false",
         "saml.onetimeuse.condition": "false"
       },
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": false,
-      "nodeReRegistrationTimeout": -1,
+      "nodeReRegistrationTimeout": 0,
+      "defaultClientScopes": [
+        "web-origins",
+        "roles"
+      ],
+      "optionalClientScopes": [
+        "microprofile-jwt"
+      ]
+    },
+    {
+      "id": "15d1ea49-5a7b-45ad-a0bf-f8ef4907fb51",
+      "clientId": "account-console",
+      "name": "${client_account-console}",
+      "rootUrl": "${authBaseUrl}",
+      "baseUrl": "/realms/eurowag/account/",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "alwaysDisplayInConsole": false,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "**********",
+      "redirectUris": [
+        "/realms/eurowag/account/*"
+      ],
+      "webOrigins": [],
+      "notBefore": 0,
+      "bearerOnly": false,
+      "consentRequired": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": false,
+      "publicClient": true,
+      "frontchannelLogout": false,
+      "protocol": "openid-connect",
+      "attributes": {
+        "pkce.code.challenge.method": "S256"
+      },
+      "authenticationFlowBindingOverrides": {},
+      "fullScopeAllowed": false,
+      "nodeReRegistrationTimeout": 0,
+      "protocolMappers": [
+        {
+          "id": "9f76a70f-4a35-4b34-8d3c-51579ebb0c2c",
+          "name": "audience resolve",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-audience-resolve-mapper",
+          "consentRequired": false,
+          "config": {}
+        }
+      ],
       "defaultClientScopes": [
         "nav4",
-        "roles",
-        "client",
-        "email",
+        "ew",
         "crm"
       ],
       "optionalClientScopes": [
@@ -2197,60 +2491,12 @@
       ]
     },
     {
-      "id": "ce98c771-849d-4277-8f6c-7ad6c654c2c4",
-      "clientId": "realm-management",
-      "name": "${client_realm-management}",
-      "surrogateAuthRequired": false,
-      "enabled": true,
-      "clientAuthenticatorType": "client-secret",
-      "secret": "**********",
-      "redirectUris": [],
-      "webOrigins": [],
-      "notBefore": 0,
-      "bearerOnly": true,
-      "consentRequired": false,
-      "standardFlowEnabled": true,
-      "implicitFlowEnabled": false,
-      "directAccessGrantsEnabled": false,
-      "serviceAccountsEnabled": false,
-      "authorizationServicesEnabled": true,
-      "publicClient": false,
-      "frontchannelLogout": false,
-      "protocol": "openid-connect",
-      "attributes": {},
-      "authenticationFlowBindingOverrides": {},
-      "fullScopeAllowed": false,
-      "nodeReRegistrationTimeout": 0,
-      "defaultClientScopes": [],
-      "optionalClientScopes": [],
-      "authorizationSettings": {
-        "allowRemoteResourceManagement": false,
-        "policyEnforcementMode": "ENFORCING",
-        "resources": [],
-        "policies": [],
-        "scopes": [
-          {
-            "id": "4b25371e-8a03-4918-89a6-43286cd36a2c",
-            "name": "map-role-composite"
-          },
-          {
-            "id": "1d1ef845-a4fd-4a23-9540-55b3681ddfb8",
-            "name": "map-role-client-scope"
-          },
-          {
-            "id": "880deff1-83bb-4a48-b2f5-f00aa9c3d310",
-            "name": "map-role"
-          }
-        ],
-        "decisionStrategy": "UNANIMOUS"
-      }
-    },
-    {
       "id": "2d7a43ad-5200-4306-b0fa-3c6b5528597c",
       "clientId": "admin-cli",
       "name": "${client_admin-cli}",
       "surrogateAuthRequired": false,
       "enabled": true,
+      "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [],
@@ -2270,9 +2516,8 @@
       "fullScopeAllowed": false,
       "nodeReRegistrationTimeout": 0,
       "defaultClientScopes": [
+        "ew",
         "nav4",
-        "roles",
-        "email",
         "crm"
       ],
       "optionalClientScopes": [
@@ -2280,41 +2525,107 @@
       ]
     },
     {
-      "id": "15c4bda0-ec49-474f-a72a-7f7096d74934",
-      "clientId": "account",
-      "name": "${client_account}",
-      "baseUrl": "/auth/realms/eurowag/account",
+      "id": "75909f10-f20d-4535-9fa6-052624d8ae23",
+      "clientId": "aequitas-web",
+      "name": "Aequitas Client Portal",
+      "rootUrl": "",
+      "adminUrl": "",
+      "baseUrl": "https://test-client.reamontax.com/",
       "surrogateAuthRequired": false,
       "enabled": true,
+      "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
-      "defaultRoles": [
-        "manage-account",
-        "view-profile"
-      ],
       "redirectUris": [
-        "/auth/realms/eurowag/account/*"
+        "https://test-client.reamontax.com/*"
       ],
-      "webOrigins": [],
+      "webOrigins": [
+        "*"
+      ],
       "notBefore": 0,
       "bearerOnly": false,
       "consentRequired": false,
       "standardFlowEnabled": true,
-      "implicitFlowEnabled": false,
-      "directAccessGrantsEnabled": false,
-      "serviceAccountsEnabled": false,
-      "publicClient": false,
+      "implicitFlowEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true,
+      "publicClient": true,
       "frontchannelLogout": false,
       "protocol": "openid-connect",
-      "attributes": {},
+      "attributes": {
+        "saml.assertion.signature": "false",
+        "saml.force.post.binding": "false",
+        "saml.multivalued.roles": "false",
+        "saml.encrypt": "false",
+        "saml.server.signature": "false",
+        "saml.server.signature.keyinfo.ext": "false",
+        "exclude.session.state.from.auth.response": "false",
+        "saml_force_name_id_format": "false",
+        "saml.client.signature": "false",
+        "tls.client.certificate.bound.access.tokens": "false",
+        "saml.authnstatement": "false",
+        "display.on.consent.screen": "false",
+        "saml.onetimeuse.condition": "false"
+      },
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": false,
-      "nodeReRegistrationTimeout": 0,
+      "nodeReRegistrationTimeout": -1,
+      "protocolMappers": [
+        {
+          "id": "518507c5-830b-4ce5-a4a2-791e3d1c0600",
+          "name": "Client ID",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientId",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientId",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "ded5d3fc-fde8-4b96-92e6-7421a951ce13",
+          "name": "Client Host",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientHost",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientHost",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "b797d01f-adf5-4ae5-af6a-2d4cd7b8989d",
+          "name": "Client IP Address",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientAddress",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientAddress",
+            "jsonType.label": "String"
+          }
+        }
+      ],
       "defaultClientScopes": [
-        "web-origins",
-        "roles"
+        "nav4",
+        "ew",
+        "crm"
       ],
       "optionalClientScopes": [
+        "address",
+        "phone",
+        "offline_access",
         "microprofile-jwt"
       ]
     },
@@ -2325,6 +2636,7 @@
       "description": "DIH API Gateway Client",
       "surrogateAuthRequired": false,
       "enabled": true,
+      "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
@@ -2368,10 +2680,11 @@
       "fullScopeAllowed": true,
       "nodeReRegistrationTimeout": -1,
       "defaultClientScopes": [
+        "web-origins",
+        "pricelist:read",
+        "ew",
         "nav4",
-        "roles",
         "hello:read",
-        "email",
         "crm"
       ],
       "optionalClientScopes": [
@@ -2387,6 +2700,7 @@
       "name": "${client_broker}",
       "surrogateAuthRequired": false,
       "enabled": true,
+      "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [],
@@ -2414,10 +2728,111 @@
       ]
     },
     {
+      "id": "a7c90587-74a6-4cc8-9187-5520730f2fa2",
+      "clientId": "clientzone",
+      "name": "ClientZone",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "alwaysDisplayInConsole": false,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "**********",
+      "redirectUris": [
+        "*"
+      ],
+      "webOrigins": [
+        "*"
+      ],
+      "notBefore": 0,
+      "bearerOnly": false,
+      "consentRequired": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true,
+      "publicClient": false,
+      "frontchannelLogout": false,
+      "protocol": "openid-connect",
+      "attributes": {
+        "saml.assertion.signature": "false",
+        "saml.multivalued.roles": "false",
+        "saml.force.post.binding": "false",
+        "saml.encrypt": "false",
+        "login_theme": "clientzone-test",
+        "saml.server.signature": "false",
+        "saml.server.signature.keyinfo.ext": "false",
+        "exclude.session.state.from.auth.response": "false",
+        "saml_force_name_id_format": "false",
+        "saml.client.signature": "false",
+        "tls.client.certificate.bound.access.tokens": "false",
+        "saml.authnstatement": "false",
+        "display.on.consent.screen": "false",
+        "saml.onetimeuse.condition": "false"
+      },
+      "authenticationFlowBindingOverrides": {},
+      "fullScopeAllowed": false,
+      "nodeReRegistrationTimeout": -1,
+      "protocolMappers": [
+        {
+          "id": "beb01062-74ad-486c-8d9c-22f20a580408",
+          "name": "Client ID",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientId",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientId",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "fd47ce48-b6e2-4807-bac8-4699db07dfc1",
+          "name": "Client IP Address",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientAddress",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientAddress",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "8b860118-7b71-4fb3-a933-e494466b586e",
+          "name": "Client Host",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientHost",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientHost",
+            "jsonType.label": "String"
+          }
+        }
+      ],
+      "defaultClientScopes": [
+        "nav4",
+        "ew",
+        "crm"
+      ],
+      "optionalClientScopes": [
+        "address",
+        "phone",
+        "offline_access",
+        "microprofile-jwt"
+      ]
+    },
+    {
       "id": "ebf0d4c0-32fe-43da-96de-a24e9e2ad8a7",
       "clientId": "dih",
       "surrogateAuthRequired": false,
       "enabled": true,
+      "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [],
@@ -2464,18 +2879,373 @@
       ]
     },
     {
-      "id": "ca59f5b5-eaab-467b-853f-7dc6567195df",
-      "clientId": "security-admin-console",
-      "name": "${client_security-admin-console}",
-      "baseUrl": "/auth/admin/eurowag/console/index.html",
+      "id": "e4dc95f3-e23c-42e7-8d91-526489c02800",
+      "clientId": "ewmczone",
+      "name": "EWMC Zone",
       "surrogateAuthRequired": false,
       "enabled": true,
+      "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "/auth/admin/eurowag/console/*"
+        "*"
       ],
+      "webOrigins": [
+        "*"
+      ],
+      "notBefore": 0,
+      "bearerOnly": false,
+      "consentRequired": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true,
+      "publicClient": false,
+      "frontchannelLogout": false,
+      "protocol": "openid-connect",
+      "attributes": {
+        "saml.assertion.signature": "false",
+        "saml.multivalued.roles": "false",
+        "saml.force.post.binding": "false",
+        "saml.encrypt": "false",
+        "login_theme": "ewmczone",
+        "saml.server.signature": "false",
+        "saml.server.signature.keyinfo.ext": "false",
+        "exclude.session.state.from.auth.response": "false",
+        "saml_force_name_id_format": "false",
+        "saml.client.signature": "false",
+        "tls.client.certificate.bound.access.tokens": "false",
+        "saml.authnstatement": "false",
+        "display.on.consent.screen": "false",
+        "saml.onetimeuse.condition": "false"
+      },
+      "authenticationFlowBindingOverrides": {},
+      "fullScopeAllowed": false,
+      "nodeReRegistrationTimeout": -1,
+      "protocolMappers": [
+        {
+          "id": "5bdeb34b-9992-4698-94e3-09abe8117862",
+          "name": "Client IP Address",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientAddress",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientAddress",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "9a0399a2-13ee-4dca-b7bd-1609922261bb",
+          "name": "Client ID",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientId",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientId",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "173215bb-079d-498d-9c12-7c65150b15fc",
+          "name": "Client Host",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientHost",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientHost",
+            "jsonType.label": "String"
+          }
+        }
+      ],
+      "defaultClientScopes": [
+        "nav4",
+        "ew",
+        "crm"
+      ],
+      "optionalClientScopes": [
+        "address",
+        "phone",
+        "offline_access",
+        "microprofile-jwt"
+      ]
+    },
+    {
+      "id": "9b74c105-4bce-43e6-8ef4-f60c924a21f4",
+      "clientId": "onboarding",
+      "name": "Online Onboarding",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "alwaysDisplayInConsole": false,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "**********",
+      "redirectUris": [
+        "*"
+      ],
+      "webOrigins": [
+        "*"
+      ],
+      "notBefore": 0,
+      "bearerOnly": false,
+      "consentRequired": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true,
+      "publicClient": false,
+      "frontchannelLogout": false,
+      "protocol": "openid-connect",
+      "attributes": {
+        "saml.assertion.signature": "false",
+        "saml.force.post.binding": "false",
+        "saml.multivalued.roles": "false",
+        "saml.encrypt": "false",
+        "saml.server.signature": "false",
+        "saml.server.signature.keyinfo.ext": "false",
+        "exclude.session.state.from.auth.response": "false",
+        "saml_force_name_id_format": "false",
+        "saml.client.signature": "false",
+        "tls.client.certificate.bound.access.tokens": "false",
+        "saml.authnstatement": "false",
+        "display.on.consent.screen": "false",
+        "saml.onetimeuse.condition": "false"
+      },
+      "authenticationFlowBindingOverrides": {},
+      "fullScopeAllowed": false,
+      "nodeReRegistrationTimeout": -1,
+      "protocolMappers": [
+        {
+          "id": "2d174910-4440-4331-aa43-549d8f216039",
+          "name": "Client Host",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientHost",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientHost",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "df508085-75c4-46ce-98cc-0d9ea56ee3b8",
+          "name": "Client IP Address",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientAddress",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientAddress",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "0752e44f-bdf3-441e-9db6-b1657357ca3d",
+          "name": "Client ID",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientId",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientId",
+            "jsonType.label": "String"
+          }
+        }
+      ],
+      "defaultClientScopes": [
+        "ew",
+        "nav4",
+        "crm"
+      ],
+      "optionalClientScopes": [
+        "address",
+        "phone",
+        "offline_access",
+        "microprofile-jwt"
+      ]
+    },
+    {
+      "id": "c55c39fd-9332-4aa9-b277-3ca9cd5dc9d3",
+      "clientId": "portal-emb",
+      "name": "Embedded Portal for Ordering",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "alwaysDisplayInConsole": false,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "**********",
+      "redirectUris": [
+        "*"
+      ],
+      "webOrigins": [
+        "*"
+      ],
+      "notBefore": 0,
+      "bearerOnly": false,
+      "consentRequired": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": false,
+      "publicClient": true,
+      "frontchannelLogout": false,
+      "protocol": "openid-connect",
+      "attributes": {
+        "saml.assertion.signature": "false",
+        "saml.multivalued.roles": "false",
+        "saml.force.post.binding": "false",
+        "saml.encrypt": "false",
+        "saml.server.signature": "false",
+        "saml.server.signature.keyinfo.ext": "false",
+        "exclude.session.state.from.auth.response": "false",
+        "saml_force_name_id_format": "false",
+        "saml.client.signature": "false",
+        "tls.client.certificate.bound.access.tokens": "false",
+        "saml.authnstatement": "false",
+        "display.on.consent.screen": "false",
+        "saml.onetimeuse.condition": "false"
+      },
+      "authenticationFlowBindingOverrides": {},
+      "fullScopeAllowed": false,
+      "nodeReRegistrationTimeout": -1,
+      "defaultClientScopes": [
+        "nav4",
+        "ew",
+        "crm"
+      ],
+      "optionalClientScopes": [
+        "address",
+        "phone",
+        "offline_access",
+        "microprofile-jwt"
+      ]
+    },
+    {
+      "id": "ce98c771-849d-4277-8f6c-7ad6c654c2c4",
+      "clientId": "realm-management",
+      "name": "${client_realm-management}",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "alwaysDisplayInConsole": false,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "**********",
+      "redirectUris": [],
       "webOrigins": [],
+      "notBefore": 0,
+      "bearerOnly": true,
+      "consentRequired": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": true,
+      "publicClient": false,
+      "frontchannelLogout": false,
+      "protocol": "openid-connect",
+      "attributes": {
+        "saml.assertion.signature": "false",
+        "saml.multivalued.roles": "false",
+        "saml.force.post.binding": "false",
+        "saml.encrypt": "false",
+        "saml.server.signature": "false",
+        "saml.server.signature.keyinfo.ext": "false",
+        "exclude.session.state.from.auth.response": "false",
+        "saml_force_name_id_format": "false",
+        "saml.client.signature": "false",
+        "tls.client.certificate.bound.access.tokens": "false",
+        "saml.authnstatement": "false",
+        "display.on.consent.screen": "false",
+        "saml.onetimeuse.condition": "false"
+      },
+      "authenticationFlowBindingOverrides": {},
+      "fullScopeAllowed": false,
+      "nodeReRegistrationTimeout": 0,
+      "protocolMappers": [
+        {
+          "id": "493de80c-9fde-486d-885b-70a25195b761",
+          "name": "Client ID",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientId",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientId",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "e41084fe-a4cb-42e6-abdd-85a528570013",
+          "name": "Client Host",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientHost",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientHost",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "3c9019c8-d52d-4071-9695-efdf1c63d821",
+          "name": "Client IP Address",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientAddress",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientAddress",
+            "jsonType.label": "String"
+          }
+        }
+      ],
+      "defaultClientScopes": [
+        "web-origins",
+        "roles"
+      ],
+      "optionalClientScopes": [
+        "microprofile-jwt"
+      ]
+    },
+    {
+      "id": "ca59f5b5-eaab-467b-853f-7dc6567195df",
+      "clientId": "security-admin-console",
+      "name": "${client_security-admin-console}",
+      "rootUrl": "${authAdminUrl}",
+      "baseUrl": "/admin/eurowag/console/",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "alwaysDisplayInConsole": false,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "**********",
+      "redirectUris": [
+        "/admin/eurowag/console/*"
+      ],
+      "webOrigins": [
+        "+"
+      ],
       "notBefore": 0,
       "bearerOnly": false,
       "consentRequired": false,
@@ -2486,7 +3256,9 @@
       "publicClient": true,
       "frontchannelLogout": false,
       "protocol": "openid-connect",
-      "attributes": {},
+      "attributes": {
+        "pkce.code.challenge.method": "S256"
+      },
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": false,
       "nodeReRegistrationTimeout": 0,
@@ -2510,7 +3282,6 @@
       "defaultClientScopes": [
         "web-origins",
         "roles",
-        "email",
         "crm"
       ],
       "optionalClientScopes": [
@@ -2523,6 +3294,7 @@
       "name": "SelfCare Client",
       "surrogateAuthRequired": false,
       "enabled": true,
+      "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
@@ -2535,7 +3307,7 @@
       "bearerOnly": false,
       "consentRequired": false,
       "standardFlowEnabled": true,
-      "implicitFlowEnabled": false,
+      "implicitFlowEnabled": true,
       "directAccessGrantsEnabled": true,
       "serviceAccountsEnabled": true,
       "publicClient": true,
@@ -2608,9 +3380,7 @@
       ],
       "defaultClientScopes": [
         "nav4",
-        "roles",
-        "client",
-        "email",
+        "ew",
         "crm"
       ],
       "optionalClientScopes": [
@@ -2619,51 +3389,51 @@
         "offline_access",
         "microprofile-jwt"
       ]
-    }
-  ],
-  "clientScopes": [
+    },
     {
-      "id": "65e271a4-186a-4936-b0eb-0866d271e274",
-      "name": "client",
-      "description": "Client ID",
+      "id": "1114cc30-14cb-4cb4-8450-a34e63c5ce99",
+      "clientId": "telematics",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "alwaysDisplayInConsole": false,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "**********",
+      "redirectUris": [
+        "*"
+      ],
+      "webOrigins": [],
+      "notBefore": 0,
+      "bearerOnly": false,
+      "consentRequired": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true,
+      "publicClient": false,
+      "frontchannelLogout": false,
       "protocol": "openid-connect",
       "attributes": {
-        "include.in.token.scope": "true",
-        "display.on.consent.screen": "true"
+        "saml.assertion.signature": "false",
+        "saml.multivalued.roles": "false",
+        "saml.force.post.binding": "false",
+        "saml.encrypt": "false",
+        "saml.server.signature": "false",
+        "saml.server.signature.keyinfo.ext": "false",
+        "exclude.session.state.from.auth.response": "false",
+        "jwt.credential.certificate": "MIICozCCAYsCBgFuzWRlvzANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDDAp0ZWxlbWF0aWNzMB4XDTE5MTIwMzIwMTAzOVoXDTI5MTIwMzIwMTIxOVowFTETMBEGA1UEAwwKdGVsZW1hdGljczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKOO8K4FhS6PCoNji+WXV3dNiop+GyzOLB2k8R/inF87bYEOhLBaDgG3MaH2PXzeuzHSlLKevfVkggP+8J30Gcjs+evC6ESk/kdpJKaXkNKY+7GEUrL8AUAldzWF3Y3acQJJTTJ0odA0h4/a2om93VWTbLy3cPhKaNbwLcdrBaZkRZO8+aIxSq0RjQFfnqQSnVOxCKdOWw6EFpukwz9zrWoRkhYvCbz0JS6+8N061/hJ8zfnMQMljGlY2AG4rY1t7lJJ3zrN8xwmK9JKtgkWeh3o4vQCpu+QjZEh1l1TQfm00OU9NqXpY+iZJUaz6EEuDOPkp2GBjEkXWl5ocwhXLB8CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAJPubTkPhtkOk+IFElXbZ9hgbt1Ye833R1xvksFKCgS6AHL0LOFBvLe7o36IHe8OJlb7/aXRW4/kEWMC4XFi17RFgJBGrhd79IiTNWJ18kJNRqLiGVWAddoFJAMMurJHlS4suvtK9cR9b1dNUC+AxhXaQ8sFbUiQs7qo/2V5IPYt4dzQj+eDwvNl/ea+Edwbc5RzG/5Ikb5p8Dcb7ux9xiCRKf3Tphli6trrQ2gPIICsxC7rsj06CwVVe41LyAYsnqJLTaGqEkOP9WHd39H07UiqXUyK3gDa4gaWddrCuF3MwIk3uyqsPmtx+B9zu+DXWE3QtzzHOUJS99vptDn63MA==",
+        "saml_force_name_id_format": "false",
+        "saml.client.signature": "false",
+        "tls.client.certificate.bound.access.tokens": "false",
+        "saml.authnstatement": "false",
+        "display.on.consent.screen": "false",
+        "saml.onetimeuse.condition": "false"
       },
+      "authenticationFlowBindingOverrides": {},
+      "fullScopeAllowed": false,
+      "nodeReRegistrationTimeout": -1,
       "protocolMappers": [
         {
-          "id": "c966e805-b477-48bc-963d-b89408664e2d",
-          "name": "Client Host",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usersessionmodel-note-mapper",
-          "consentRequired": false,
-          "config": {
-            "user.session.note": "clientHost",
-            "userinfo.token.claim": "true",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "claim.name": "client.host",
-            "jsonType.label": "String"
-          }
-        },
-        {
-          "id": "ca4cdadc-160d-48e0-8ab7-ac9bc9be34b8",
-          "name": "Client ID",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usersessionmodel-note-mapper",
-          "consentRequired": false,
-          "config": {
-            "user.session.note": "clientId",
-            "userinfo.token.claim": "true",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "claim.name": "client.id",
-            "jsonType.label": "String"
-          }
-        },
-        {
-          "id": "def561bd-0295-4b3e-9137-4840341dcff5",
+          "id": "2162363f-ae22-4ff5-b063-bfbd9e22a963",
           "name": "Client IP Address",
           "protocol": "openid-connect",
           "protocolMapper": "oidc-usersessionmodel-note-mapper",
@@ -2673,218 +3443,332 @@
             "userinfo.token.claim": "true",
             "id.token.claim": "true",
             "access.token.claim": "true",
-            "claim.name": "client.ip",
+            "claim.name": "clientAddress",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "672d24ff-a55c-4b35-93ba-120668032b08",
+          "name": "Client Host",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientHost",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientHost",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "7a5854ad-0e8e-4ada-aca7-204957041a70",
+          "name": "Client ID",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientId",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientId",
             "jsonType.label": "String"
           }
         }
+      ],
+      "defaultClientScopes": [
+        "ew",
+        "nav4",
+        "role_list",
+        "tbr",
+        "crm"
+      ],
+      "optionalClientScopes": [
+        "address",
+        "phone",
+        "offline_access",
+        "microprofile-jwt"
       ]
     },
     {
-      "id": "fa437ad1-6f37-4d67-ad39-28f00d20a0e1",
-      "name": "tbr",
-      "description": "Telematics Binary Rights",
+      "id": "6dd796b0-8bb9-4840-b2c4-d4c0d287607d",
+      "clientId": "telematics-web",
+      "name": "EuroWAG Telematics",
+      "description": "This is telematics bla bla bla",
+      "baseUrl": "",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "alwaysDisplayInConsole": false,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "**********",
+      "redirectUris": [
+        "https://telematics-sit.wag-test.local/*",
+        "https://tsta-tlmfront-st-lb.wag-test.local/*",
+        "http://dev-telematics-aks-front.dispecer.sk/*",
+        "http://tsta-tlmfront-st-lb.wag-test.local/*",
+        "http://features:22014/*",
+        "https://telematics-uat.wag-test.local/*",
+        "http://localhost:8080/*",
+        "https://telematics-st.wag-test.local/*",
+        "http://192.168.115.68:3000/*",
+        "http://telematics-sitm-aks-front.westeurope.cloudapp.azure.com/*",
+        "http://telematics-dev-aks-front.westeurope.cloudapp.azure.com/*",
+        "http://tsta-tlmfront-uat-lb.wag-test.local/*",
+        "https://dev-telematics-aks-front.dispecer.sk/*",
+        "https://telematics-test.eurowag.com/*",
+        "http://telematics-sitj-aks-front.westeurope.cloudapp.azure.com/*",
+        "http://tsta-tlmfront-sit-lb.wag-test.local/*",
+        "http://192.168.111.9:3000/*",
+        "http://tsta-tlmfront-dev-lb.wag-test.local/*",
+        "https://telematics.eurowag.com/*",
+        "http://telematics.eurowag.com/*",
+        "http://telematics-test.eurowag.com/*",
+        "https://telematics-dev.wag-test.local/*",
+        "http://52.166.76.11/*",
+        "http://sitj-telematics-aks-front.dispecer.sk/*",
+        "http://938070be.ngrok.io/*",
+        "http://localhost:3000/*"
+      ],
+      "webOrigins": [
+        "*"
+      ],
+      "notBefore": 0,
+      "bearerOnly": false,
+      "consentRequired": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true,
+      "publicClient": true,
+      "frontchannelLogout": false,
       "protocol": "openid-connect",
       "attributes": {
-        "include.in.token.scope": "true",
-        "display.on.consent.screen": "true"
-      },
-      "protocolMappers": [
-        {
-          "id": "26ec55f9-0fcf-4ded-8f8d-c2e25d294e87",
-          "name": "binary_rights",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usermodel-attribute-mapper",
-          "consentRequired": false,
-          "config": {
-            "userinfo.token.claim": "true",
-            "user.attribute": "binaryRights",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "claim.name": "binaryRights",
-            "jsonType.label": "String"
-          }
-        }
-      ]
-    },
-    {
-      "id": "e622d7eb-baf3-4142-9502-6073941369b3",
-      "name": "crm",
-      "description": "CRM Identifications",
-      "protocol": "openid-connect",
-      "attributes": {
-        "include.in.token.scope": "true",
-        "display.on.consent.screen": "true"
-      },
-      "protocolMappers": [
-        {
-          "id": "d3616cb5-612d-481d-85ca-2ef4d91ce401",
-          "name": "Username",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usermodel-property-mapper",
-          "consentRequired": false,
-          "config": {
-            "userinfo.token.claim": "true",
-            "user.attribute": "username",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "claim.name": "sub",
-            "jsonType.label": "String"
-          }
-        },
-        {
-          "id": "2cb29cc8-d429-4b25-b00c-0adfa377858b",
-          "name": "uid",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usermodel-property-mapper",
-          "consentRequired": false,
-          "config": {
-            "userinfo.token.claim": "true",
-            "user.attribute": "id",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "claim.name": "uid",
-            "jsonType.label": "String"
-          }
-        },
-        {
-          "id": "d647f5d8-6f33-4bec-b47b-67fc7396d7ef",
-          "name": "CRM Contact Number",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usermodel-attribute-mapper",
-          "consentRequired": false,
-          "config": {
-            "userinfo.token.claim": "true",
-            "user.attribute": "contactNumber",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "claim.name": "contactNumber",
-            "jsonType.label": "String"
-          }
-        },
-        {
-          "id": "117fde7a-abe0-404f-8999-bf1be5a47efe",
-          "name": "CRM Account Number",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usermodel-attribute-mapper",
-          "consentRequired": false,
-          "config": {
-            "userinfo.token.claim": "true",
-            "user.attribute": "accountNumber",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "claim.name": "accountNumber",
-            "jsonType.label": "String"
-          }
-        },
-        {
-          "id": "46eebb69-a2bc-46e4-813a-3ce3c4791eef",
-          "name": "iss",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-hardcoded-claim-mapper",
-          "consentRequired": false,
-          "config": {
-            "claim.value": "https://login-test.eurowag.com/auth/realms/eurowag",
-            "userinfo.token.claim": "true",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "claim.name": "iss",
-            "jsonType.label": "String"
-          }
-        }
-      ]
-    },
-    {
-      "id": "8f203f29-1852-4603-9b93-7226ddc25ec1",
-      "name": "microprofile-jwt",
-      "description": "Microprofile - JWT built-in scope",
-      "protocol": "openid-connect",
-      "attributes": {
-        "include.in.token.scope": "true",
-        "display.on.consent.screen": "false"
-      },
-      "protocolMappers": [
-        {
-          "id": "c1ab21e4-de1e-4cf7-98e9-b32a38ec029f",
-          "name": "groups",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usermodel-realm-role-mapper",
-          "consentRequired": false,
-          "config": {
-            "multivalued": "true",
-            "userinfo.token.claim": "true",
-            "user.attribute": "foo",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "claim.name": "groups",
-            "jsonType.label": "String"
-          }
-        },
-        {
-          "id": "6bf95a07-5098-48d8-9640-a8f645547718",
-          "name": "upn",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usermodel-property-mapper",
-          "consentRequired": false,
-          "config": {
-            "userinfo.token.claim": "true",
-            "user.attribute": "username",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "claim.name": "upn",
-            "jsonType.label": "String"
-          }
-        }
-      ]
-    },
-    {
-      "id": "471b7cd1-3b6a-40cf-aa4f-fde48b01b3e9",
-      "name": "web-origins",
-      "description": "OpenID Connect scope for add allowed web origins to the access token",
-      "protocol": "openid-connect",
-      "attributes": {
-        "include.in.token.scope": "false",
+        "saml.assertion.signature": "false",
+        "saml.force.post.binding": "false",
+        "saml.multivalued.roles": "false",
+        "saml.encrypt": "false",
+        "login_theme": "keycloak",
+        "saml.server.signature": "false",
+        "saml.server.signature.keyinfo.ext": "false",
+        "exclude.session.state.from.auth.response": "false",
+        "saml_force_name_id_format": "false",
+        "saml.client.signature": "false",
+        "tls.client.certificate.bound.access.tokens": "false",
+        "saml.authnstatement": "false",
         "display.on.consent.screen": "false",
-        "consent.screen.text": ""
+        "saml.onetimeuse.condition": "false"
       },
+      "authenticationFlowBindingOverrides": {},
+      "fullScopeAllowed": false,
+      "nodeReRegistrationTimeout": -1,
       "protocolMappers": [
         {
-          "id": "eca06d12-d382-4267-aae0-f382f14fceb0",
-          "name": "allowed web origins",
+          "id": "b6190716-5ea9-48ab-b2ce-d1cf47fe9b23",
+          "name": "Client ID",
           "protocol": "openid-connect",
-          "protocolMapper": "oidc-allowed-origins-mapper",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
           "consentRequired": false,
-          "config": {}
+          "config": {
+            "user.session.note": "clientId",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientId",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "931de4d0-e283-4463-b5e6-43806a69940f",
+          "name": "family name",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-property-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "lastName",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "family_name",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "d8807bb0-71f8-4ec3-8205-8aeafe509183",
+          "name": "Client IP Address",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientAddress",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientAddress",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "7dbb3554-ac9f-4c69-96c2-112e496e3196",
+          "name": "given name",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-property-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "firstName",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "given_name",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "14f1998c-72d1-4025-99b6-f669b0cccf17",
+          "name": "Client Host",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientHost",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientHost",
+            "jsonType.label": "String"
+          }
         }
+      ],
+      "defaultClientScopes": [
+        "nav4",
+        "ew",
+        "role_list",
+        "tbr",
+        "crm"
+      ],
+      "optionalClientScopes": [
+        "web-origins",
+        "address",
+        "phone",
+        "offline_access",
+        "microprofile-jwt"
       ]
-    },
+    }
+  ],
+  "clientScopes": [
     {
-      "id": "05d9d210-b871-4848-8735-24dba026f21c",
-      "name": "roles",
-      "description": "OpenID Connect scope for add user roles to the access token",
+      "id": "42b23682-b3ab-4788-983e-2ea6d79a7589",
+      "name": "ew",
+      "description": "Eurowag Global Scope",
       "protocol": "openid-connect",
       "attributes": {
-        "include.in.token.scope": "false",
-        "display.on.consent.screen": "true",
-        "consent.screen.text": "${rolesScopeConsentText}"
+        "include.in.token.scope": "true",
+        "display.on.consent.screen": "true"
       },
       "protocolMappers": [
         {
-          "id": "28950793-3bc4-499a-ad65-53df8b56546e",
+          "id": "d958d2ed-7f51-4c74-bcf3-1fded9c7d7ed",
+          "name": "full name",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-full-name-mapper",
+          "consentRequired": false,
+          "config": {
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "userinfo.token.claim": "true"
+          }
+        },
+        {
+          "id": "318016ab-bbb2-43df-a9ab-18abb6535260",
+          "name": "username",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-property-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "username",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "usr",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "162d3543-dc6e-4a65-a79b-5d43e9c80430",
           "name": "realm roles",
           "protocol": "openid-connect",
           "protocolMapper": "oidc-usermodel-realm-role-mapper",
           "consentRequired": false,
           "config": {
+            "multivalued": "true",
             "user.attribute": "foo",
             "id.token.claim": "true",
             "access.token.claim": "true",
             "claim.name": "roles",
-            "jsonType.label": "String",
-            "multivalued": "true"
+            "jsonType.label": "String"
           }
         },
         {
-          "id": "c4f71c4c-0270-486a-8bb3-6ea24b14514a",
+          "id": "4d0f4cbb-ab9c-4336-8cb4-8fcea42e20e3",
+          "name": "locale",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "locale",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "locale",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "1a6b61ab-bf0b-4711-9e42-2431598fdbcd",
+          "name": "Impersonator User ID",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "IMPERSONATOR_ID",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "impersonator.id",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "80bb4f7c-540c-47e8-9641-528e429f0134",
+          "name": "Impersonator Username",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "IMPERSONATOR_USERNAME",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "impersonator.username",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "5468c16e-85e0-4774-b008-7475bb425b11",
+          "name": "email verified",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-property-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "emailVerified",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "email_verified",
+            "jsonType.label": "boolean"
+          }
+        },
+        {
+          "id": "038962e0-d9e7-46e9-9581-ff68bbc7729c",
           "name": "client roles",
           "protocol": "openid-connect",
           "protocolMapper": "oidc-usermodel-client-role-mapper",
@@ -2900,129 +3784,7 @@
           }
         },
         {
-          "id": "1dd1911b-8967-4c52-9aca-1ffe3482cf76",
-          "name": "audience resolve",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-audience-resolve-mapper",
-          "consentRequired": false,
-          "config": {}
-        }
-      ]
-    },
-    {
-      "id": "03e6003d-6521-4a4e-a96a-a31b37639675",
-      "name": "phone",
-      "description": "OpenID Connect built-in scope: phone",
-      "protocol": "openid-connect",
-      "attributes": {
-        "include.in.token.scope": "true",
-        "display.on.consent.screen": "true",
-        "consent.screen.text": "${phoneScopeConsentText}"
-      },
-      "protocolMappers": [
-        {
-          "id": "9b1100c6-e289-4074-a64f-74129f6d5f2f",
-          "name": "phone number",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usermodel-attribute-mapper",
-          "consentRequired": false,
-          "config": {
-            "userinfo.token.claim": "true",
-            "user.attribute": "phoneNumber",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "claim.name": "phone_number",
-            "jsonType.label": "String"
-          }
-        },
-        {
-          "id": "8dba50dd-c3e2-497d-acf3-ff4d15dc3bdf",
-          "name": "phone number verified",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usermodel-attribute-mapper",
-          "consentRequired": false,
-          "config": {
-            "userinfo.token.claim": "true",
-            "user.attribute": "phoneNumberVerified",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "claim.name": "phone_number_verified",
-            "jsonType.label": "boolean"
-          }
-        }
-      ]
-    },
-    {
-      "id": "e2bbb456-10d6-4ef2-8a5b-c02ca4320185",
-      "name": "address",
-      "description": "OpenID Connect built-in scope: address",
-      "protocol": "openid-connect",
-      "attributes": {
-        "include.in.token.scope": "true",
-        "display.on.consent.screen": "true",
-        "consent.screen.text": "${addressScopeConsentText}"
-      },
-      "protocolMappers": [
-        {
-          "id": "27e92970-192b-49dc-9eec-45c0e755c961",
-          "name": "address",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-address-mapper",
-          "consentRequired": false,
-          "config": {
-            "user.attribute.formatted": "formatted",
-            "user.attribute.country": "country",
-            "user.attribute.postal_code": "postal_code",
-            "userinfo.token.claim": "true",
-            "user.attribute.street": "street",
-            "id.token.claim": "true",
-            "user.attribute.region": "region",
-            "access.token.claim": "true",
-            "user.attribute.locality": "locality"
-          }
-        }
-      ]
-    },
-    {
-      "id": "5f3c2eea-5e20-40a6-b7de-9b1982407073",
-      "name": "email",
-      "description": "OpenID Connect built-in scope: email",
-      "protocol": "openid-connect",
-      "attributes": {
-        "include.in.token.scope": "true",
-        "display.on.consent.screen": "true",
-        "consent.screen.text": "${emailScopeConsentText}"
-      },
-      "protocolMappers": [
-        {
-          "id": "51aa232f-19c0-4ac4-93f5-61627276f28c",
-          "name": "locale",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usermodel-attribute-mapper",
-          "consentRequired": false,
-          "config": {
-            "userinfo.token.claim": "true",
-            "user.attribute": "locale",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "claim.name": "locale",
-            "jsonType.label": "String"
-          }
-        },
-        {
-          "id": "a6ea5433-8d96-46fd-9874-c85bd404fcc9",
-          "name": "full name",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-full-name-mapper",
-          "consentRequired": false,
-          "config": {
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "userinfo.token.claim": "true"
-          }
-        },
-        {
-          "id": "297145a9-1d91-4785-ade6-658e2d3ec6a3",
+          "id": "2e0adcb7-b75c-4a98-88f8-5c3ba55c609b",
           "name": "email",
           "protocol": "openid-connect",
           "protocolMapper": "oidc-usermodel-property-mapper",
@@ -3034,6 +3796,85 @@
             "access.token.claim": "true",
             "claim.name": "email",
             "jsonType.label": "String"
+          }
+        }
+      ]
+    },
+    {
+      "id": "e9219998-f8c9-4f77-bb4c-a69e3a90c649",
+      "name": "pricelist:read",
+      "protocol": "openid-connect",
+      "attributes": {
+        "include.in.token.scope": "true",
+        "display.on.consent.screen": "true"
+      }
+    },
+    {
+      "id": "8dff7e23-9826-4fc5-b215-3e977b70c857",
+      "name": "nav4",
+      "description": "Navision 4",
+      "protocol": "openid-connect",
+      "attributes": {
+        "include.in.token.scope": "true",
+        "display.on.consent.screen": "true"
+      },
+      "protocolMappers": [
+        {
+          "id": "eff73fa5-015c-41ae-8437-305cb109bb9b",
+          "name": "Navision 4 ID",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "nav4Id",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "nav4Id",
+            "jsonType.label": "String"
+          }
+        }
+      ]
+    },
+    {
+      "id": "73734a15-d90c-4850-83db-7b0497c73189",
+      "name": "hello:read",
+      "protocol": "openid-connect",
+      "attributes": {
+        "include.in.token.scope": "true",
+        "display.on.consent.screen": "true"
+      }
+    },
+    {
+      "id": "ccb49f3d-65f1-475d-9dfe-fb196f3bf822",
+      "name": "offline_access",
+      "description": "OpenID Connect built-in scope: offline_access",
+      "protocol": "openid-connect",
+      "attributes": {
+        "consent.screen.text": "${offlineAccessScopeConsentText}",
+        "display.on.consent.screen": "true"
+      }
+    },
+    {
+      "id": "62006c06-4f47-43f9-9389-7070c430bc35",
+      "name": "role_list",
+      "description": "SAML role list",
+      "protocol": "saml",
+      "attributes": {
+        "consent.screen.text": "${samlRoleListScopeConsentText}",
+        "display.on.consent.screen": "true"
+      },
+      "protocolMappers": [
+        {
+          "id": "7948afa3-626a-4303-9f1e-a8327ace9d63",
+          "name": "role list",
+          "protocol": "saml",
+          "protocolMapper": "saml-role-list-mapper",
+          "consentRequired": false,
+          "config": {
+            "single": "false",
+            "attribute.nameformat": "Basic",
+            "attribute.name": "Role"
           }
         }
       ]
@@ -3095,17 +3936,17 @@
           }
         },
         {
-          "id": "06979141-fd76-41e9-a96c-6ff9eb993991",
-          "name": "family name",
+          "id": "5f778316-cdf5-4ea0-afb4-58ef59629b81",
+          "name": "locale",
           "protocol": "openid-connect",
-          "protocolMapper": "oidc-usermodel-property-mapper",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
           "consentRequired": false,
           "config": {
             "userinfo.token.claim": "true",
-            "user.attribute": "lastName",
+            "user.attribute": "locale",
             "id.token.claim": "true",
-            "access.token.claim": "false",
-            "claim.name": "family_name",
+            "access.token.claim": "true",
+            "claim.name": "locale",
             "jsonType.label": "String"
           }
         },
@@ -3140,6 +3981,21 @@
           }
         },
         {
+          "id": "435ea173-7529-4070-baa5-084cba924558",
+          "name": "nickname",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "nickname",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "nickname",
+            "jsonType.label": "String"
+          }
+        },
+        {
           "id": "afaa836c-cf93-4b7f-9976-46eecacbdbd6",
           "name": "profile",
           "protocol": "openid-connect",
@@ -3167,66 +4023,6 @@
           }
         },
         {
-          "id": "5f778316-cdf5-4ea0-afb4-58ef59629b81",
-          "name": "locale",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usermodel-attribute-mapper",
-          "consentRequired": false,
-          "config": {
-            "userinfo.token.claim": "true",
-            "user.attribute": "locale",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "claim.name": "locale",
-            "jsonType.label": "String"
-          }
-        },
-        {
-          "id": "435ea173-7529-4070-baa5-084cba924558",
-          "name": "nickname",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usermodel-attribute-mapper",
-          "consentRequired": false,
-          "config": {
-            "userinfo.token.claim": "true",
-            "user.attribute": "nickname",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "claim.name": "nickname",
-            "jsonType.label": "String"
-          }
-        },
-        {
-          "id": "793c34a1-df21-4c39-9e25-4883a3693318",
-          "name": "given name",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usermodel-property-mapper",
-          "consentRequired": false,
-          "config": {
-            "userinfo.token.claim": "true",
-            "user.attribute": "firstName",
-            "id.token.claim": "true",
-            "access.token.claim": "false",
-            "claim.name": "given_name",
-            "jsonType.label": "String"
-          }
-        },
-        {
-          "id": "0bfe75fc-ab37-48f5-be2b-f6f683c9984f",
-          "name": "middle name",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-usermodel-attribute-mapper",
-          "consentRequired": false,
-          "config": {
-            "userinfo.token.claim": "true",
-            "user.attribute": "middleName",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "claim.name": "middle_name",
-            "jsonType.label": "String"
-          }
-        },
-        {
           "id": "46a981c2-6828-4148-8e22-a25eb1349efc",
           "name": "gender",
           "protocol": "openid-connect",
@@ -3244,70 +4040,328 @@
       ]
     },
     {
-      "id": "62006c06-4f47-43f9-9389-7070c430bc35",
-      "name": "role_list",
-      "description": "SAML role list",
-      "protocol": "saml",
-      "attributes": {
-        "consent.screen.text": "${samlRoleListScopeConsentText}",
-        "display.on.consent.screen": "true"
-      },
-      "protocolMappers": [
-        {
-          "id": "7948afa3-626a-4303-9f1e-a8327ace9d63",
-          "name": "role list",
-          "protocol": "saml",
-          "protocolMapper": "saml-role-list-mapper",
-          "consentRequired": false,
-          "config": {
-            "single": "false",
-            "attribute.nameformat": "Basic",
-            "attribute.name": "Role"
-          }
-        }
-      ]
-    },
-    {
-      "id": "ccb49f3d-65f1-475d-9dfe-fb196f3bf822",
-      "name": "offline_access",
-      "description": "OpenID Connect built-in scope: offline_access",
-      "protocol": "openid-connect",
-      "attributes": {
-        "consent.screen.text": "${offlineAccessScopeConsentText}",
-        "display.on.consent.screen": "true"
-      }
-    },
-    {
-      "id": "73734a15-d90c-4850-83db-7b0497c73189",
-      "name": "hello:read",
+      "id": "5f3c2eea-5e20-40a6-b7de-9b1982407073",
+      "name": "email",
+      "description": "OpenID Connect built-in scope: email",
       "protocol": "openid-connect",
       "attributes": {
         "include.in.token.scope": "true",
-        "display.on.consent.screen": "true"
-      }
-    },
-    {
-      "id": "8dff7e23-9826-4fc5-b215-3e977b70c857",
-      "name": "nav4",
-      "description": "Navision 4",
-      "protocol": "openid-connect",
-      "attributes": {
-        "include.in.token.scope": "true",
-        "display.on.consent.screen": "true"
+        "display.on.consent.screen": "true",
+        "consent.screen.text": "${emailScopeConsentText}"
       },
       "protocolMappers": [
         {
-          "id": "eff73fa5-015c-41ae-8437-305cb109bb9b",
-          "name": "Navision 4 ID",
+          "id": "51aa232f-19c0-4ac4-93f5-61627276f28c",
+          "name": "locale",
           "protocol": "openid-connect",
           "protocolMapper": "oidc-usermodel-attribute-mapper",
           "consentRequired": false,
           "config": {
             "userinfo.token.claim": "true",
-            "user.attribute": "nav4Id",
+            "user.attribute": "locale",
             "id.token.claim": "true",
             "access.token.claim": "true",
-            "claim.name": "nav4Id",
+            "claim.name": "locale",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "a6ea5433-8d96-46fd-9874-c85bd404fcc9",
+          "name": "full name",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-full-name-mapper",
+          "consentRequired": false,
+          "config": {
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "userinfo.token.claim": "true"
+          }
+        },
+        {
+          "id": "297145a9-1d91-4785-ade6-658e2d3ec6a3",
+          "name": "email",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-property-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "email",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "email",
+            "jsonType.label": "String"
+          }
+        }
+      ]
+    },
+    {
+      "id": "e2bbb456-10d6-4ef2-8a5b-c02ca4320185",
+      "name": "address",
+      "description": "OpenID Connect built-in scope: address",
+      "protocol": "openid-connect",
+      "attributes": {
+        "include.in.token.scope": "true",
+        "display.on.consent.screen": "true",
+        "consent.screen.text": "${addressScopeConsentText}"
+      },
+      "protocolMappers": [
+        {
+          "id": "27e92970-192b-49dc-9eec-45c0e755c961",
+          "name": "address",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-address-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.attribute.formatted": "formatted",
+            "user.attribute.country": "country",
+            "user.attribute.postal_code": "postal_code",
+            "userinfo.token.claim": "true",
+            "user.attribute.street": "street",
+            "id.token.claim": "true",
+            "user.attribute.region": "region",
+            "access.token.claim": "true",
+            "user.attribute.locality": "locality"
+          }
+        }
+      ]
+    },
+    {
+      "id": "03e6003d-6521-4a4e-a96a-a31b37639675",
+      "name": "phone",
+      "description": "OpenID Connect built-in scope: phone",
+      "protocol": "openid-connect",
+      "attributes": {
+        "include.in.token.scope": "true",
+        "display.on.consent.screen": "true",
+        "consent.screen.text": "${phoneScopeConsentText}"
+      },
+      "protocolMappers": [
+        {
+          "id": "9b1100c6-e289-4074-a64f-74129f6d5f2f",
+          "name": "phone number",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "phoneNumber",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "phone_number",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "8dba50dd-c3e2-497d-acf3-ff4d15dc3bdf",
+          "name": "phone number verified",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "phoneNumberVerified",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "phone_number_verified",
+            "jsonType.label": "boolean"
+          }
+        }
+      ]
+    },
+    {
+      "id": "05d9d210-b871-4848-8735-24dba026f21c",
+      "name": "roles",
+      "description": "OpenID Connect scope for add user roles to the access token",
+      "protocol": "openid-connect",
+      "attributes": {
+        "include.in.token.scope": "false",
+        "display.on.consent.screen": "true",
+        "consent.screen.text": "${rolesScopeConsentText}"
+      },
+      "protocolMappers": [
+        {
+          "id": "28950793-3bc4-499a-ad65-53df8b56546e",
+          "name": "realm roles",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-realm-role-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.attribute": "foo",
+            "access.token.claim": "true",
+            "claim.name": "roles",
+            "jsonType.label": "String",
+            "multivalued": "true"
+          }
+        },
+        {
+          "id": "c4f71c4c-0270-486a-8bb3-6ea24b14514a",
+          "name": "client roles",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-client-role-mapper",
+          "consentRequired": false,
+          "config": {
+            "multivalued": "true",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "resource_access.realm-management.roles",
+            "jsonType.label": "String",
+            "usermodel.clientRoleMapping.clientId": "realm-management"
+          }
+        },
+        {
+          "id": "1dd1911b-8967-4c52-9aca-1ffe3482cf76",
+          "name": "audience resolve",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-audience-resolve-mapper",
+          "consentRequired": false,
+          "config": {}
+        }
+      ]
+    },
+    {
+      "id": "471b7cd1-3b6a-40cf-aa4f-fde48b01b3e9",
+      "name": "web-origins",
+      "description": "OpenID Connect scope for add allowed web origins to the access token",
+      "protocol": "openid-connect",
+      "attributes": {
+        "include.in.token.scope": "false",
+        "display.on.consent.screen": "false",
+        "consent.screen.text": ""
+      },
+      "protocolMappers": [
+        {
+          "id": "eca06d12-d382-4267-aae0-f382f14fceb0",
+          "name": "allowed web origins",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-allowed-origins-mapper",
+          "consentRequired": false,
+          "config": {}
+        }
+      ]
+    },
+    {
+      "id": "8f203f29-1852-4603-9b93-7226ddc25ec1",
+      "name": "microprofile-jwt",
+      "description": "Microprofile - JWT built-in scope",
+      "protocol": "openid-connect",
+      "attributes": {
+        "include.in.token.scope": "true",
+        "display.on.consent.screen": "false"
+      },
+      "protocolMappers": [
+        {
+          "id": "c1ab21e4-de1e-4cf7-98e9-b32a38ec029f",
+          "name": "groups",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-realm-role-mapper",
+          "consentRequired": false,
+          "config": {
+            "multivalued": "true",
+            "userinfo.token.claim": "true",
+            "user.attribute": "foo",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "groups",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "6bf95a07-5098-48d8-9640-a8f645547718",
+          "name": "upn",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-property-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "username",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "upn",
+            "jsonType.label": "String"
+          }
+        }
+      ]
+    },
+    {
+      "id": "e622d7eb-baf3-4142-9502-6073941369b3",
+      "name": "crm",
+      "description": "CRM Identifications",
+      "protocol": "openid-connect",
+      "attributes": {
+        "include.in.token.scope": "true",
+        "display.on.consent.screen": "true"
+      },
+      "protocolMappers": [
+        {
+          "id": "d3616cb5-612d-481d-85ca-2ef4d91ce401",
+          "name": "Username",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-property-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "username",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "usr",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "d647f5d8-6f33-4bec-b47b-67fc7396d7ef",
+          "name": "CRM Contact Number",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "contactNumber",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "contactNumber",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "117fde7a-abe0-404f-8999-bf1be5a47efe",
+          "name": "CRM Account Number",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "accountNumber",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "accountNumber",
+            "jsonType.label": "String"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fa437ad1-6f37-4d67-ad39-28f00d20a0e1",
+      "name": "tbr",
+      "description": "Telematics Binary Rights",
+      "protocol": "openid-connect",
+      "attributes": {
+        "include.in.token.scope": "true",
+        "display.on.consent.screen": "true"
+      },
+      "protocolMappers": [
+        {
+          "id": "26ec55f9-0fcf-4ded-8f8d-c2e25d294e87",
+          "name": "binary_rights",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "binaryRights",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "binaryRights",
             "jsonType.label": "String"
           }
         }
@@ -3316,10 +4370,8 @@
   ],
   "defaultDefaultClientScopes": [
     "crm",
-    "roles",
-    "email",
-    "client",
-    "nav4"
+    "nav4",
+    "ew"
   ],
   "defaultOptionalClientScopes": [
     "offline_access",
@@ -3338,17 +4390,19 @@
   },
   "smtpServer": {
     "password": "**********",
-    "replyToDisplayName": "Eurowag SSO",
-    "starttls": "",
+    "replyToDisplayName": "",
+    "starttls": "true",
     "auth": "true",
-    "port": "465",
-    "host": "smtp.gmail.com",
-    "replyTo": "ewtelematics@dispecer.sk",
-    "from": "miroslav.svoboda@karumien.com",
-    "fromDisplayName": "Eurowag SSO",
-    "ssl": "true",
-    "user": "miroslav.svoboda@karumien.com"
+    "port": "587",
+    "host": "smtp.office365.com",
+    "replyTo": "",
+    "from": "sso@eurowag.com",
+    "fromDisplayName": "WAG_SVC_SSO",
+    "ssl": "false",
+    "user": "WAG_SVC_SSO_mail@eurowag.com"
   },
+  "loginTheme": "eurowag",
+  "emailTheme": "exchange",
   "eventsEnabled": true,
   "eventsExpiration": 2592000,
   "eventsListeners": [
@@ -3425,61 +4479,6 @@
   ],
   "adminEventsEnabled": true,
   "adminEventsDetailsEnabled": false,
-  "identityProviders": [
-    {
-      "alias": "eurowag365",
-      "displayName": "Eurowag 365",
-      "internalId": "48ab2423-50a0-4795-b2cd-f403ec07e109",
-      "providerId": "oidc",
-      "enabled": true,
-      "updateProfileFirstLoginMode": "on",
-      "trustEmail": true,
-      "storeToken": true,
-      "addReadTokenRoleOnCreate": true,
-      "authenticateByDefault": false,
-      "linkOnly": false,
-      "firstBrokerLoginFlowAlias": "first broker login",
-      "config": {
-        "hideOnLoginPage": "",
-        "validateSignature": "true",
-        "userInfoUrl": "https://graph.microsoft.com/oidc/userinfo",
-        "uiLocales": "",
-        "acceptsPromptNoneForwardFromClient": "",
-        "tokenUrl": "https://login.microsoftonline.com/c97a84f5-62bf-4715-beca-fc25af9516f1/oauth2/v2.0/token",
-        "clientId": "7e028630-512d-4741-b47c-1a0d215c07cd",
-        "jwksUrl": "https://login.microsoftonline.com/c97a84f5-62bf-4715-beca-fc25af9516f1/discovery/v2.0/keys",
-        "backchannelSupported": "",
-        "issuer": "https://login.microsoftonline.com/c97a84f5-62bf-4715-beca-fc25af9516f1/v2.0",
-        "useJwksUrl": "true",
-        "loginHint": "",
-        "authorizationUrl": "https://login.microsoftonline.com/c97a84f5-62bf-4715-beca-fc25af9516f1/oauth2/v2.0/authorize",
-        "disableUserInfo": "",
-        "logoutUrl": "https://login.microsoftonline.com/c97a84f5-62bf-4715-beca-fc25af9516f1/oauth2/v2.0/logout",
-        "clientSecret": "**********",
-        "defaultScope": ""
-      }
-    }
-  ],
-  "identityProviderMappers": [
-    {
-      "id": "89645e2d-74a3-4ae3-9215-61f0f10e9a13",
-      "name": "Automatic assigned role Realm ReadOnly Admin",
-      "identityProviderAlias": "eurowag365",
-      "identityProviderMapper": "oidc-hardcoded-role-idp-mapper",
-      "config": {
-        "role": "EW_Realm_Reader"
-      }
-    },
-    {
-      "id": "87a55fa8-ee7f-40b9-b39f-d49298a6b484",
-      "name": "Automatic assigned role Operator",
-      "identityProviderAlias": "eurowag365",
-      "identityProviderMapper": "oidc-hardcoded-role-idp-mapper",
-      "config": {
-        "role": "ROLE_OPERATOR"
-      }
-    }
-  ],
   "components": {
     "org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy": [
       {
@@ -3510,26 +4509,14 @@
         "subComponents": {},
         "config": {
           "allowed-protocol-mapper-types": [
-            "oidc-sha256-pairwise-sub-mapper",
-            "oidc-address-mapper",
-            "oidc-usermodel-property-mapper",
-            "saml-user-attribute-mapper",
+            "saml-role-list-mapper",
             "saml-user-property-mapper",
+            "saml-user-attribute-mapper",
+            "oidc-address-mapper",
             "oidc-full-name-mapper",
-            "oidc-usermodel-attribute-mapper",
-            "saml-role-list-mapper"
-          ]
-        }
-      },
-      {
-        "id": "db25daaf-b933-433b-94f1-1d17a68375c9",
-        "name": "Allowed Client Scopes",
-        "providerId": "allowed-client-templates",
-        "subType": "anonymous",
-        "subComponents": {},
-        "config": {
-          "allow-default-scopes": [
-            "true"
+            "oidc-sha256-pairwise-sub-mapper",
+            "oidc-usermodel-property-mapper",
+            "oidc-usermodel-attribute-mapper"
           ]
         }
       },
@@ -3544,6 +4531,18 @@
             "true"
           ],
           "client-uris-must-match": [
+            "true"
+          ]
+        }
+      },
+      {
+        "id": "db25daaf-b933-433b-94f1-1d17a68375c9",
+        "name": "Allowed Client Scopes",
+        "providerId": "allowed-client-templates",
+        "subType": "anonymous",
+        "subComponents": {},
+        "config": {
+          "allow-default-scopes": [
             "true"
           ]
         }
@@ -3576,14 +4575,14 @@
         "subComponents": {},
         "config": {
           "allowed-protocol-mapper-types": [
-            "oidc-address-mapper",
             "saml-user-attribute-mapper",
+            "oidc-address-mapper",
+            "saml-user-property-mapper",
+            "oidc-full-name-mapper",
+            "oidc-usermodel-attribute-mapper",
             "saml-role-list-mapper",
             "oidc-sha256-pairwise-sub-mapper",
-            "oidc-full-name-mapper",
-            "oidc-usermodel-property-mapper",
-            "oidc-usermodel-attribute-mapper",
-            "saml-user-property-mapper"
+            "oidc-usermodel-property-mapper"
           ]
         }
       }
@@ -3629,16 +4628,34 @@
   },
   "internationalizationEnabled": true,
   "supportedLocales": [
+    "ee",
     "de",
-    "sk",
+    "ru",
+    "sv",
+    "pt",
+    "bg",
+    "dk",
+    "lt",
     "en",
+    "lv",
     "it",
-    "fr"
+    "fr",
+    "hu",
+    "es",
+    "cs",
+    "at",
+    "si",
+    "sk",
+    "pl",
+    "ro",
+    "nl",
+    "tr",
+    "sr"
   ],
   "defaultLocale": "en",
   "authenticationFlows": [
     {
-      "id": "55ae28a9-c8a5-4e52-a91a-38a17c895b8b",
+      "id": "21b418fd-8100-4781-9ac2-bc5bad64129f",
       "alias": "Handle Existing Account",
       "description": "Handle what to do if there is existing account with same email/username like authenticated identity provider",
       "providerId": "basic-flow",
@@ -3653,15 +4670,32 @@
           "autheticatorFlow": false
         },
         {
+          "requirement": "REQUIRED",
+          "priority": 20,
+          "flowAlias": "Handle Existing Account - Alternatives - 0",
+          "userSetupAllowed": false,
+          "autheticatorFlow": true
+        }
+      ]
+    },
+    {
+      "id": "1fc05906-4e9a-47bf-a45b-3a0f80828b35",
+      "alias": "Handle Existing Account - Alternatives - 0",
+      "description": "Subflow of Handle Existing Account with alternative executions",
+      "providerId": "basic-flow",
+      "topLevel": false,
+      "builtIn": true,
+      "authenticationExecutions": [
+        {
           "authenticator": "idp-email-verification",
           "requirement": "ALTERNATIVE",
-          "priority": 20,
+          "priority": 10,
           "userSetupAllowed": false,
           "autheticatorFlow": false
         },
         {
           "requirement": "ALTERNATIVE",
-          "priority": 30,
+          "priority": 20,
           "flowAlias": "Verify Existing Account by Re-authentication",
           "userSetupAllowed": false,
           "autheticatorFlow": true
@@ -3669,7 +4703,7 @@
       ]
     },
     {
-      "id": "cf429243-58d8-4d35-a876-95116432c5e6",
+      "id": "316aae13-3e46-4688-9131-49533dd777b1",
       "alias": "Verify Existing Account by Re-authentication",
       "description": "Reauthentication of existing account",
       "providerId": "basic-flow",
@@ -3684,8 +4718,32 @@
           "autheticatorFlow": false
         },
         {
+          "requirement": "CONDITIONAL",
+          "priority": 20,
+          "flowAlias": "Verify Existing Account by Re-authentication - auth-otp-form - Conditional",
+          "userSetupAllowed": false,
+          "autheticatorFlow": true
+        }
+      ]
+    },
+    {
+      "id": "c45d665b-0ff3-45c8-aed8-576c063b3f55",
+      "alias": "Verify Existing Account by Re-authentication - auth-otp-form - Conditional",
+      "description": "Flow to determine if the auth-otp-form authenticator should be used or not.",
+      "providerId": "basic-flow",
+      "topLevel": false,
+      "builtIn": true,
+      "authenticationExecutions": [
+        {
+          "authenticator": "conditional-user-configured",
+          "requirement": "REQUIRED",
+          "priority": 10,
+          "userSetupAllowed": false,
+          "autheticatorFlow": false
+        },
+        {
           "authenticator": "auth-otp-form",
-          "requirement": "OPTIONAL",
+          "requirement": "REQUIRED",
           "priority": 20,
           "userSetupAllowed": false,
           "autheticatorFlow": false
@@ -3693,7 +4751,7 @@
       ]
     },
     {
-      "id": "116b2caa-a074-4d52-a401-9a5c8ea1ca26",
+      "id": "de03db82-6937-4315-869a-7e893e5a6c6a",
       "alias": "browser",
       "description": "browser based authentication",
       "providerId": "basic-flow",
@@ -3731,7 +4789,7 @@
       ]
     },
     {
-      "id": "837a3829-194b-4a0e-a6f1-03ce151e5dcd",
+      "id": "f49765a8-5df9-42f0-9ff1-eb2ee3d75c42",
       "alias": "clients",
       "description": "Base authentication for clients",
       "providerId": "client-flow",
@@ -3769,7 +4827,7 @@
       ]
     },
     {
-      "id": "bc377be8-0f41-47ab-bd7b-3b553a1210d6",
+      "id": "8c476f58-4d90-49ff-bde2-cbc116153abd",
       "alias": "direct grant",
       "description": "OpenID Connect Resource Owner Grant",
       "providerId": "basic-flow",
@@ -3791,16 +4849,40 @@
           "autheticatorFlow": false
         },
         {
-          "authenticator": "direct-grant-validate-otp",
-          "requirement": "OPTIONAL",
+          "requirement": "CONDITIONAL",
           "priority": 30,
+          "flowAlias": "direct grant - direct-grant-validate-otp - Conditional",
+          "userSetupAllowed": false,
+          "autheticatorFlow": true
+        }
+      ]
+    },
+    {
+      "id": "b8a9a3fd-af90-402a-acd0-8cb2c71617b3",
+      "alias": "direct grant - direct-grant-validate-otp - Conditional",
+      "description": "Flow to determine if the direct-grant-validate-otp authenticator should be used or not.",
+      "providerId": "basic-flow",
+      "topLevel": false,
+      "builtIn": true,
+      "authenticationExecutions": [
+        {
+          "authenticator": "conditional-user-configured",
+          "requirement": "REQUIRED",
+          "priority": 10,
+          "userSetupAllowed": false,
+          "autheticatorFlow": false
+        },
+        {
+          "authenticator": "direct-grant-validate-otp",
+          "requirement": "REQUIRED",
+          "priority": 20,
           "userSetupAllowed": false,
           "autheticatorFlow": false
         }
       ]
     },
     {
-      "id": "abfabcfe-3fe6-47ac-9fea-2ef639a1a5dc",
+      "id": "1546f10c-7ee8-4cb3-8c32-28bb3e30ad61",
       "alias": "docker auth",
       "description": "Used by Docker clients to authenticate against the IDP",
       "providerId": "basic-flow",
@@ -3817,7 +4899,7 @@
       ]
     },
     {
-      "id": "01704be8-a5be-4b05-a9f6-b55301d8e805",
+      "id": "9b6e28d2-8cbb-4b77-8a13-1e66f5ff233a",
       "alias": "first broker login",
       "description": "Actions taken after first broker login with identity provider account, which is not yet linked to any Keycloak account",
       "providerId": "basic-flow",
@@ -3833,16 +4915,33 @@
           "autheticatorFlow": false
         },
         {
+          "requirement": "REQUIRED",
+          "priority": 20,
+          "flowAlias": "first broker login - Alternatives - 0",
+          "userSetupAllowed": false,
+          "autheticatorFlow": true
+        }
+      ]
+    },
+    {
+      "id": "84ae28e7-823a-4bdb-8175-25695e242daf",
+      "alias": "first broker login - Alternatives - 0",
+      "description": "Subflow of first broker login with alternative executions",
+      "providerId": "basic-flow",
+      "topLevel": false,
+      "builtIn": true,
+      "authenticationExecutions": [
+        {
           "authenticatorConfig": "create unique user config",
           "authenticator": "idp-create-user-if-unique",
           "requirement": "ALTERNATIVE",
-          "priority": 20,
+          "priority": 10,
           "userSetupAllowed": false,
           "autheticatorFlow": false
         },
         {
           "requirement": "ALTERNATIVE",
-          "priority": 30,
+          "priority": 20,
           "flowAlias": "Handle Existing Account",
           "userSetupAllowed": false,
           "autheticatorFlow": true
@@ -3850,7 +4949,7 @@
       ]
     },
     {
-      "id": "eaa6cb93-3f7f-4d90-a194-537fe93c50e1",
+      "id": "27c5b307-9b91-4c27-8743-22b7bd7b694b",
       "alias": "forms",
       "description": "Username, password, otp and other auth forms.",
       "providerId": "basic-flow",
@@ -3865,8 +4964,32 @@
           "autheticatorFlow": false
         },
         {
+          "requirement": "CONDITIONAL",
+          "priority": 20,
+          "flowAlias": "forms - auth-otp-form - Conditional",
+          "userSetupAllowed": false,
+          "autheticatorFlow": true
+        }
+      ]
+    },
+    {
+      "id": "eac2c87a-2e6b-4214-876e-ba343f420f3c",
+      "alias": "forms - auth-otp-form - Conditional",
+      "description": "Flow to determine if the auth-otp-form authenticator should be used or not.",
+      "providerId": "basic-flow",
+      "topLevel": false,
+      "builtIn": true,
+      "authenticationExecutions": [
+        {
+          "authenticator": "conditional-user-configured",
+          "requirement": "REQUIRED",
+          "priority": 10,
+          "userSetupAllowed": false,
+          "autheticatorFlow": false
+        },
+        {
           "authenticator": "auth-otp-form",
-          "requirement": "OPTIONAL",
+          "requirement": "REQUIRED",
           "priority": 20,
           "userSetupAllowed": false,
           "autheticatorFlow": false
@@ -3874,7 +4997,7 @@
       ]
     },
     {
-      "id": "a7dcafa6-7a3c-4ee3-b36e-93bf3266127c",
+      "id": "55224214-f3bb-45ab-9a93-468ab88fb760",
       "alias": "http challenge",
       "description": "An authentication flow based on challenge-response HTTP Authentication Schemes",
       "providerId": "basic-flow",
@@ -3912,7 +5035,7 @@
       ]
     },
     {
-      "id": "b6a78252-b2a6-4814-af10-9818d9cdcb26",
+      "id": "c1ac1f3f-a858-41c8-ad61-8883b0637e16",
       "alias": "registration",
       "description": "registration flow",
       "providerId": "basic-flow",
@@ -3930,7 +5053,7 @@
       ]
     },
     {
-      "id": "127e3ca8-65a0-4b7c-a6c6-ad968db040de",
+      "id": "7e13a798-43ba-4be5-8dfa-1ab24d9ec628",
       "alias": "registration form",
       "description": "registration form",
       "providerId": "form-flow",
@@ -3968,7 +5091,7 @@
       ]
     },
     {
-      "id": "ce2c29b4-0fd4-4620-af35-7f43f15ef268",
+      "id": "42cd04e0-7ead-46b6-889d-f958ada0ad26",
       "alias": "reset credentials",
       "description": "Reset credentials for a user if they forgot their password or something",
       "providerId": "basic-flow",
@@ -3997,16 +5120,40 @@
           "autheticatorFlow": false
         },
         {
-          "authenticator": "reset-otp",
-          "requirement": "OPTIONAL",
+          "requirement": "CONDITIONAL",
           "priority": 40,
+          "flowAlias": "reset credentials - reset-otp - Conditional",
+          "userSetupAllowed": false,
+          "autheticatorFlow": true
+        }
+      ]
+    },
+    {
+      "id": "b3dce0ce-0063-4012-9a29-9f194f41be06",
+      "alias": "reset credentials - reset-otp - Conditional",
+      "description": "Flow to determine if the reset-otp authenticator should be used or not.",
+      "providerId": "basic-flow",
+      "topLevel": false,
+      "builtIn": true,
+      "authenticationExecutions": [
+        {
+          "authenticator": "conditional-user-configured",
+          "requirement": "REQUIRED",
+          "priority": 10,
+          "userSetupAllowed": false,
+          "autheticatorFlow": false
+        },
+        {
+          "authenticator": "reset-otp",
+          "requirement": "REQUIRED",
+          "priority": 20,
           "userSetupAllowed": false,
           "autheticatorFlow": false
         }
       ]
     },
     {
-      "id": "51a262f8-0447-4a0f-a064-4fc3f4373434",
+      "id": "925b1c7d-d1cf-48a0-bbdf-08699f0606b2",
       "alias": "saml ecp",
       "description": "SAML ECP Profile Authentication Flow",
       "providerId": "basic-flow",
@@ -4025,14 +5172,14 @@
   ],
   "authenticatorConfig": [
     {
-      "id": "f30d345a-180d-457a-a4be-e1f999ced83c",
+      "id": "bfe1d3cc-91ee-44e8-ac4b-78fc43899905",
       "alias": "create unique user config",
       "config": {
         "require.password.update.after.registration": "false"
       }
     },
     {
-      "id": "feeaac3a-d600-4a52-8729-30d45a6935c3",
+      "id": "6a5cfe77-540e-4c30-a9ec-fe1333b2d7b6",
       "alias": "review profile config",
       "config": {
         "update.profile.on.first.login": "missing"
@@ -4084,6 +5231,15 @@
       "defaultAction": false,
       "priority": 50,
       "config": {}
+    },
+    {
+      "alias": "update_user_locale",
+      "name": "Update User Locale",
+      "providerId": "update_user_locale",
+      "enabled": true,
+      "defaultAction": false,
+      "priority": 1000,
+      "config": {}
     }
   ],
   "browserFlow": "browser",
@@ -4093,28 +5249,8 @@
   "clientAuthenticationFlow": "clients",
   "dockerAuthenticationFlow": "docker auth",
   "attributes": {
-    "_browser_header.xXSSProtection": "1; mode=block",
-    "_browser_header.strictTransportSecurity": "max-age=31536000; includeSubDomains",
-    "_browser_header.xFrameOptions": "SAMEORIGIN",
-    "quickLoginCheckMilliSeconds": "1000",
-    "permanentLockout": "false",
-    "displayName": "EUROWAG [TEST]",
-    "_browser_header.xRobotsTag": "none",
-    "maxFailureWaitSeconds": "900",
-    "displayNameHtml": "<h1>EUROWAG <sup>[TEST]</sup></h1>",
-    "minimumQuickLoginWaitSeconds": "60",
-    "failureFactor": "5",
-    "actionTokenGeneratedByUserLifespan": "300",
-    "maxDeltaTimeSeconds": "1800",
-    "_browser_header.xContentTypeOptions": "nosniff",
-    "actionTokenGeneratedByAdminLifespan": "43200",
-    "offlineSessionMaxLifespan": "5184000",
-    "_browser_header.contentSecurityPolicyReportOnly": "",
-    "bruteForceProtected": "true",
-    "_browser_header.contentSecurityPolicy": "frame-src 'self'; frame-ancestors 'self'; object-src 'none';",
-    "offlineSessionMaxLifespanEnabled": "false",
-    "waitIncrementSeconds": "1200"
+    "frontendUrl": "https://login-test.eurowag.com/auth"
   },
-  "keycloakVersion": "7.0.0",
+  "keycloakVersion": "9.0.3",
   "userManagedAccessAllowed": false
 }
