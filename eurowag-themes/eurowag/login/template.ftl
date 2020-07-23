@@ -12,7 +12,7 @@
             <meta name="${meta?split('==')[0]}" content="${meta?split('==')[1]}"/>
         </#list>
     </#if>
-    <title>${msg("loginTitle",(realm.displayName!''))}</title>
+    <title>${msg("loginTitleEasy",(realm.displayName!''))}</title>
     <link rel="icon" href="${url.resourcesPath}/img/favicon.png" />
     <#if properties.styles?has_content>
         <#list properties.styles?split(' ') as style>
