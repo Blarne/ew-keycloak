@@ -1,0 +1,259 @@
+body {
+    display: table;
+}
+form {
+    height: 100vh;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+#login-box .cards .line label /* Basic layout rules */
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* Clearfix & Reset */
+.clearfix { *zoom: 1; }
+.clearfix:before, .clearfix:after { display: table; content: ""; }
+.clearfix:after { clear: both; }
+.reset { margin: 0; padding: 0; list-style: none; }
+
+#panel-dialog {
+    text-align: left;
+    display: inline-block;
+}
+#panel-login {
+    background: #f8f9fb;
+    border-bottom: 30px solid #fae108;
+    width: 1000px;
+    box-shadow: 10px 10px 40px #222;
+}
+
+/* Header */
+#header {
+    padding: 20px 0;
+}  /*zakomentovano v pripade viditelneho baneru*/
+#header .logo { margin: 0 0 0 20px; float: left; }
+#header .logo a { display:inline-block; background-image:url(../img/logo.png); width:140px; height:102px; background-size: cover; }
+#header .lang { margin: 0 20px; padding: 0; float: right; position: relative; }
+#header .submenu { width: 70px; padding: 20px 10px 5px; background: #f8f9fb; position: absolute; top: 26px; display: none; border-bottom-left-radius:4px; border-bottom-right-radius: 4px; -moz-border-radius-bottomleft: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-left-radius: 4px; -webkit-border-bottom-right-radius: 4px; z-index: 5; border: 1px solid lightgrey; border-top: none; }
+#header .submenu ul { padding: 0; text-transform: uppercase; font-size: 13px; margin-bottom: 0px;}
+#header .submenu li { display: block; }
+#header .submenu li:hover { background-color: #206b9f; }
+#header .submenu img { vertical-align: baseline; }
+#header .submenu a { padding: 0 0 0px 10px; text-decoration: none;  font-size: 13px	; }
+#header .submenu a:hover { color: white; }
+#header .lang .submenu { padding: 10px 0; right: 0px; }
+#header .selectedLang { padding: 10px; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; }
+#header .selectedLang.hover { border-bottom-right-radius: 0px; -moz-border-radius-bottomright: 0px; -webkit-border-bottom-right-radius: 0px; }
+#header .selectedLang span { margin-left: 5px; padding-left: 20px; background-repeat: no-repeat; background-position: 0 45%; }
+
+/* Main menu > Languages */
+
+#header .lang .cs { background-image: url("/images/ico-flag-cs.png"); }
+#header .lang .sk { background-image: url("/images/ico-flag-sk.png"); }
+#header .lang .en { background-image: url("/images/ico-flag-en.png"); }
+#header .lang .de { background-image: url("/images/ico-flag-de.png"); }
+#header .lang .dk { background-image: url("/images/ico-flag-dk.png"); }
+#header .lang .hu { background-image: url("/images/ico-flag-hu.png"); }
+#header .lang .pl { background-image: url("/images/ico-flag-pl.png"); }
+#header .lang .ro { background-image: url("/images/ico-flag-ro.png"); }
+#header .lang .ru { background-image: url("/images/ico-flag-ru.png"); }
+#header .lang .bg { background-image: url("/images/ico-flag-bg.png"); }
+#header .lang .tr { background-image: url("/images/ico-flag-tr.png"); }
+#header .lang .si { background-image: url("/images/ico-flag-si.png"); }
+#header .lang .ee { background-image: url("/images/ico-flag-ee.png"); }
+#header .lang .pt { background-image: url("/images/ico-flag-pt.png"); }
+#header .lang .es { background-image: url("/images/ico-flag-es.png"); }
+#header .lang .at { background-image: url("/images/ico-flag-at.png"); }
+#header .lang .sr { background-image: url("/images/ico-flag-sr.png"); }
+#header .lang .lv { background-image: url("/images/ico-flag-lv.png"); }
+#header .lang .fr { background-image: url("/images/ico-flag-fr.png"); }
+#header .lang .nl { background-image: url("/images/ico-flag-nl.png"); }
+#header .lang .it { background-image: url("/images/ico-flag-it.png"); }
+#header .lang .sv { background-image: url("/images/ico-flag-sv.png"); }
+
+/* Login Welcome */
+#login-welcome { padding: 0px 20px; text-align: left; color: #484848; }
+#login-welcome > p { margin-bottom: 20px; }
+#login-welcome h1 { color: #003559; 
+    font-size: 20px; 
+    line-height: 1.5;
+    padding: 0;
+    text-align: left;
+}
+#login-welcome h1.outage {
+    text-align: center;
+}
+
+#login-welcome h1.outage img {
+    margin-top: -110px;
+    height: 140px;
+}
+
+#login-welcome .outage {
+    color: #274388;
+    font-weight: bold;
+}
+
+.directLogin #login-box, #login-box.newPasswordSetting { background: none; margin-left: 278px; }
+#login-box .col { width: 49%; }
+#login-box .col-l { float: left; position: relative; width: 100%; padding: 0 20px; box-sizing: border-box; }
+#login-box .col-l .inner { position: relative; }
+.directLogin #login-box .col-l .inner .top { height: initial; }
+
+#login-box .col-l.changePassword .inline-btn { margin-left: 0px; }
+#login-box .inner > div > div {
+    margin-top: 30px;
+    position: absolute;
+    margin-left: 260px;
+}
+#login-box .caption-info-text {
+    float: left;
+    position: relative !important;
+    margin: 0 !important;
+    clear: both;
+    width: 100%;
+}
+#login-box .col-r {
+    float: left;
+    position: relative;
+    clear: both;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+#login-box .col-r .inner { /* padding: 10px 20px 10px 35px; */ position: relative; }
+#login-box .col-r p { margin-bottom: 20px; }
+#login-box h2 {
+    color: #192851;
+    font-size: 20px;
+    margin: 10px 0;
+}
+#PortalChoose > label {
+    font-size: 13px;
+    width: 120px !important;
+    margin-top: 25px;
+}
+#login-box label { display: inline-block; width: 120px;  }
+#login-box label.longLabel { width: auto; margin-bottom: 10px; }
+#login-box input.text, #login-box .cards { width: 60%; /* 280px; */ padding: 5px 10px 5px; border: 1px solid #d9d9d9; outline: 0; color: #333; }
+#login-box .info { font-style: italic; color: #999; line-height: 1.8; margin-top: 20px; }
+#login-box .cards {
+    display: inline-block;
+    vertical-align: top;
+    border: none;
+    width: 300px !important;
+}
+#login-box .cards .line { width: 100%; display: inline-block; padding: 6px 0; }
+#login-box .cards .line.first { /* background: url('../images/login-box-line.png') no-repeat 50% bottom; */ padding-bottom: 12px; }
+#login-box .cards .line label { width: auto; vertical-align: middle; padding-left: 4px; /*font-family: 'Intro';*/ font-size: 17px; color: #005288; }
+#login-box .cards .line img { display: inline-block;  padding-right: 4px; width: 45px; }
+#LoginRightBox { border-left: 1px solid #d8d8d8; }
+
+#footer {
+    text-align: left;
+    margin-top: 15px;
+    color: white;
+    font-size: 14px;
+    width: 1000px;
+}
+#footer .line { border-top: 1px solid #d8d8d8; width: 250px; display: inline-block; }
+#footer .mastercard {
+    font-size: 14px;
+    margin: 0 15px 20px 15px;
+    line-height: 1.4em;
+}
+#footer strong {
+    font-weight: normal;
+    margin: 0 15px;
+}
+
+/* Inline buttons */
+.inline-btn, .inline-btn span, .inline-btn input { display: inline-block; /* height: 24px; */ line-height: 24px; vertical-align: middle; text-decoration: none; white-space: nowrap; /* background: white; */ color: #656565; text-decoration: none; }
+.inline-btn span, .inline-btn input { min-width: 50px; padding: 0 10px; font-size: 11px; text-transform: uppercase; text-decoration: none; font-weight: bold; vertical-align: top; text-align: center; background: none; border: none; cursor: pointer; }
+.inline-btn span:hover, .inline-btn input:hover { color: #a1a1a1; }
+.inline-btn.r { float: right; margin-right: 0; }
+
+.btn-blue-light { min-width: 80px; text-align: center; /* background: #2870ab url('../images/buttons/btn-blue-light.png') repeat-x 0 0; */ margin: 20px 0; }
+.btn-blue-light span, .btn-blue-light input { color: #323232; font-size: 18px }
+.btn-blue-light span:hover, .btn-blue-light input:hover { color: #000 }
+#ButtonLogin, #ButtonLoginDriver, #ButtonSendRequest, #ButtonLogout, #ButtonLogoutDriver {
+    font-size: 18px;
+    text-shadow: none;
+    padding: 10px 30px;
+    background: #fae108;
+    color: #323232;
+}
+#ButtonLogoutDriver {
+    font-size: 14px;
+    padding: 6px 20px;
+}
+input#ButtonSendRequest {
+    margin-right: 100px;
+}
+/* Text shadow */
+.btn-blue-light, .btn-blue-light input { text-shadow: 1px 1px 1px rgba(0,0,0,.5); }
+
+/* Fonts */
+.inline-btn span, .inline-btn input, #login-box h2 { font-family: 'Open Sans'; }
+
+.error {color: red;}
+
+#loginBanner {
+  height: 191px;
+  background: url(/images/loginBanner_v4.png) no-repeat #f1f2f3 right;
+  border-bottom: 1px solid #dee3e6;
+  text-align: center;
+	display: none;
+}
+
+#loginBannerInner {
+  width: 1000px;
+  text-align: left;
+  margin: 0px auto;
+}
+
+.loginBannerText {
+  min-width: 320px;
+  position: absolute;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: bold;
+  color: #003559;
+  padding-top: 53px;
+  margin-right: 640px;
+}
+
+.loginBannerDot {
+  margin-top: 138px;
+  float: left;
+  height: 11px;
+  width: 11px;
+  margin-right: 9px;
+  background: url(/images/loginBannerDot.png) no-repeat;
+  cursor: pointer;
+}
+
+.loginBannerDot.active, .loginBannerDot:hover {
+  background-image: url(/images/loginBannerDotActive.png);
+}
+
+.messages p { padding: 12px 55px; background: #f5dfe0 url("/images/ico-message-error.png") no-repeat 25px 50%; border: 1px solid #ebd6d7; font-weight: normal; position: relative; display: inline-block; color: #a81616; font-size: 15px; }
+.messages {
+  margin: 0 15px 15px 0; 
+  text-align: center;
+}
+/*  forgotten password  */
+#mainforgot {
+    text-align: left;
+    width: 1000px;
+    display: inline-block;
+}
+#ChangePasswordRequestPanel, #RequestConfirmedPanel {
+    background: #f8f9fb;
+    border-bottom: 30px solid #fae108;
+    width: 1000px;
+    box-shadow: 10px 10px 40px #222;
+}
