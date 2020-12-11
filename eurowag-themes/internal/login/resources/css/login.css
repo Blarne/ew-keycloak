@@ -96,6 +96,7 @@ form {
     color: #274388;
     font-weight: bold;
 }
+/* Login Box */
 
 .directLogin #login-box, #login-box.newPasswordSetting { background: none; margin-left: 278px; }
 #login-box .col { width: 49%; }
@@ -149,7 +150,7 @@ form {
 #login-box .cards .line { width: 100%; display: inline-block; padding: 6px 0; }
 #login-box .cards .line.first { /* background: url('../images/login-box-line.png') no-repeat 50% bottom; */ padding-bottom: 12px; }
 #login-box .cards .line label { width: auto; vertical-align: middle; padding-left: 4px; /*font-family: 'Intro';*/ font-size: 17px; color: #005288; }
-#login-box .cards .line img { display: inline-block;  padding-right: 4px; width: 45px; }
+#login-box .cards .line img { display: inline-block; float: right; padding-right: 4px; width: 45px; }
 #LoginRightBox { border-left: 1px solid #d8d8d8; }
 
 #footer {

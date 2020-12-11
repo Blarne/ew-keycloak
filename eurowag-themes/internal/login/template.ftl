@@ -31,7 +31,6 @@
     </#if> 
 
     <link href="//fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext,latin" rel="stylesheet" type="text/css">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 </head>
 
 
@@ -46,60 +45,9 @@
                 		<p class="logo">
                         	<a href="http://www.eurowag.com/cs?manualSelection=cs" title="EUROWAG"></a>
 	                    </p>
-					</div>
+			</div>
 
-					<div id="ew-header-flag">
-			         
-				   <script type="text/javascript">
-    $(function () {
-
-      var $submenus = $('.lang');
-      var menuTimer;
-    
-      // Main menu hovers
-      $('.lang').bind('mouseenter', function (event) {
-        var $submenu = $(event.currentTarget).find('.submenu,.submenu-lang');
-        if ($submenu.length == 0) return;
-        $submenus.not(event.currentTarget).triggerHandler('mouseleave');
-        $submenu.stop().fadeTo(200, 1);
-        $('.lang').addClass('hover');
-        var $arrow = $('<span class="arrow" />').css({ left: $('.lang').width() / 2 });
-        $('.lang').append($arrow);
-        $('#header .selectedLang').addClass('hover');
-        clearTimeout(menuTimer);
-      });
-      $('.lang').bind('mouseleave', function (event) {
-        var $submenu = $(event.currentTarget).find('.submenu,.submenu-lang');
-        if ($submenu.length == 0) return;
-        clearTimeout(menuTimer);
-        menuTimer = setTimeout(function () { $submenu.stop().fadeTo(100, 0, function () { $submenu.css({ display: 'none' }); $('#header .selectedLang').removeClass('hover'); }).closest('li').removeClass('hover').find('.arrow').remove(); }, 200);
-      });
-    });
-  </script>
-						<div id="ChangeLanguage__LangPanel">
-							
-						    <span class="lang hover">
-						      <a href="#" id="kc-current-locale-link" style="text-transform:uppercase"><span class="flag-icon flag-icon-lg flag-icon-${locale.currentLanguageTag}"></span>${locale.currentLanguageTag}</a>
-						      <div class="submenu" style="opacity: 0; display: none;">
-								    <ul>
-						 			  <#list locale.supported?sort_by("languageTag") as l>
-						   			  <li class="kc-dropdown-item">
-						                <a href="${l.url}"><span class="flag-icon flag-icon-lg flag-icon-${l.languageTag}"></span> ${l.languageTag}</a>
-									  </li>
-									  </#list>          		                  
-								    </ul>
-							    </div>
-						    <span class="arrow" style="left: 31px;"></span><span class="arrow" style="left: 31px;"></span><span class="arrow" style="left: 31px;"></span><span class="arrow" style="left: 31px;"></span><span class="arrow" style="left: 31px;"></span><span class="arrow" style="left: 31px;"></span><span class="arrow" style="left: 31px;"></span><span class="arrow" style="left: 31px;"></span><span class="arrow" style="left: 31px;"></span><span class="arrow" style="left: 31px;"></span><span class="arrow" style="left: 31px;"></span><span class="arrow" style="left: 31px;"></span><span class="arrow" style="left: 31px;"></span><span class="arrow" style="left: 31px;"></span></span>
-						  
- 						 </div>
-
-			         
-		            </div>
-
-
-
-
-				
+					
 
                 </div>
 
