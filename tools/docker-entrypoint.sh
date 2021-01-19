@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo 10.48.112.197   api-dev.wag-test.local >> /etc/hosts
+echo 10.48.115.5   api-test.wag-test.local >> /etc/hosts
+echo 10.48.115.69   api-uat.wag-test.local >> /etc/hosts
+echo 10.48.115.102   api-ppe.wag-test.local >> /etc/hosts
+echo 10.48.56.5   api.wag.local >> /etc/hosts
+
 # usage: file_env VAR [DEFAULT]
 #    ie: file_env 'XYZ_DB_PASSWORD' 'example'
 # (will allow for "$XYZ_DB_PASSWORD_FILE" to fill in the value of
